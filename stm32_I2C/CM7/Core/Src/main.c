@@ -141,13 +141,13 @@ Error_Handler();
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+
+	  HAL_I2C_Master_Transmit(&hi2c2,(0x68<<1 ),&addr_sec,sizeof(addr_sec),HAL_MAX_DELAY); //Sending in Blocking mode
 	  HAL_GPIO_TogglePin(LD1_GPIO_Port, LD1_Pin);
-//	  HAL_I2C_Master_Transmit(&hi2c2,(0x68<<1 ),&addr_sec,sizeof(addr_sec),HAL_MAX_DELAY); //Sending in Blocking mode
-//	  HAL_GPIO_TogglePin(LD1_GPIO_Port, LD1_Pin);
-//	  HAL_Delay(1000);
-//	  HAL_I2C_Master_Receive(&hi2c2 , (0x68<<1 )+1,&msg, sizeof(msg), HAL_MAX_DELAY);
-//	  HAL_GPIO_TogglePin(LD1_GPIO_Port, LD1_Pin);
-//	  HAL_Delay(1000);
+	  HAL_Delay(1000);
+	  HAL_I2C_Master_Receive(&hi2c2 , (0x68<<1 )+1,&msg, sizeof(msg), HAL_MAX_DELAY);
+	  HAL_GPIO_TogglePin(LD1_GPIO_Port, LD1_Pin);
+	  HAL_Delay(1000);
 
 	  printf("%u\r\n",msg-128);
 //	  HAL_GPIO_WritePin(LD1_GPIO_Port, LD1_Pin, GPIO_PIN_SET);
