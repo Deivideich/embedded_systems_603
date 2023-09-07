@@ -1,5 +1,5 @@
 Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.o: \
- D:/Universidad/Quinto_Semestre/Embedidos_Avanzados/STM32/embedded_systems_603/stm32_I2C/Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.c \
+ C:/Users/maxpr/STM32CubeIDE/workspace_1.10.1/embedded_systems_603/stm32_I2C/Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.c \
  ../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h \
  ../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h745xx.h \
  ../../Drivers/CMSIS/Include/core_cm4.h \
