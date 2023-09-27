@@ -144,8 +144,8 @@ Error_Handler();
      	HAL_Delay(10);
      	printf("\n\rCAN ID: %lx", RxHeader.Identifier);
 
-     	printf(" [%x] ",RxHeader.DataLength);
-     	printf(" %X %X %X %X %X %X %X %X",RxData[0], RxData[1], RxData[2], RxData[3], RxData[4], RxData[5], RxData[6], RxData[7]);
+     	printf(" [%X] ", ((unsigned int)RxHeader.DataLength & 0x000F0000) >> 16 );
+     	printf(" %02X %02X %02X %02X %02X %02X %02X %02X",RxData[0], RxData[1], RxData[2], RxData[3], RxData[4], RxData[5], RxData[6], RxData[7]);
      	HAL_GPIO_TogglePin(LD1_GPIO_Port,LD1_Pin);
      	HAL_Delay(100); /*AAO-*/
     /* USER CODE END WHILE */
@@ -270,8 +270,8 @@ static void MX_FDCAN1_Init(void)
     sFilterConfig.FilterConfig = FDCAN_FILTER_TO_RXFIFO0;
 //    sFilterConfig.FilterID1 = 0x321;
 //    sFilterConfig.FilterID2 = 0x7FF;
-    sFilterConfig.FilterID1 = 0x3F8;
-	sFilterConfig.FilterID2 = 0x442;
+    sFilterConfig.FilterID1 = 0x610; //Testing
+	sFilterConfig.FilterID2 = 0xFFF;
 
     /* Configure global filter to reject all non-matching frames */
     HAL_FDCAN_ConfigGlobalFilter(&hfdcan1, FDCAN_REJECT, FDCAN_REJECT, FDCAN_REJECT_REMOTE, FDCAN_REJECT_REMOTE);
