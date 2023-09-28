@@ -136,13 +136,15 @@ Error_Handler();
   uint16_t dev_addr_w = (0x68<<1);
   uint16_t dev_addr_r = (0x68<<1)+1;
   uint8_t seconds_addr = 0x00;
+  uint8_t week_day_addr = 0x03;
   uint8_t minutes_addr = 0x01;
   uint8_t hour_addr = 0x02;
   uint8_t date_addr = 0x04;
   uint8_t month_addr = 0x05;
   uint8_t year_addr = 0x06;
-  uint8_t date[] = {0x7, 0x9, 0x23, 0x18, 0x57, 0x5};
+  uint8_t date[] = {0x8, 0x9, 0x23, 0x23, 0x3, 0x50};
   uint8_t date_d = date[0];
+  uint8_t week_day_d = 0x05;
   uint8_t month_d = date[1];
   uint8_t year_d = date[2];
   uint8_t hour_d = date[3];
@@ -160,29 +162,33 @@ Error_Handler();
 	  HAL_I2C_Mem_Write(&hi2c2, dev_addr_w, (uint16_t)date_addr, sizeof(date_addr), &date_d, sizeof(date_d), HAL_MAX_DELAY);
 	  HAL_I2C_Mem_Write(&hi2c2, dev_addr_w, (uint16_t)month_addr, sizeof(month_addr), &month_d, sizeof(month_d), HAL_MAX_DELAY);
 	  HAL_I2C_Mem_Write(&hi2c2, dev_addr_w, (uint16_t)year_addr, sizeof(year_addr), &year_d, sizeof(year_d), HAL_MAX_DELAY);
+	  HAL_I2C_Mem_Write(&hi2c2, dev_addr_w, (uint16_t)week_day_addr, sizeof(week_day_addr), &week_day_d, sizeof(week_day_d), HAL_MAX_DELAY);
 
 
   while (1)
   {
 
-	  HAL_GPIO_TogglePin(LD1_GPIO_Port, LD1_Pin);
-	  HAL_Delay(delay_time);
+	  //HAL_GPIO_TogglePin(LD1_GPIO_Port, LD1_Pin);
 	  HAL_I2C_Master_Transmit(&hi2c2,dev_addr_w,&seconds_addr,sizeof(seconds_addr),HAL_MAX_DELAY);
 	  HAL_I2C_Master_Receive(&hi2c2 , dev_addr_r,&msg[0], sizeof(msg), HAL_MAX_DELAY);
 	  HAL_I2C_Master_Transmit(&hi2c2,dev_addr_w,&minutes_addr,sizeof(minutes_addr),HAL_MAX_DELAY);
 	  HAL_I2C_Master_Receive(&hi2c2 , dev_addr_r,&msg[1], sizeof(msg), HAL_MAX_DELAY);
 	  HAL_I2C_Master_Transmit(&hi2c2,dev_addr_w,&hour_addr,sizeof(hour_addr),HAL_MAX_DELAY);
 	  HAL_I2C_Master_Receive(&hi2c2 , dev_addr_r,&msg[2], sizeof(msg), HAL_MAX_DELAY);
+	  HAL_I2C_Master_Transmit(&hi2c2,dev_addr_w,&week_day_addr,sizeof(week_day_addr),HAL_MAX_DELAY);
+	  HAL_I2C_Master_Receive(&hi2c2 , dev_addr_r,&msg[6], sizeof(msg), HAL_MAX_DELAY);
 	  HAL_I2C_Master_Transmit(&hi2c2,dev_addr_w,&date_addr,sizeof(date_addr),HAL_MAX_DELAY);
 	  HAL_I2C_Master_Receive(&hi2c2 , dev_addr_r,&msg[3], sizeof(msg), HAL_MAX_DELAY);
 	  HAL_I2C_Master_Transmit(&hi2c2,dev_addr_w,&month_addr,sizeof(month_addr),HAL_MAX_DELAY);
 	  HAL_I2C_Master_Receive(&hi2c2 , dev_addr_r,&msg[4], sizeof(msg), HAL_MAX_DELAY);
 	  HAL_I2C_Master_Transmit(&hi2c2,dev_addr_w,&year_addr,sizeof(year_addr),HAL_MAX_DELAY);
 	  HAL_I2C_Master_Receive(&hi2c2 , dev_addr_r,&msg[5], sizeof(msg), HAL_MAX_DELAY);
-	  HAL_Delay(delay_time);
+
+	  HAL_I2C_Master_Transmit(&hi2c2,dev_addr_w,&hour_addr,sizeof(hour_addr),HAL_MAX_DELAY);
 
 	  printf("Day: %d, Month: %d, Year: %d, Hours: %d, Minutes: %d, Seconds: %d\r\n",
-	  	  	  	  ((msg[3] & 0x30)>>4)*10 + (msg[3] & 0x0F),
+
+				  ((msg[3] & 0x30)>>4)*10 + (msg[3] & 0x0F),
 	  	  	  	  ((msg[4] & 0x10)>>4)*10 + (msg[4] & 0x0F),
 	  	  	  	  ((msg[5] & 0xF0)>>4)*10 + (msg[5] & 0x0F),
 	  	  	  	  ((msg[2] & 0x70)>>4)*10 + (msg[2] & 0x0F),
