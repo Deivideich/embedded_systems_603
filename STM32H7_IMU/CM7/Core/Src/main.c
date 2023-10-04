@@ -21,7 +21,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "myprintf.h"
+#include "math.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -128,36 +129,56 @@ Error_Handler();
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
   int16_t acc_x, acc_y, acc_z;
-  uint8_t imu_data[14] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+  int16_t gyro_x, gyro_y, gyro_z;
+  int16_t mag_x, mag_y, mag_z;
+  uint8_t imu_data[14];
+  mpu9250_write_reg(27, 0x00);
+  HAL_Delay(100);
   mpu9250_write_reg(28, 0x08);
-  float g_conv = 4.0 / 32768;
-  float f_x, f_y, f_z;
-  uint8_t x_a, x_b, y_a, y_b, z_a, z_b;
+  HAL_Delay(100);
+  float a_conv = 4.0 / 32768;
+  float g_conv = 250.0 / 32768.0;
+  float m_conv = 10.0 * 4912.0 / 8190.0;
+  float a_x, a_y, a_z, g_x, g_y, g_z, m_x, m_y, m_z;
   /* USER CODE END 2 */
+
+
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   printf("Starting !\r\n");
   while (1)
   {
-	  HAL_Delay(10);
+	  HAL_Delay(5);
 	  mpu9250_read_reg(59, imu_data, sizeof(imu_data));
 	  acc_x = ((int16_t)imu_data[0]<<8) + imu_data[1];
 	  acc_y = ((int16_t)imu_data[2]<<8) + imu_data[3];
 	  acc_z = ((int16_t)imu_data[4]<<8) + imu_data[5];
-	  f_x = (float)(acc_x *  g_conv);
-	  f_y = (float)(acc_y *  g_conv);
-	  f_z = (float)(acc_z *  g_conv);
-	  x_a = f_x;
-	  x_b = ((int8_t)(f_x * 100))%100;
-	  y_a = f_y;
-	  y_b = ((int8_t)(f_y * 100))%100;
-	  z_a = f_z;
-	  z_b = ((int8_t)(f_z * 100))%100;
-	  printf("Acceleration { x: %d.%d, y: %d.%d, z: %d.%d }\r\n",x_a,x_b,y_a,y_b,z_a,z_b);
-//	  printf("%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d \r\n",imu_data[0],imu_data[1],imu_data[2],
-//      imu_data[3],imu_data[4],imu_data[5],imu_data[6],imu_data[7],imu_data[8],imu_data[9],imu_data[10],
-//	  imu_data[11],imu_data[12],imu_data[13]);
+
+	  mpu9250_read_reg(67, imu_data, sizeof(imu_data));
+	  gyro_x = ((int16_t)imu_data[0]<<8) + imu_data[1];
+	  gyro_y = ((int16_t)imu_data[2]<<8) + imu_data[3];
+	  gyro_z = ((int16_t)imu_data[4]<<8) + imu_data[5];
+
+	  a_x = (float)(acc_x *  a_conv - 1);
+	  a_y = (float)(acc_y *  a_conv + 0.27);
+	  a_z = (float)(acc_z *  a_conv);
+	  g_x = (float)(gyro_x *  g_conv);
+	  g_y = (float)(gyro_y *  g_conv);
+	  g_z = (float)(gyro_z *  g_conv);
+
+//	  mpu9250_read_reg(67, imu_data, sizeof(imu_data));
+//	  mag_x = ((int16_t)imu_data[0]<<8) + imu_data[1];
+//	  mag_y = ((int16_t)imu_data[2]<<8) + imu_data[3];
+//	  mag_z = ((int16_t)imu_data[4]<<8) + imu_data[5];
+//	  m_x = (float)(mag_x *  m_conv);
+//	  m_y = (float)(mag_y *  m_conv);
+//	  m_z = (float)(mag_z *  m_conv);
+
+//  m[0] = (float)(mag_count[0] * mag_resolution * mag_bias_factory[0] - mag_bias[0] * bias_to_current_bits) * mag_scale[0];  // get actual magnetometer value, this depends on scale being set
+
+	  printf("Acc{x: %.3f, y: %.3f, z:%.3f}, Gyro{x: %.3f, y: %.3f, z:%.3f}\r\n",a_x, a_y, a_z,g_x, g_y, g_z);
+//	  printf("Mag{x: %.3f, y: %.3f, z:%.3f}\r\n",m_x, m_y, m_z);
 
     /* USER CODE END WHILE */
 
