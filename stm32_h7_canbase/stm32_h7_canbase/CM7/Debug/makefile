@@ -61,8 +61,8 @@ all: main-build
 main-build: stm32_h7_canbase_CM7.elf secondary-outputs
 
 # Tool invocations
-stm32_h7_canbase_CM7.elf stm32_h7_canbase_CM7.map: $(OBJS) $(USER_OBJS) D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\stm32_h7_canbase\stm32_h7_canbase\CM7\STM32H745ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "stm32_h7_canbase_CM7.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\stm32_h7_canbase\stm32_h7_canbase\CM7\STM32H745ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_h7_canbase_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+stm32_h7_canbase_CM7.elf stm32_h7_canbase_CM7.map: $(OBJS) $(USER_OBJS) C:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32_h7_canbase\stm32_h7_canbase\CM7\STM32H745ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "stm32_h7_canbase_CM7.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32_h7_canbase\stm32_h7_canbase\CM7\STM32H745ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_h7_canbase_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

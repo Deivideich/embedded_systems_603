@@ -1,0 +1,10 @@
+10:59:01 **** Incremental Build of configuration Debug for project stm32h7_ParallelConstantPi_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32h7_ParallelConstantPi_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18016	    128	  22232	  40376	   9db8	stm32h7_ParallelConstantPi_CM4.elf
+Finished building: default.size.stdout
+ 
+
+10:59:01 Build Finished. 0 errors, 0 warnings. (took 156ms)
+
