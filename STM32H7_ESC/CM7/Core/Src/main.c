@@ -25,6 +25,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "myprintf.h"
+#include "esc.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -127,45 +128,105 @@ Error_Handler();
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  double pulseWidth = 0.0015;
+  uint8_t input[4];
+  int inputInt;
+  double pulseWidth = 0.000;
+  double prevPulseWidth = 0.000;
   double ccr = 0;
 
-  double i = 0;
+  double i = 0.0001;
+
+  printf("Starting...\r\n");
+
 
   do{
 	  ccr = (pulseWidth * htim2.Init.Period) / 0.02;
 	  htim2.Instance->CCR1 = ccr;
 	  HAL_Delay(100);
 
-	  printf("pulseWidth = %f \r\n", pulseWidth);
-	  i += 0.000001;
+	  printf("(From Start) pulseWidth = %f {CCR=%f}\r\n", pulseWidth,ccr);
+//			  i += 0.000001;
 
 	  pulseWidth += i;
 
   }while(pulseWidth < 0.002);
 
+  pulseWidth = 0.002;
+  ccr = (pulseWidth * htim2.Init.Period) / 0.02;
+  printf("CCR: %f\r\n",ccr);
+  htim2.Instance->CCR1 = ccr;
+
+
   while (1)
   {
-	  for(int i = 0; i<50;i++){
-		  pulseWidth = 0.001;
-		  ccr = (pulseWidth * htim2.Init.Period) / 0.02;
-		  htim2.Instance->CCR1 = ccr;
-		  HAL_Delay(100);
-	  }
-	  for(int i = 0; i<20;i++){
-	 		  pulseWidth = 0.0015;
+	  while(HAL_UART_Receive(&huart3, input, 4, HAL_MAX_DELAY));
+	  printf("Receive from UART %c%c%c%c \r\n",input[0],input[1],input[2],input[3]);
 
-	 		  ccr = (pulseWidth * htim2.Init.Period) / 0.02;
-	 		  htim2.Instance->CCR1 = ccr;
-	 		  HAL_Delay(100);
-	 }
-	  for(int i = 0; i<50;i++){
-		  pulseWidth = 0.002;
-
-		  ccr = (pulseWidth * htim2.Init.Period) / 0.02;
-		  htim2.Instance->CCR1 = ccr;
-		  HAL_Delay(100);
+	  for(int i = 0 ; i < 4 ; i++){
+		  input[i]-='0';
 	  }
+
+	  inputInt = (input[0]*1000 + input[1]*100 + input[2]*10 + input[3]*1);
+
+	  if(inputInt < 2500 && inputInt > 550){
+		  pulseWidth = (input[0]*1000 + input[1]*100 + input[2]*10 + input[3]*1)/1000000.0;
+	  }
+//	  pulseWidth = 0.001;
+
+	  printf("PulseWidth %f\r\n",pulseWidth);
+
+	  ccr = (pulseWidth * htim2.Init.Period) / 0.02;
+	  htim2.Instance->CCR1 = ccr;
+	  HAL_Delay(100);
+
+//	  switch (input) {
+//
+//	  case '1':
+//		  printf("Case 1\r\n");
+//		  pulseWidth = 0.00;
+//		  if(pulseWidth < 0.002){
+//		  	  do{
+//		  		  ccr = (pulseWidth * htim2.Init.Period) / 0.02;
+//		  		  htim2.Instance->CCR1 = ccr;
+//		  		  HAL_Delay(100);
+//
+//		  		  printf("(From Start) pulseWidth = %f \r\n", pulseWidth);
+//
+//		  		  pulseWidth += i;
+//
+//		  	  }while(pulseWidth < 0.002);
+//		    }else{
+//		  	  pulseWidth = 0.002;
+//		  	  ccr = (pulseWidth * htim2.Init.Period) / 0.02;
+//		  	  htim2.Instance->CCR1 = ccr;
+//		    }
+//
+//		  break;
+//
+//	  case '2':
+//		  printf("Case 2\r\n");
+//		  pulseWidth = 0.002;
+//		  ccr = (pulseWidth * htim2.Init.Period) / 0.02;
+//		  htim2.Instance->CCR1 = ccr;
+//
+//		  break;
+//
+//	  case '3':
+//		  printf("Case 3\r\n");
+//		  pulseWidth = 0.001;
+//		  ccr = (pulseWidth * htim2.Init.Period) / 0.02;
+//		  htim2.Instance->CCR1 = ccr;
+//
+//		  break;
+//
+//	  default:
+//		  printf("Default\r\n");
+//		  pulseWidth = input;
+//		  ccr = (pulseWidth * htim2.Init.Period) / 0.02;
+//		  htim2.Instance->CCR1 = ccr;
+//
+//	  }
+
 
     /* USER CODE END WHILE */
 
