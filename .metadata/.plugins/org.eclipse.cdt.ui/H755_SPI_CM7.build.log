@@ -1,0 +1,10 @@
+18:58:45 **** Incremental Build of configuration Debug for project H755_SPI_CM7 ****
+make -j12 all 
+arm-none-eabi-size   H755_SPI_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  43204	    496	   2224	  45924	   b364	H755_SPI_CM7.elf
+Finished building: default.size.stdout
+ 
+
+18:58:45 Build Finished. 0 errors, 0 warnings. (took 860ms)
+

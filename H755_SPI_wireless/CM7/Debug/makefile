@@ -61,8 +61,8 @@ all: main-build
 main-build: H755_SPI_CM7.elf secondary-outputs
 
 # Tool invocations
-H755_SPI_CM7.elf H755_SPI_CM7.map: $(OBJS) $(USER_OBJS) C:\Users\david\STM32CubeIDE\workspace_1.10.1\H755_SPI\CM7\STM32H755ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "H755_SPI_CM7.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\david\STM32CubeIDE\workspace_1.10.1\H755_SPI\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="H755_SPI_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+H755_SPI_CM7.elf H755_SPI_CM7.map: $(OBJS) $(USER_OBJS) D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\STM32H755ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "H755_SPI_CM7.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="H755_SPI_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -1,0 +1,1077 @@
+2023-11-03 15:10:14,289 [INFO] Activator:177 - 
+
+
+2023-11-03 15:10:14,289 [INFO] Activator:178 - !SESSION log4j initialized
+2023-11-03 15:10:39,311 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2023-11-03 15:10:39,318 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2023-11-03 15:10:39,318 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2023-11-03 15:10:51,449 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :8:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:10:51,449 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:10:55,730 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:10:55,730 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:10:55,730 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:10:55,730 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:10:55,730 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:10:55,730 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:10:55,746 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:10:55,746 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:10:55,746 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:10:55,746 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:10:55,746 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:10:55,746 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:10:55,746 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:10:55,746 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:10:55,761 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:10:55,761 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:10:55,761 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:10:55,761 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:10:55,777 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:10:55,777 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:10:55,777 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:10:55,777 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:10:55,777 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:10:55,777 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:10:55,792 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:10:55,792 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:10:55,792 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:10:55,792 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:10:55,962 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:10:55,962 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:10:55,962 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:10:55,962 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:11:02,155 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:11:02,155 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:11:02,170 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:11:02,170 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:11:02,177 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:11:02,177 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:19,215 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:19,215 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:19,215 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:19,226 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:19,231 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:19,231 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:19,238 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:19,238 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:19,243 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:19,243 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:19,249 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:19,250 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:19,257 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:19,257 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:19,259 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:19,259 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:19,259 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:19,259 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:19,275 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:19,275 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:19,283 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:19,283 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:19,283 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:19,283 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:22,665 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:22,665 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:22,665 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:22,665 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:22,681 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:22,681 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:22,690 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:22,690 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:22,690 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:22,690 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:22,690 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:22,690 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:22,837 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:22,837 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:22,852 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:22,852 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:22,852 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:22,852 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:22,868 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:22,868 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:22,868 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:22,868 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:22,868 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:22,883 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:22,906 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:22,906 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:22,921 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:22,921 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:22,921 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:22,921 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:22,921 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:22,921 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:22,921 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:22,921 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:22,937 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:22,937 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:22,937 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:22,937 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:22,953 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:22,953 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:22,953 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:22,953 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:22,968 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:22,968 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:22,968 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:22,968 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:22,984 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:22,984 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:22,990 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:22,990 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,006 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,006 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,006 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,006 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,022 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,022 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,022 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,022 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,022 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,037 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,037 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,037 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,053 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,053 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,053 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,053 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,053 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,053 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,068 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,068 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,068 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,068 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,091 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,091 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,106 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,106 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,106 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,106 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,117 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,117 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,123 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,123 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,127 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,127 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,143 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,143 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,147 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,147 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,148 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,148 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,148 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,148 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,148 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,148 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,163 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,163 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,206 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,206 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,206 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,206 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,222 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,222 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,222 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,222 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,237 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,237 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,237 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,237 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,253 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,253 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,253 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,253 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,269 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,269 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,269 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,269 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,284 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,284 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:23,291 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:23,291 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:33,058 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:33,058 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:34,159 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:34,161 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:35,028 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:35,028 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:35,057 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:35,057 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:35,057 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:35,057 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:35,273 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:35,273 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:35,342 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:35,342 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:35,342 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:35,342 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:35,474 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:35,474 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:35,806 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:35,806 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:36,006 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:36,006 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:36,006 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:36,006 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:36,022 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:36,022 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:36,022 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:36,022 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:36,160 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:36,160 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:36,160 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:36,176 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:36,176 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:36,176 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:36,176 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:36,176 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:36,191 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:36,191 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:36,191 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:36,191 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:36,223 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:36,223 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:36,245 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:36,245 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:36,245 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:36,245 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:36,260 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:36,260 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:36,345 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:36,345 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:36,561 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:36,561 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:36,568 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:36,569 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:58,992 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:58,992 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:58,992 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:58,992 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:12:58,992 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:12:58,992 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:13:36,347 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:13:36,347 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:13:36,362 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:13:36,362 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:13:36,386 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:13:36,386 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:13:36,392 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:13:36,393 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:13:36,400 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:13:36,400 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 15:13:36,405 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :17:2: The content of elements must consist of well-formed character data or markup.
+2023-11-03 15:13:36,405 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-11-03 18:10:39,812 [INFO] Activator:177 - 
+
+
+2023-11-03 18:10:39,812 [INFO] Activator:178 - !SESSION log4j initialized
+2023-11-03 18:11:15,312 [INFO] Activator:177 - 
+
+
+2023-11-03 18:11:15,312 [INFO] Activator:178 - !SESSION log4j initialized
+2023-11-03 18:11:45,070 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2023-11-03 18:11:45,070 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2023-11-03 18:11:45,070 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2023-11-03 18:15:11,218 [ERROR] ApiDbMcu:1619 - Can't use Application install path:
+2023-11-03 18:15:13,503 [WARN] RulesReader:63 - Compatibility file://mcu/compatibility.xml not found
+2023-11-03 18:16:48,157 [INFO] McuFinderGlobals:44 - Set McuFinder mode to 2 (CubeIDE integrated)
+2023-11-03 18:16:50,749 [INFO] ApplicationProperties:181 - Using Application install path: C:\Program Files (x86)\STMicroelectronics\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420
+2023-11-03 18:16:50,771 [INFO] DbMcusXml:77 - Set database path to: C:\Program Files (x86)\STMicroelectronics\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/mcu/
+2023-11-03 18:16:50,771 [INFO] ApiDb:269 - Set plugin database path to: C:\Program Files (x86)\STMicroelectronics\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/plugins/boardmanager/
+2023-11-03 18:16:50,771 [WARN] ApiDb:254 - Overriding images path with different value:  => C:\Program Files (x86)\STMicroelectronics\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/plugins/mcufinder/images/
+2023-11-03 18:16:50,786 [INFO] ApiDb:249 - Set database path to: C:\Users\demia\.stmcufinder\plugins\mcufinder//mcu/
+2023-11-03 18:16:50,802 [INFO] DbMcusAds:124 - Set database path to: C:\Users\demia\.stmcufinder\plugins\mcufinder//mcu/
+2023-11-03 18:16:50,802 [INFO] CrossReferenceDbSqlite:201 - Set database path to: C:\Users\demia\.stmcufinder\plugins\mcufinder//mcu/cs/
+2023-11-03 18:16:50,933 [INFO] DbMcusXml:77 - Set database path to: C:\Program Files (x86)\STMicroelectronics\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/mcu/
+2023-11-03 18:16:50,933 [INFO] ApiDb:269 - Set plugin database path to: C:\Program Files (x86)\STMicroelectronics\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/plugins/boardmanager/
+2023-11-03 18:16:50,933 [INFO] ApiDb:256 - Set plugin images path to: C:\Program Files (x86)\STMicroelectronics\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/plugins/mcufinder/images/
+2023-11-03 18:16:50,933 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\demia\.stmcufinder\plugins\mcufinder/ => C:\Users\demia\.stmcufinder\plugins\mcufinder
+2023-11-03 18:16:50,933 [INFO] ApiDb:249 - Set database path to: C:\Users\demia\.stmcufinder\plugins\mcufinder//mcu/
+2023-11-03 18:16:50,933 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\demia\.stmcufinder\plugins\mcufinder/ => C:\Users\demia\.stmcufinder\plugins\mcufinder
+2023-11-03 18:16:50,933 [INFO] DbMcusAds:124 - Set database path to: C:\Users\demia\.stmcufinder\plugins\mcufinder//mcu/
+2023-11-03 18:16:50,933 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\demia\.stmcufinder\plugins\mcufinder/ => C:\Users\demia\.stmcufinder\plugins\mcufinder
+2023-11-03 18:16:50,933 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\demia\.stmcufinder\plugins\mcufinder/ => C:\Users\demia\.stmcufinder\plugins\mcufinder
+2023-11-03 18:16:50,933 [INFO] CrossReferenceDbSqlite:201 - Set database path to: C:\Users\demia\.stmcufinder\plugins\mcufinder//mcu/cs/
+2023-11-03 18:16:51,034 [INFO] MainPanel:242 - HeapMemory: 696254464
+2023-11-03 18:16:51,150 [INFO] DbMcusXml:77 - Set database path to: C:\Program Files (x86)\STMicroelectronics\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/mcu/
+2023-11-03 18:16:51,150 [INFO] ApiDb:269 - Set plugin database path to: C:\Program Files (x86)\STMicroelectronics\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/plugins/boardmanager/
+2023-11-03 18:16:51,150 [INFO] ApiDb:256 - Set plugin images path to: C:\Program Files (x86)\STMicroelectronics\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/plugins/mcufinder/images/
+2023-11-03 18:16:51,150 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\demia\.stmcufinder\plugins\mcufinder/ => C:\Users\demia\.stmcufinder\plugins\mcufinder
+2023-11-03 18:16:51,150 [INFO] ApiDb:249 - Set database path to: C:\Users\demia\.stmcufinder\plugins\mcufinder//mcu/
+2023-11-03 18:16:51,150 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\demia\.stmcufinder\plugins\mcufinder/ => C:\Users\demia\.stmcufinder\plugins\mcufinder
+2023-11-03 18:16:51,150 [INFO] DbMcusAds:124 - Set database path to: C:\Users\demia\.stmcufinder\plugins\mcufinder//mcu/
+2023-11-03 18:16:51,150 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\demia\.stmcufinder\plugins\mcufinder/ => C:\Users\demia\.stmcufinder\plugins\mcufinder
+2023-11-03 18:16:51,150 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\demia\.stmcufinder\plugins\mcufinder/ => C:\Users\demia\.stmcufinder\plugins\mcufinder
+2023-11-03 18:16:51,150 [INFO] CrossReferenceDbSqlite:201 - Set database path to: C:\Users\demia\.stmcufinder\plugins\mcufinder//mcu/cs/
+2023-11-03 18:16:51,220 [INFO] ApplicationProperties:181 - Using Application install path: C:\Program Files (x86)\STMicroelectronics\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420
+2023-11-03 18:16:51,220 [INFO] PluginManage:193 - Search for loadable plugins [exclusion list=, ]
+2023-11-03 18:16:51,220 [INFO] PluginManage:307 - Check plugin analytics
+2023-11-03 18:16:51,504 [INFO] AnalyticsPlugin:262 - Accepted Software Licenses: 
+2023-11-03 18:16:51,504 [INFO] AnalyticsPlugin:264 - Accepted CMSIS Pack Licenses: 
+2023-11-03 18:16:51,504 [INFO] AnalyticsPlugin:266 - Accepted Firmware Licenses: FW.H7.1.11.0,FW.H7.1.10.0
+2023-11-03 18:16:51,519 [INFO] PluginManage:356 - Loaded plugin analytics (category:tool,tabindex:-1)
+2023-11-03 18:16:51,519 [INFO] PluginManage:307 - Check plugin cadmodel
+2023-11-03 18:16:51,519 [INFO] CADModel:65 - Init CAD model plugin
+2023-11-03 18:16:51,519 [INFO] PluginManage:356 - Loaded plugin cadmodel (category:power,tabindex:5)
+2023-11-03 18:16:51,519 [INFO] PluginManage:307 - Check plugin clock
+2023-11-03 18:16:51,535 [INFO] PluginManage:356 - Loaded plugin clock (category:base,tabindex:2)
+2023-11-03 18:16:51,535 [INFO] PluginManage:307 - Check plugin ddr
+2023-11-03 18:16:51,551 [INFO] PluginManage:356 - Loaded plugin ddr (category:tool,tabindex:6)
+2023-11-03 18:16:51,551 [INFO] PluginManage:307 - Check plugin filemanager
+2023-11-03 18:16:51,770 [INFO] PluginManage:356 - Loaded plugin filemanager (category:base,tabindex:10)
+2023-11-03 18:16:51,770 [INFO] PluginManage:307 - Check plugin ipmanager
+2023-11-03 18:16:51,789 [INFO] PluginManage:356 - Loaded plugin ipmanager (category:base,tabindex:5)
+2023-11-03 18:16:51,789 [INFO] PluginManage:307 - Check plugin lpbam
+2023-11-03 18:16:51,805 [INFO] PluginManage:356 - Loaded plugin lpbam (category:base,tabindex:0)
+2023-11-03 18:16:51,805 [INFO] PluginManage:307 - Check plugin pinoutandconfiguration
+2023-11-03 18:16:51,820 [INFO] PluginManage:356 - Loaded plugin pinoutandconfiguration (category:base,tabindex:1)
+2023-11-03 18:16:51,820 [INFO] PluginManage:307 - Check plugin pinoutconfig
+2023-11-03 18:16:51,867 [INFO] PluginManage:356 - Loaded plugin pinoutconfig (category:base,tabindex:0)
+2023-11-03 18:16:51,867 [INFO] PluginManage:307 - Check plugin power
+2023-11-03 18:16:51,874 [INFO] PluginManage:356 - Loaded plugin power (category:power,tabindex:4)
+2023-11-03 18:16:51,874 [INFO] PluginManage:307 - Check plugin projectmanager
+2023-11-03 18:16:51,905 [INFO] PluginManage:356 - Loaded plugin projectmanager (category:projectmanager,tabindex:3)
+2023-11-03 18:16:51,905 [INFO] PluginManage:307 - Check plugin thirdparty
+2023-11-03 18:16:52,074 [INFO] PluginManage:356 - Loaded plugin thirdparty (category:base,tabindex:-1)
+2023-11-03 18:16:52,074 [WARN] IntegrityCheckThread:82 - waiting for thirdparty lock release [integrity check]
+2023-11-03 18:16:52,074 [INFO] PluginManage:307 - Check plugin tools
+2023-11-03 18:16:52,074 [INFO] IntegrityCheckThread:84 - entering critical section [integrity check]
+2023-11-03 18:16:52,074 [INFO] ThirdPartyUpdaterWithRetryManager:70 - Updater plugin not ready yet. [1/15]
+2023-11-03 18:16:52,074 [INFO] PluginManage:356 - Loaded plugin tools (category:base,tabindex:7)
+2023-11-03 18:16:52,074 [INFO] PluginManage:307 - Check plugin tutovideos
+2023-11-03 18:16:52,391 [INFO] PluginManage:356 - Loaded plugin tutovideos (category:base,tabindex:-1)
+2023-11-03 18:16:52,391 [INFO] PluginManage:307 - Check plugin updater
+2023-11-03 18:16:52,422 [INFO] PluginManage:356 - Loaded plugin updater (category:base,tabindex:12)
+2023-11-03 18:16:52,422 [INFO] PluginManage:280 - PluginManage : Loaded plugins [15]
+2023-11-03 18:16:52,907 [INFO] PinOutPanel:1468 - setPackage(No Configuration,No Configuration)
+2023-11-03 18:16:53,023 [INFO] CADModel:98 - CPN selected for project level
+2023-11-03 18:16:53,054 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,054 [INFO] PluginManager:217 - loadIPPluginJar : add adc
+2023-11-03 18:16:53,054 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,054 [INFO] PluginManager:217 - loadIPPluginJar : add aes
+2023-11-03 18:16:53,054 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,054 [INFO] PluginManager:217 - loadIPPluginJar : add can
+2023-11-03 18:16:53,054 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,054 [INFO] PluginManager:217 - loadIPPluginJar : add comp
+2023-11-03 18:16:53,070 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,070 [INFO] PluginManager:217 - loadIPPluginJar : add cryp
+2023-11-03 18:16:53,076 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,076 [INFO] PluginManager:217 - loadIPPluginJar : add dfsdm
+2023-11-03 18:16:53,076 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,076 [INFO] PluginManager:217 - loadIPPluginJar : add dma
+2023-11-03 18:16:53,076 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,076 [INFO] PluginManager:217 - loadIPPluginJar : add dma3
+2023-11-03 18:16:53,076 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,092 [INFO] PluginManager:217 - loadIPPluginJar : add fatfs
+2023-11-03 18:16:53,092 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,092 [INFO] PluginManager:217 - loadIPPluginJar : add fmc
+2023-11-03 18:16:53,092 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,092 [INFO] PluginManager:217 - loadIPPluginJar : add freertos
+2023-11-03 18:16:53,108 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,108 [INFO] PluginManager:217 - loadIPPluginJar : add genericplugin
+2023-11-03 18:16:53,108 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,108 [INFO] PluginManager:217 - loadIPPluginJar : add gfxmmu
+2023-11-03 18:16:53,108 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,108 [INFO] PluginManager:217 - loadIPPluginJar : add gic
+2023-11-03 18:16:53,123 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,123 [INFO] PluginManager:217 - loadIPPluginJar : add gpio
+2023-11-03 18:16:53,123 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,123 [INFO] PluginManager:217 - loadIPPluginJar : add gtzc
+2023-11-03 18:16:53,123 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,123 [INFO] PluginManager:217 - loadIPPluginJar : add hash
+2023-11-03 18:16:53,123 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,123 [INFO] PluginManager:217 - loadIPPluginJar : add i2c
+2023-11-03 18:16:53,139 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,139 [INFO] PluginManager:217 - loadIPPluginJar : add i2s
+2023-11-03 18:16:53,139 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,139 [INFO] PluginManager:217 - loadIPPluginJar : add ipddr
+2023-11-03 18:16:53,139 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,139 [INFO] PluginManager:217 - loadIPPluginJar : add linkedlist
+2023-11-03 18:16:53,154 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,154 [INFO] PluginManager:217 - loadIPPluginJar : add lorawan
+2023-11-03 18:16:53,154 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,154 [INFO] PluginManager:217 - loadIPPluginJar : add ltdc
+2023-11-03 18:16:53,154 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,154 [INFO] PluginManager:217 - loadIPPluginJar : add mdma
+2023-11-03 18:16:53,170 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,170 [INFO] PluginManager:217 - loadIPPluginJar : add nvic
+2023-11-03 18:16:53,170 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,177 [INFO] PluginManager:217 - loadIPPluginJar : add opamp
+2023-11-03 18:16:53,177 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,177 [INFO] PluginManager:217 - loadIPPluginJar : add openamp
+2023-11-03 18:16:53,177 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,177 [INFO] PluginManager:217 - loadIPPluginJar : add pdm2pcm
+2023-11-03 18:16:53,192 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,192 [INFO] PluginManager:217 - loadIPPluginJar : add plateformsettings
+2023-11-03 18:16:53,192 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,192 [INFO] PluginManager:217 - loadIPPluginJar : add quadspi
+2023-11-03 18:16:53,192 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,192 [INFO] PluginManager:217 - loadIPPluginJar : add resmgrutility
+2023-11-03 18:16:53,208 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,208 [INFO] PluginManager:217 - loadIPPluginJar : add sai
+2023-11-03 18:16:53,208 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,208 [INFO] PluginManager:217 - loadIPPluginJar : add spi
+2023-11-03 18:16:53,208 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,208 [INFO] PluginManager:217 - loadIPPluginJar : add stm32_wpan
+2023-11-03 18:16:53,208 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,208 [INFO] PluginManager:217 - loadIPPluginJar : add tim
+2023-11-03 18:16:53,223 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,223 [INFO] PluginManager:217 - loadIPPluginJar : add touchsensing
+2023-11-03 18:16:53,223 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,223 [INFO] PluginManager:217 - loadIPPluginJar : add tracer_emb
+2023-11-03 18:16:53,223 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,223 [INFO] PluginManager:217 - loadIPPluginJar : add ts
+2023-11-03 18:16:53,223 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,223 [INFO] PluginManager:217 - loadIPPluginJar : add tsc
+2023-11-03 18:16:53,223 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,223 [INFO] PluginManager:217 - loadIPPluginJar : add ucpd
+2023-11-03 18:16:53,239 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,239 [INFO] PluginManager:217 - loadIPPluginJar : add usart
+2023-11-03 18:16:53,239 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:16:53,239 [INFO] PluginManager:217 - loadIPPluginJar : add usbx
+2023-11-03 18:16:53,778 [FATAL] Updater:301 - Updater called before beeing initialized
+2023-11-03 18:16:54,021 [FATAL] Updater:301 - Updater called before beeing initialized
+2023-11-03 18:16:54,041 [INFO] DbMcusAds:52 - JSON generation date=Tue Mar 07 02:50:55 CST 2023 (1678179055114)
+2023-11-03 18:16:54,041 [FATAL] Updater:301 - Updater called before beeing initialized
+2023-11-03 18:16:54,110 [WARN] DetailPanel:344 - Failed to get advertising image, set to default
+2023-11-03 18:16:54,361 [FATAL] Updater:301 - Updater called before beeing initialized
+2023-11-03 18:16:54,377 [FATAL] Updater:301 - Updater called before beeing initialized
+2023-11-03 18:16:54,377 [FATAL] Updater:301 - Updater called before beeing initialized
+2023-11-03 18:16:54,377 [WARN] DetailPanel:344 - Failed to get advertising image, set to default
+2023-11-03 18:16:54,377 [FATAL] Updater:301 - Updater called before beeing initialized
+2023-11-03 18:16:54,462 [ERROR] Updater:1105 - MainUpdater not yet initialized. External WinMGr cannot be set.
+2023-11-03 18:16:54,462 [INFO] Updater:1041 - Updater Version found : 6.6.1
+2023-11-03 18:16:54,481 [INFO] ApplicationProperties:181 - Using Application install path: C:\Program Files (x86)\STMicroelectronics\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420
+2023-11-03 18:16:54,681 [INFO] MainUpdater:2768 - connection check result : 10
+2023-11-03 18:16:54,681 [INFO] MainUpdater:280 - Updater Check For Update Now.
+2023-11-03 18:16:54,681 [INFO] MicroXplorer:481 - Change Database Version : DB.6.0.60
+2023-11-03 18:16:54,898 [INFO] CheckServerUpdateThread:119 - End of CheckServer Thread
+2023-11-03 18:16:55,299 [INFO] MainUpdater:2768 - connection check result : 10
+2023-11-03 18:16:55,299 [INFO] MainUpdater:2768 - connection check result : 10
+2023-11-03 18:16:55,361 [INFO] MicroXplorer:451 - Change Database Path : 
+2023-11-03 18:16:55,361 [INFO] MicroXplorer:481 - Change Database Version : DB.6.0.60
+2023-11-03 18:16:55,361 [WARN] ThirdParty:827 - waiting for thirdparty lock release [close project]
+2023-11-03 18:16:55,383 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-SMBUS.2.1.0
+2023-11-03 18:16:55,446 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-F7.1.1.0
+2023-11-03 18:16:55,502 [ERROR] RealEvaluatedCondition:433 - Found unsupported composite condition: GROUP='STM32_MetaDataManager' CLASS='Data Exchange'
+2023-11-03 18:16:55,502 [ERROR] RealEvaluatedCondition:433 - Found unsupported composite condition: CLASS='Data Exchange' GROUP='STM32_MetaDataManager'
+2023-11-03 18:16:55,502 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.FP-SNS-MOTENV1.4.3.0
+2023-11-03 18:16:55,518 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.FP-SNS-MOTENV1.4.3.2
+2023-11-03 18:16:55,518 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.FP-SNS-FLIGHT1.5.0.0
+2023-11-03 18:16:55,533 [ERROR] RealEvaluatedCondition:433 - Found unsupported composite condition: GROUP='STM32_MetaDataManager' CLASS='Data Exchange'
+2023-11-03 18:16:55,533 [ERROR] RealEvaluatedCondition:433 - Found unsupported composite condition: CLASS='Data Exchange' GROUP='STM32_MetaDataManager'
+2023-11-03 18:16:55,549 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.FP-SNS-MOTENV1.4.3.1
+2023-11-03 18:16:55,565 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.FP-SNS-FLIGHT1.5.0.1
+2023-11-03 18:16:55,584 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLE1.6.2.4
+2023-11-03 18:16:55,584 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.FP-SNS-FLIGHT1.5.0.2
+2023-11-03 18:16:55,599 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-DISPLAY.3.0.0
+2023-11-03 18:16:55,615 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLE1.7.0.0
+2023-11-03 18:16:55,615 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOUCHGFX.4.22.0
+2023-11-03 18:16:55,631 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOUCHGFX.4.22.1
+2023-11-03 18:16:55,631 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.FP-SNS-SMARTAG2.1.2.0
+2023-11-03 18:16:55,646 [WARN] PackLoader:242 - Cannot read IP mode file for WES.I-CUBE-Cesium.1.3.0
+2023-11-03 18:16:55,646 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLE2.3.3.0
+2023-11-03 18:16:55,662 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOUCHGFX.4.21.3
+2023-11-03 18:16:55,662 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOUCHGFX.4.21.4
+2023-11-03 18:16:55,677 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ALGOBUILD.1.3.0
+2023-11-03 18:16:55,700 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-G0.1.1.0
+2023-11-03 18:16:55,715 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC4.3.0.0
+2023-11-03 18:16:55,746 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLEMGR.3.0.0
+2023-11-03 18:16:55,746 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.FP-ATR-SIGFOX1.3.2.0
+2023-11-03 18:16:55,816 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-MEMS1.9.5.0
+2023-11-03 18:16:56,132 [WARN] PackLoader:242 - Cannot read IP mode file for SEGGER.I-CUBE-embOS.1.3.1
+2023-11-03 18:16:56,236 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-GNSS1.6.0.0
+2023-11-03 18:16:56,267 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-F4.1.1.0
+2023-11-03 18:16:56,283 [WARN] PackLoader:242 - Cannot read IP mode file for wolfSSL.I-CUBE-wolfSSL.5.6.0
+2023-11-03 18:16:56,314 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-L5.2.0.0
+2023-11-03 18:16:56,368 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-MEMS1.9.6.0
+2023-11-03 18:16:56,683 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-EEPRMA1.4.2.0
+2023-11-03 18:16:56,691 [WARN] PackLoader:242 - Cannot read IP mode file for ITTIA_DB.I-CUBE-ITTIADB.8.8.0
+2023-11-03 18:16:56,701 [WARN] PackLoader:242 - Cannot read IP mode file for emotas.I-CUBE-CANOPEN.1.1.3
+2023-11-03 18:16:56,709 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLEMGR.2.0.0
+2023-11-03 18:16:56,751 [WARN] ConditionMgr:437 - getConditionDescription Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2023-11-03 18:16:56,751 [WARN] ConditionMgr:437 - getConditionDescription Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2023-11-03 18:16:56,761 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-H7.3.1.0
+2023-11-03 18:16:56,761 [WARN] ConditionMgr:1038 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2023-11-03 18:16:56,761 [WARN] ConditionMgr:1038 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2023-11-03 18:16:56,761 [WARN] ConditionMgr:1038 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2023-11-03 18:16:56,761 [WARN] ConditionMgr:1038 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2023-11-03 18:16:56,761 [WARN] ConditionMgr:1038 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2023-11-03 18:16:56,771 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC7.1.0.1
+2023-11-03 18:16:56,779 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC7.1.0.0
+2023-11-03 18:16:56,789 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC6.3.0.0
+2023-11-03 18:16:56,791 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-EEPRMA1.4.1.0
+2023-11-03 18:16:56,801 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AI.8.1.0
+2023-11-03 18:16:56,821 [WARN] ConditionMgr:437 - getConditionDescription Invalid condition id : LAN8742 Phy interface Condition cause : null
+2023-11-03 18:16:56,821 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-L4.2.0.0
+2023-11-03 18:16:56,829 [WARN] ConditionMgr:1038 - genDependencies : Invalid condition id : LAN8742 Phy interface Condition cause : null
+2023-11-03 18:16:56,829 [WARN] ConditionMgr:1038 - genDependencies : Invalid condition id : LAN8742 Phy interface Condition cause : null
+2023-11-03 18:16:56,832 [WARN] ConditionMgr:1038 - genDependencies : Invalid condition id : LAN8742 Phy interface Condition cause : null
+2023-11-03 18:16:56,842 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-SFXS2LP1.4.0.0
+2023-11-03 18:16:56,850 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ISPU.1.1.0
+2023-11-03 18:16:56,852 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AI.8.0.0
+2023-11-03 18:16:56,872 [WARN] ConditionMgr:437 - getConditionDescription Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2023-11-03 18:16:56,872 [WARN] ConditionMgr:437 - getConditionDescription Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2023-11-03 18:16:56,872 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-WB.2.0.0
+2023-11-03 18:16:56,872 [WARN] ConditionMgr:1038 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2023-11-03 18:16:56,872 [WARN] ConditionMgr:1038 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2023-11-03 18:16:56,872 [WARN] ConditionMgr:1038 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2023-11-03 18:16:56,872 [WARN] ConditionMgr:1038 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2023-11-03 18:16:56,872 [WARN] ConditionMgr:1038 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2023-11-03 18:16:56,882 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-FREERTOS.1.0.1
+2023-11-03 18:16:56,900 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-L5.1.1.0
+2023-11-03 18:16:56,940 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AI.8.0.1
+2023-11-03 18:16:56,952 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-SUBG2.5.0.0
+2023-11-03 18:16:56,973 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOF1.3.3.1
+2023-11-03 18:16:57,003 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0
+2023-11-03 18:16:57,013 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOF1.3.3.0
+2023-11-03 18:16:57,033 [WARN] PackLoader:242 - Cannot read IP mode file for Infineon.AIROC-Wi-Fi-Bluetooth-STM32.1.5.1
+2023-11-03 18:16:57,053 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-G4.1.0.0
+2023-11-03 18:16:57,081 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-L4.1.0.0
+2023-11-03 18:16:57,162 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-MEMS1.10.0.0
+2023-11-03 18:16:57,320 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-FREERTOS.1.1.0
+2023-11-03 18:16:57,336 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-WL.1.0.0
+2023-11-03 18:16:57,351 [WARN] PackLoader:242 - Cannot read IP mode file for portGmbH.I-Cube-SoM-uGOAL.1.1.0
+2023-11-03 18:16:57,351 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ALS.1.0.1
+2023-11-03 18:16:57,386 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-WB.1.1.0
+2023-11-03 18:16:57,396 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.FP-ATR-ASTRA1.2.0.0
+2023-11-03 18:16:57,396 [INFO] ThirdParty:929 - Integrity check success = true
+2023-11-03 18:16:57,396 [INFO] IntegrityCheckThread:98 - exiting critical section [integrity check]
+2023-11-03 18:16:57,396 [INFO] IntegrityCheckThread:101 - End integrity checks thread
+2023-11-03 18:16:57,396 [INFO] ThirdParty:829 - entering critical section [close project]
+2023-11-03 18:16:57,396 [INFO] ThirdParty:839 - exiting critical section [close project]
+2023-11-03 18:16:57,404 [INFO] PinOutPanel:1468 - setPackage(No Configuration,No Configuration)
+2023-11-03 18:16:57,404 [INFO] UtilMem:74 - Begin LoadConfig() Used Memory: 586705104 Bytes (696254464)
+2023-11-03 18:16:57,414 [INFO] MicroXplorer:451 - Change Database Path : 
+2023-11-03 18:16:57,414 [INFO] MicroXplorer:481 - Change Database Version : DB.6.0.60
+2023-11-03 18:16:57,414 [INFO] OpenFileManager:307 - Change cursor
+2023-11-03 18:16:57,530 [INFO] Mcu:1922 - Initializing MCU STM32H755ZITx STM32H755ZITx STM32H755ZIT3
+2023-11-03 18:17:03,652 [INFO] Context:654 - Trying to add GPIOservice into a context  which must be forbidden
+2023-11-03 18:17:03,652 [INFO] Context:654 - Trying to add GPIOservice into a context  which must be forbidden
+2023-11-03 18:17:06,751 [INFO] Context:654 - Trying to add GPIOservice into a context  which must be forbidden
+2023-11-03 18:17:06,751 [INFO] Context:654 - Trying to add GPIOservice into a context  which must be forbidden
+2023-11-03 18:17:07,016 [WARN] ApiManager:308 - Cannot register API 'Board Extension:GNSS1A1' from pack STMicroelectronics.X-CUBE-GNSS1.6.0.0: no header file found
+2023-11-03 18:17:07,016 [WARN] ApiManager:308 - Cannot register API 'Board Support:Custom' from pack STMicroelectronics.X-CUBE-GNSS1.6.0.0: no header file found
+2023-11-03 18:17:07,032 [WARN] ApiManager:308 - Cannot register API 'Data Exchange:lib_gnss' from pack STMicroelectronics.X-CUBE-GNSS1.6.0.0: no header file found
+2023-11-03 18:17:07,201 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS01A3' from pack STMicroelectronics.X-CUBE-MEMS1.9.6.0: no header file found
+2023-11-03 18:17:07,201 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS01A2' from pack STMicroelectronics.X-CUBE-MEMS1.9.6.0: no header file found
+2023-11-03 18:17:07,203 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS02A1' from pack STMicroelectronics.X-CUBE-MEMS1.9.6.0: no header file found
+2023-11-03 18:17:07,213 [WARN] ApiManager:308 - Cannot register API 'Board Extension:EEPRMA2' from pack STMicroelectronics.X-CUBE-EEPRMA1.4.2.0: no header file found
+2023-11-03 18:17:07,213 [WARN] ApiManager:308 - Cannot register API 'Board Extension:PGEEZ1' from pack STMicroelectronics.X-CUBE-EEPRMA1.4.2.0: no header file found
+2023-11-03 18:17:07,213 [WARN] ApiManager:308 - Cannot register API 'Board Part:M24' from pack STMicroelectronics.X-CUBE-EEPRMA1.4.2.0: no header file found
+2023-11-03 18:17:07,213 [WARN] ApiManager:308 - Cannot register API 'Board Part:M95' from pack STMicroelectronics.X-CUBE-EEPRMA1.4.2.0: no header file found
+2023-11-03 18:17:07,213 [WARN] ApiManager:308 - Cannot register API 'Board Part:M95P32' from pack STMicroelectronics.X-CUBE-EEPRMA1.4.2.0: no header file found
+2023-11-03 18:17:07,213 [WARN] ApiManager:308 - Cannot register API 'PGEEZ1:SPI' from pack STMicroelectronics.X-CUBE-EEPRMA1.4.2.0: no header file found
+2023-11-03 18:17:07,213 [WARN] ApiManager:308 - Cannot register API 'PGEEZ1:QDSPI' from pack STMicroelectronics.X-CUBE-EEPRMA1.4.2.0: no header file found
+2023-11-03 18:17:07,213 [WARN] ApiManager:308 - Cannot register API 'Wireless:BlueNRG-MS' from pack STMicroelectronics.X-CUBE-BLE1.6.2.4: no header file found
+2023-11-03 18:17:07,223 [INFO] RtosManager:488 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS_M7
+2023-11-03 18:17:07,223 [INFO] RtosManager:488 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS_M7
+2023-11-03 18:17:07,231 [INFO] RtosManager:488 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS_M7
+2023-11-03 18:17:07,231 [INFO] RtosManager:488 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS_M7
+2023-11-03 18:17:07,231 [WARN] ModelIntegratedComponent:185 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
+2023-11-03 18:17:07,231 [WARN] ApiManager:308 - Cannot register API 'Board Extension:NFC04A1' from pack STMicroelectronics.X-CUBE-NFC4.3.0.0: no header file found
+2023-11-03 18:17:07,242 [WARN] ApiManager:308 - Cannot register API 'Board Extension:S2868A1' from pack STMicroelectronics.X-CUBE-SUBG2.5.0.0: no header file found
+2023-11-03 18:17:07,242 [WARN] ApiManager:308 - Cannot register API 'Board Extension:S2868A2' from pack STMicroelectronics.X-CUBE-SUBG2.5.0.0: no header file found
+2023-11-03 18:17:07,242 [WARN] ApiManager:308 - Cannot register API 'Board Extension:S2915A1' from pack STMicroelectronics.X-CUBE-SUBG2.5.0.0: no header file found
+2023-11-03 18:17:07,262 [WARN] ApiManager:308 - Cannot register API 'Wireless:BlueNRG-MS' from pack STMicroelectronics.X-CUBE-BLE1.7.0.0: no header file found
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,262 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,340 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS01A3' from pack STMicroelectronics.X-CUBE-MEMS1.10.0.0: no header file found
+2023-11-03 18:17:07,340 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS02A1' from pack STMicroelectronics.X-CUBE-MEMS1.10.0.0: no header file found
+2023-11-03 18:17:07,340 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS4A1' from pack STMicroelectronics.X-CUBE-MEMS1.10.0.0: no header file found
+2023-11-03 18:17:07,355 [WARN] ApiManager:308 - Cannot register API 'Board Extension:NFC07A1' from pack STMicroelectronics.X-CUBE-NFC7.1.0.1: no header file found
+2023-11-03 18:17:07,355 [WARN] ApiManager:308 - Cannot register API 'Board Extension:NFC07A1' from pack STMicroelectronics.X-CUBE-NFC7.1.0.0: no header file found
+2023-11-03 18:17:07,355 [WARN] ApiManager:308 - Cannot register API 'Board Extension:NFC06A1' from pack STMicroelectronics.X-CUBE-NFC6.3.0.0: no header file found
+2023-11-03 18:17:07,355 [WARN] ApiManager:308 - Cannot register API 'Board Extension:NFC08A1' from pack STMicroelectronics.X-CUBE-NFC6.3.0.0: no header file found
+2023-11-03 18:17:07,355 [WARN] ApiManager:308 - Cannot register API 'Board Extension:EEPRMA1' from pack STMicroelectronics.X-CUBE-EEPRMA1.4.1.0: no header file found
+2023-11-03 18:17:07,355 [WARN] ApiManager:308 - Cannot register API 'Board Extension:EEPRMA2' from pack STMicroelectronics.X-CUBE-EEPRMA1.4.1.0: no header file found
+2023-11-03 18:17:07,355 [WARN] ApiManager:308 - Cannot register API 'Board Extension:PGEEZ1' from pack STMicroelectronics.X-CUBE-EEPRMA1.4.1.0: no header file found
+2023-11-03 18:17:07,355 [WARN] ApiManager:308 - Cannot register API 'Board Part:M24' from pack STMicroelectronics.X-CUBE-EEPRMA1.4.1.0: no header file found
+2023-11-03 18:17:07,355 [WARN] ApiManager:308 - Cannot register API 'Board Part:M95' from pack STMicroelectronics.X-CUBE-EEPRMA1.4.1.0: no header file found
+2023-11-03 18:17:07,355 [WARN] ApiManager:308 - Cannot register API 'Board Part:M95P32' from pack STMicroelectronics.X-CUBE-EEPRMA1.4.1.0: no header file found
+2023-11-03 18:17:07,355 [WARN] ApiManager:308 - Cannot register API 'PGEEZ1:SPI' from pack STMicroelectronics.X-CUBE-EEPRMA1.4.1.0: no header file found
+2023-11-03 18:17:07,355 [WARN] ApiManager:308 - Cannot register API 'PGEEZ1:QDSPI' from pack STMicroelectronics.X-CUBE-EEPRMA1.4.1.0: no header file found
+2023-11-03 18:17:07,424 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS01A3' from pack STMicroelectronics.X-CUBE-MEMS1.9.5.0: no header file found
+2023-11-03 18:17:07,424 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS01A2' from pack STMicroelectronics.X-CUBE-MEMS1.9.5.0: no header file found
+2023-11-03 18:17:07,424 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS02A1' from pack STMicroelectronics.X-CUBE-MEMS1.9.5.0: no header file found
+2023-11-03 18:17:07,440 [WARN] ApiManager:308 - Cannot register API 'Board Extension:S2868A1' from pack STMicroelectronics.X-CUBE-SFXS2LP1.4.0.0: no header file found
+2023-11-03 18:17:07,440 [WARN] ApiManager:308 - Cannot register API 'Board Extension:S2868A2' from pack STMicroelectronics.X-CUBE-SFXS2LP1.4.0.0: no header file found
+2023-11-03 18:17:07,440 [WARN] ApiManager:308 - Cannot register API 'Board Extension:S2915A1' from pack STMicroelectronics.X-CUBE-SFXS2LP1.4.0.0: no header file found
+2023-11-03 18:17:07,440 [WARN] ApiManager:308 - Cannot register API 'Wireless:BlueNRG-2' from pack STMicroelectronics.X-CUBE-BLE2.3.3.0: no header file found
+2023-11-03 18:17:07,456 [WARN] ApiManager:308 - Cannot register API 'Board Extension:GNSS1A1' from pack STMicroelectronics.X-CUBE-GNSS1.6.0.0: no header file found
+2023-11-03 18:17:07,456 [WARN] ApiManager:308 - Cannot register API 'Board Support:Custom' from pack STMicroelectronics.X-CUBE-GNSS1.6.0.0: no header file found
+2023-11-03 18:17:07,456 [WARN] ApiManager:308 - Cannot register API 'Data Exchange:lib_gnss' from pack STMicroelectronics.X-CUBE-GNSS1.6.0.0: no header file found
+2023-11-03 18:17:07,540 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS01A3' from pack STMicroelectronics.X-CUBE-MEMS1.9.6.0: no header file found
+2023-11-03 18:17:07,540 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS01A2' from pack STMicroelectronics.X-CUBE-MEMS1.9.6.0: no header file found
+2023-11-03 18:17:07,540 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS02A1' from pack STMicroelectronics.X-CUBE-MEMS1.9.6.0: no header file found
+2023-11-03 18:17:07,540 [WARN] ApiManager:308 - Cannot register API 'Board Extension:EEPRMA2' from pack STMicroelectronics.X-CUBE-EEPRMA1.4.2.0: no header file found
+2023-11-03 18:17:07,540 [WARN] ApiManager:308 - Cannot register API 'Board Extension:PGEEZ1' from pack STMicroelectronics.X-CUBE-EEPRMA1.4.2.0: no header file found
+2023-11-03 18:17:07,540 [WARN] ApiManager:308 - Cannot register API 'Board Part:M24' from pack STMicroelectronics.X-CUBE-EEPRMA1.4.2.0: no header file found
+2023-11-03 18:17:07,540 [WARN] ApiManager:308 - Cannot register API 'Board Part:M95' from pack STMicroelectronics.X-CUBE-EEPRMA1.4.2.0: no header file found
+2023-11-03 18:17:07,540 [WARN] ApiManager:308 - Cannot register API 'Board Part:M95P32' from pack STMicroelectronics.X-CUBE-EEPRMA1.4.2.0: no header file found
+2023-11-03 18:17:07,540 [WARN] ApiManager:308 - Cannot register API 'PGEEZ1:SPI' from pack STMicroelectronics.X-CUBE-EEPRMA1.4.2.0: no header file found
+2023-11-03 18:17:07,540 [WARN] ApiManager:308 - Cannot register API 'PGEEZ1:QDSPI' from pack STMicroelectronics.X-CUBE-EEPRMA1.4.2.0: no header file found
+2023-11-03 18:17:07,556 [WARN] ApiManager:308 - Cannot register API 'Wireless:BlueNRG-MS' from pack STMicroelectronics.X-CUBE-BLE1.6.2.4: no header file found
+2023-11-03 18:17:07,556 [INFO] RtosManager:488 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS_M4
+2023-11-03 18:17:07,556 [INFO] RtosManager:488 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS_M4
+2023-11-03 18:17:07,556 [INFO] RtosManager:488 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS_M4
+2023-11-03 18:17:07,556 [INFO] RtosManager:488 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS_M4
+2023-11-03 18:17:07,556 [WARN] ModelIntegratedComponent:185 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
+2023-11-03 18:17:07,562 [WARN] ApiManager:308 - Cannot register API 'Board Extension:NFC04A1' from pack STMicroelectronics.X-CUBE-NFC4.3.0.0: no header file found
+2023-11-03 18:17:07,562 [WARN] ApiManager:308 - Cannot register API 'Board Extension:S2868A1' from pack STMicroelectronics.X-CUBE-SUBG2.5.0.0: no header file found
+2023-11-03 18:17:07,562 [WARN] ApiManager:308 - Cannot register API 'Board Extension:S2868A2' from pack STMicroelectronics.X-CUBE-SUBG2.5.0.0: no header file found
+2023-11-03 18:17:07,562 [WARN] ApiManager:308 - Cannot register API 'Board Extension:S2915A1' from pack STMicroelectronics.X-CUBE-SUBG2.5.0.0: no header file found
+2023-11-03 18:17:07,578 [WARN] ApiManager:308 - Cannot register API 'Wireless:BlueNRG-MS' from pack STMicroelectronics.X-CUBE-BLE1.7.0.0: no header file found
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,578 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-11-03 18:17:07,678 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS01A3' from pack STMicroelectronics.X-CUBE-MEMS1.10.0.0: no header file found
+2023-11-03 18:17:07,678 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS02A1' from pack STMicroelectronics.X-CUBE-MEMS1.10.0.0: no header file found
+2023-11-03 18:17:07,678 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS4A1' from pack STMicroelectronics.X-CUBE-MEMS1.10.0.0: no header file found
+2023-11-03 18:17:07,678 [WARN] ApiManager:308 - Cannot register API 'Board Extension:NFC07A1' from pack STMicroelectronics.X-CUBE-NFC7.1.0.1: no header file found
+2023-11-03 18:17:07,678 [WARN] ApiManager:308 - Cannot register API 'Board Extension:NFC07A1' from pack STMicroelectronics.X-CUBE-NFC7.1.0.0: no header file found
+2023-11-03 18:17:07,678 [WARN] ApiManager:308 - Cannot register API 'Board Extension:NFC06A1' from pack STMicroelectronics.X-CUBE-NFC6.3.0.0: no header file found
+2023-11-03 18:17:07,678 [WARN] ApiManager:308 - Cannot register API 'Board Extension:NFC08A1' from pack STMicroelectronics.X-CUBE-NFC6.3.0.0: no header file found
+2023-11-03 18:17:07,678 [WARN] ApiManager:308 - Cannot register API 'Board Extension:EEPRMA1' from pack STMicroelectronics.X-CUBE-EEPRMA1.4.1.0: no header file found
+2023-11-03 18:17:07,678 [WARN] ApiManager:308 - Cannot register API 'Board Extension:EEPRMA2' from pack STMicroelectronics.X-CUBE-EEPRMA1.4.1.0: no header file found
+2023-11-03 18:17:07,678 [WARN] ApiManager:308 - Cannot register API 'Board Extension:PGEEZ1' from pack STMicroelectronics.X-CUBE-EEPRMA1.4.1.0: no header file found
+2023-11-03 18:17:07,678 [WARN] ApiManager:308 - Cannot register API 'Board Part:M24' from pack STMicroelectronics.X-CUBE-EEPRMA1.4.1.0: no header file found
+2023-11-03 18:17:07,678 [WARN] ApiManager:308 - Cannot register API 'Board Part:M95' from pack STMicroelectronics.X-CUBE-EEPRMA1.4.1.0: no header file found
+2023-11-03 18:17:07,678 [WARN] ApiManager:308 - Cannot register API 'Board Part:M95P32' from pack STMicroelectronics.X-CUBE-EEPRMA1.4.1.0: no header file found
+2023-11-03 18:17:07,678 [WARN] ApiManager:308 - Cannot register API 'PGEEZ1:SPI' from pack STMicroelectronics.X-CUBE-EEPRMA1.4.1.0: no header file found
+2023-11-03 18:17:07,678 [WARN] ApiManager:308 - Cannot register API 'PGEEZ1:QDSPI' from pack STMicroelectronics.X-CUBE-EEPRMA1.4.1.0: no header file found
+2023-11-03 18:17:07,794 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS01A3' from pack STMicroelectronics.X-CUBE-MEMS1.9.5.0: no header file found
+2023-11-03 18:17:07,794 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS01A2' from pack STMicroelectronics.X-CUBE-MEMS1.9.5.0: no header file found
+2023-11-03 18:17:07,794 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS02A1' from pack STMicroelectronics.X-CUBE-MEMS1.9.5.0: no header file found
+2023-11-03 18:17:07,810 [WARN] ApiManager:308 - Cannot register API 'Board Extension:S2868A1' from pack STMicroelectronics.X-CUBE-SFXS2LP1.4.0.0: no header file found
+2023-11-03 18:17:07,810 [WARN] ApiManager:308 - Cannot register API 'Board Extension:S2868A2' from pack STMicroelectronics.X-CUBE-SFXS2LP1.4.0.0: no header file found
+2023-11-03 18:17:07,810 [WARN] ApiManager:308 - Cannot register API 'Board Extension:S2915A1' from pack STMicroelectronics.X-CUBE-SFXS2LP1.4.0.0: no header file found
+2023-11-03 18:17:07,810 [WARN] ApiManager:308 - Cannot register API 'Wireless:BlueNRG-2' from pack STMicroelectronics.X-CUBE-BLE2.3.3.0: no header file found
+2023-11-03 18:17:07,876 [INFO] ThirdPartyModel:289 - Start build external matchings
+2023-11-03 18:17:09,445 [INFO] ThirdPartyModel:302 - End build external matchings
+2023-11-03 18:17:09,484 [INFO] ThirdPartyModel:289 - Start build external matchings
+2023-11-03 18:17:10,641 [INFO] ThirdPartyModel:302 - End build external matchings
+2023-11-03 18:17:10,691 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (RCC) : Parameter (FDCANFreq_Value) has invalid value (75000000)
+2023-11-03 18:17:10,691 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (FamilyName)
+2023-11-03 18:17:10,691 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (RCC) : Parameter (I2C4Freq_Value) has invalid value (75000000)
+2023-11-03 18:17:10,691 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (RCC) : Parameter (LPTIM2Freq_Value) has invalid value (75000000)
+2023-11-03 18:17:10,691 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (RCC) : Parameter (LPTIM345Freq_Value) has invalid value (75000000)
+2023-11-03 18:17:10,691 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (RCC) : Parameter (LPUART1Freq_Value) has invalid value (75000000)
+2023-11-03 18:17:10,691 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (RCC) : Parameter (SPI45Freq_Value) has invalid value (75000000)
+2023-11-03 18:17:10,691 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (RCC) : Parameter (SPI6Freq_Value) has invalid value (75000000)
+2023-11-03 18:17:10,691 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (RCC) : Parameter (USART16Freq_Value) has invalid value (75000000)
+2023-11-03 18:17:10,691 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (RCC) : Parameter (USBFreq_Value) has invalid value (75000000)
+2023-11-03 18:17:11,085 [INFO] UtilMem:74 - End LoadConfig() Used Memory: 607761304 Bytes (757071872)
+2023-11-03 18:17:11,304 [INFO] ApiDb:576 - Connected to CubeFinder SQLite database (C:\Users\demia\.stmcufinder\plugins\mcufinder\mcu\cube-finder-db.db)
+2023-11-03 18:17:11,425 [INFO] ApiDb:663 - CubeFinder database Data Model version=2.1
+2023-11-03 18:17:11,425 [INFO] ApiDb:664 - CubeFinder database Configuration version=3.0.37
+2023-11-03 18:17:11,425 [INFO] ApiDb:665 - CubeFinder database generation date=2023-10-13 (1697197505)
+2023-11-03 18:17:11,433 [INFO] ApiDb:666 - CubeFinder database FW Pack versions=[FP-ATR-ASTRA1_V2.0.0, FP-SNS-FLIGHT1_V5.0.1, FP-SNS-FLIGHT1_V5.0.2, FP-SNS-MOTENV1_V4.3.1, FP-SNS-MOTENV1_V4.3.2, FP-SNS-SMARTAG2_V1.2.0, I-CUBE-ITTIADB_V8.6.3-1, STM32Cube_FW_C0_V1.1.0, STM32Cube_FW_F4_V1.27.1, STM32Cube_FW_F7_V1.17.0, STM32Cube_FW_G0_V1.6.1, STM32Cube_FW_G4_V1.5.1, STM32Cube_FW_H5_V0.5.1, STM32Cube_FW_H5_V1.1.1, STM32Cube_FW_H7_V1.11.0, STM32Cube_FW_L0_V1.12.2, STM32Cube_FW_L5_V1.5.0, STM32Cube_FW_U5_V1.3.0, STM32Cube_FW_U5_V1.3.0RC4, STM32Cube_FW_WBA_V1.0.0RC1, STM32Cube_FW_WBA_V1.1.0RC1, STM32Cube_FW_WBA_V1.1.1, STM32Cube_FW_WB_V1.15.0RC1, STM32Cube_FW_WB_V1.16.0, STM32Cube_FW_WB_V1.16.0RC2, STM32Cube_FW_WB_V1.17.3, STM32Cube_FW_WL_V1.3.0, X-CUBE-ALGOBUILD_V1.3.0, X-CUBE-ALS_V1.0.1, X-CUBE-AZRTOS-F4_V1.1.0, X-CUBE-AZRTOS-F7_V1.1.0, X-CUBE-AZRTOS-G0_V1.1.0, X-CUBE-AZRTOS-G4_V2.0.0, X-CUBE-AZRTOS-H7_V3.1.0, X-CUBE-AZRTOS-L4_V1.0.0, X-CUBE-AZRTOS-L4_V2.0.0, X-CUBE-AZRTOS-L5_V1.1.0, X-CUBE-AZRTOS-WB_V2.0.0, X-CUBE-AZRTOS-WL_V2.0.0, X-CUBE-BLE1_V7.0.0, X-CUBE-BLE2_V3.3.0, X-CUBE-BLEMGR_V2.0.0, X-CUBE-EEPRMA1_V4.1.0, X-CUBE-FREERTOS_V1.1.0, X-CUBE-GNSS1_V6.0.0, X-CUBE-MEMS1_V10.0.0, X-CUBE-MEMS1_V9.1.0, X-CUBE-MEMS1_V9.4.0, X-CUBE-MEMS1_V9.6.0, X-CUBE-NFC4_V3.0.0, X-CUBE-NFC7_V1.0.1, X-CUBE-SFXS2LP1_V4.0.0, X-CUBE-SUBG2_V5.0.0, X-CUBE-TOF1_V3.3.1]
+2023-11-03 18:17:14,694 [INFO] ApiDb:239 - Found 138 in-development CPN: [B-WB1M-WPAN1, NUCLEO-C031C6, STEVAL-STWINBX1, STM320518-EVAL, STM32C0116-DK, STM32C011D6Y3TR, STM32C011D6Y6TR, STM32C011F4P3, STM32C011F4P6, STM32C011F4U3, STM32C011F4U6TR, STM32C011F6P3, STM32C011F6P6, STM32C011F6U3, STM32C011F6U6TR, STM32C011J4M3, STM32C011J4M6, STM32C011J6M3, STM32C011J6M6, STM32C0316-DK, STM32C031C4T3, STM32C031C4T6, STM32C031C4U3, STM32C031C4U6, STM32C031C6T3, STM32C031C6T6, STM32C031C6U3, STM32C031C6U6, STM32C031F4P3, STM32C031F4P6, STM32C031F6P3, STM32C031F6P6, STM32C031G4U3, STM32C031G4U6, STM32C031G6U3, STM32C031G6U6, STM32C031K4T3, STM32C031K4T6, STM32C031K4U3, STM32C031K4U6, STM32C031K6T3, STM32C031K6T6, STM32C031K6U3, STM32C031K6U6, STM32G071K8TXN, STM32G071K8UXN, STM32G081GBU6N, STM32G081KBT6N, STM32G081KBUXN, STM32G0B1CCT6N, STM32G0B1KCT6, STM32G0B1NEY6TR, STM32G0B1RCT6N, STM32G0C1CCT6, STM32G0C1CCT6N, STM32G0C1CCU6N, STM32G0C1CET6N, STM32G0C1CEU6N, STM32G0C1KCT6, STM32G0C1NEY6TR, STM32G0C1RCI6N, STM32G0C1RCT6N, STM32G0C1REI6N, STM32G0C1RET6N, STM32G0C1VCI6, STM32G0C1VEI6, STM32G471CCT6, STM32G471CCU6, STM32G471CET3, STM32G471CET6, STM32G471CEU3, STM32G471CEU6, STM32G471MCT6, STM32G471MET3, STM32G471MET6, STM32G471MEY6TR, STM32G471QCT6, STM32G471QET3, STM32G471RCT6, STM32G471RET3, STM32G471RET6, STM32G471VCH6, STM32G471VCI6, STM32G471VCT6, STM32G471VEH3, STM32G471VEH6, STM32G471VEI3, STM32G471VEI6, STM32G471VET3, STM32G471VET6, STM32G474CCT6, STM32L476VGY6PTR, STM32L4R5QGI6STR, STM32MP131AAE3, STM32MP131AAF3, STM32MP131AAG3, STM32MP131CAE3, STM32MP131CAF3, STM32MP131CAG3, STM32MP131DAE7, STM32MP131DAF7, STM32MP131DAG7, STM32MP131FAE7, STM32MP131FAF7, STM32MP131FAG7, STM32MP133AAE3, STM32MP133AAF3, STM32MP133AAG3, STM32MP133CAE3, STM32MP133CAF3, STM32MP133CAG3, STM32MP133DAE7, STM32MP133DAF7, STM32MP133DAG7, STM32MP133FAE7, STM32MP133FAF7, STM32MP133FAG7, STM32MP135AAE3, STM32MP135AAF3, STM32MP135AAG3, STM32MP135CAE3, STM32MP135CAF3, STM32MP135CAG3, STM32MP135DAE7, STM32MP135DAF7, STM32MP135DAG7, STM32MP135F-DK, STM32MP135FAE7, STM32MP135FAF7, STM32MP135FAG7, STM32U595ZJT6Q, STM32U599BJY6QTR, STM32U599NIH6Q, STM32U599NJH6Q, STM32U5A5ZJT6Q, STM32U5A9BJY6QTR, STM32U5A9NJH6Q, STM32WB1MMCH6]
+2023-11-03 18:17:14,694 [INFO] DbMcus:215 - Found 3805 MCUs, 3805 are supported
+2023-11-03 18:17:14,694 [INFO] ApiDb:418 - Load user favorites file C:\Users\demia/.stm32cubeide/favorites.mcus.txt: 0 item(s)
+2023-11-03 18:17:14,702 [INFO] ApiDb:422 - User favorites MCUs=[]
+2023-11-03 18:17:14,702 [INFO] DbMcus:221 - Set 0 / 0 favorites MCUs
+2023-11-03 18:17:14,868 [WARN] ThirdParty:789 - waiting for thirdparty lock release [change project]
+2023-11-03 18:17:14,868 [INFO] ThirdParty:791 - entering critical section [change project]
+2023-11-03 18:17:14,868 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ISPU 1.1.0
+2023-11-03 18:17:14,869 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 6.0.0
+2023-11-03 18:17:14,869 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2023-11-03 18:17:14,869 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F4 1.1.0
+2023-11-03 18:17:14,869 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics LIBJPEG 8.0.0
+2023-11-03 18:17:14,869 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SMBUS 2.1.0
+2023-11-03 18:17:14,869 [INFO] ThirdParty:981 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfSSL 5.6.0
+2023-11-03 18:17:14,869 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2023-11-03 18:17:14,869 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 8.0.0
+2023-11-03 18:17:14,869 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WB 2.0.0
+2023-11-03 18:17:14,869 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-FREERTOS 1.0.1
+2023-11-03 18:17:14,869 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.21.3
+2023-11-03 18:17:14,869 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F7 1.1.0
+2023-11-03 18:17:14,869 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.21.4
+2023-11-03 18:17:14,869 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L5 2.0.0
+2023-11-03 18:17:14,869 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2023-11-03 18:17:14,869 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 9.6.0
+2023-11-03 18:17:14,869 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 4.2.0
+2023-11-03 18:17:14,869 [INFO] ThirdParty:981 - CMSIS Pack Vendor :ITTIA_DB I-CUBE-ITTIADB 8.8.0
+2023-11-03 18:17:14,870 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENV1 4.3.0
+2023-11-03 18:17:14,870 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENV1 4.3.2
+2023-11-03 18:17:14,870 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.0.0
+2023-11-03 18:17:14,870 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENV1 4.3.1
+2023-11-03 18:17:14,870 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.0.1
+2023-11-03 18:17:14,870 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALGOBUILD 1.3.0
+2023-11-03 18:17:14,870 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 6.2.4
+2023-11-03 18:17:14,870 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L5 1.1.0
+2023-11-03 18:17:14,870 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2023-11-03 18:17:14,870 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G0 1.1.0
+2023-11-03 18:17:14,870 [INFO] ThirdParty:981 - CMSIS Pack Vendor :emotas I-CUBE-CANOPEN 1.1.3
+2023-11-03 18:17:14,870 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 2.0.0
+2023-11-03 18:17:14,870 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 8.0.1
+2023-11-03 18:17:14,870 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 3.0.0
+2023-11-03 18:17:14,870 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SUBG2 5.0.0
+2023-11-03 18:17:14,870 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics STM32_WPAN 1.0.0
+2023-11-03 18:17:14,870 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2023-11-03 18:17:14,871 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.0.2
+2023-11-03 18:17:14,871 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2023-11-03 18:17:14,871 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.3.1
+2023-11-03 18:17:14,871 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G4 2.0.0
+2023-11-03 18:17:14,871 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2023-11-03 18:17:14,871 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 3.1.0
+2023-11-03 18:17:14,871 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.3.0
+2023-11-03 18:17:14,871 [INFO] ThirdParty:981 - CMSIS Pack Vendor :Infineon AIROC-Wi-Fi-Bluetooth-STM32 1.5.1
+2023-11-03 18:17:14,871 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 3.0.0
+2023-11-03 18:17:14,871 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2023-11-03 18:17:14,871 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DISPLAY 3.0.0
+2023-11-03 18:17:14,871 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 7.0.0
+2023-11-03 18:17:14,871 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-SIGFOX1 3.2.0
+2023-11-03 18:17:14,871 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G4 1.0.0
+2023-11-03 18:17:14,871 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L4 1.0.0
+2023-11-03 18:17:14,872 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2023-11-03 18:17:14,872 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2023-11-03 18:17:14,872 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 10.0.0
+2023-11-03 18:17:14,872 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-FREERTOS 1.1.0
+2023-11-03 18:17:14,872 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.22.0
+2023-11-03 18:17:14,872 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC7 1.0.1
+2023-11-03 18:17:14,872 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2023-11-03 18:17:14,872 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC7 1.0.0
+2023-11-03 18:17:14,872 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.22.1
+2023-11-03 18:17:14,872 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WL 1.0.0
+2023-11-03 18:17:14,872 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC6 3.0.0
+2023-11-03 18:17:14,873 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 4.1.0
+2023-11-03 18:17:14,873 [INFO] ThirdParty:981 - CMSIS Pack Vendor :portGmbH I-Cube-SoM-uGOAL 1.1.0
+2023-11-03 18:17:14,873 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALS 1.0.1
+2023-11-03 18:17:14,873 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 9.5.0
+2023-11-03 18:17:14,873 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics ThreadX 1.0.0
+2023-11-03 18:17:14,873 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-SMARTAG2 1.2.0
+2023-11-03 18:17:14,874 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WB 1.1.0
+2023-11-03 18:17:14,874 [INFO] ThirdParty:981 - CMSIS Pack Vendor :SEGGER I-CUBE-embOS 1.3.1
+2023-11-03 18:17:14,875 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2023-11-03 18:17:14,875 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 8.1.0
+2023-11-03 18:17:14,875 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L4 2.0.0
+2023-11-03 18:17:14,875 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics ThreadX 0.0.2
+2023-11-03 18:17:14,875 [INFO] ThirdParty:981 - CMSIS Pack Vendor :WES I-CUBE-Cesium 1.3.0
+2023-11-03 18:17:14,875 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 2.0.0
+2023-11-03 18:17:14,875 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2023-11-03 18:17:14,875 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SFXS2LP1 4.0.0
+2023-11-03 18:17:14,875 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE2 3.3.0
+2023-11-03 18:17:14,876 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2023-11-03 18:17:14,876 [INFO] ThirdParty:797 - exiting critical section [change project]
+2023-11-03 18:17:16,385 [INFO] PinOutPanel:1468 - setPackage(No Configuration,No Configuration)
+2023-11-03 18:17:16,385 [INFO] PinOutPanel:1468 - setPackage(STM32H755ZITx,LQFP144)
+2023-11-03 18:17:18,292 [INFO] UtilMem:74 - Before build in PCC Used Memory: 640366968 Bytes (757071872)
+2023-11-03 18:17:19,890 [INFO] UtilMem:74 - After build in PCC Used Memory: 670915200 Bytes (757071872)
+2023-11-03 18:17:19,976 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,976 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,976 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,976 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,976 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,976 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,976 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,992 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,992 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,992 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,992 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,992 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,992 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,992 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,992 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,992 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,992 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,992 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,992 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,992 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,992 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,992 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,992 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,992 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,992 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,992 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,992 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:19,997 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,012 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,012 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,012 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,012 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,012 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,012 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,012 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,012 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,012 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,012 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,012 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,012 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,012 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,012 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,012 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,012 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,012 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,012 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,012 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,012 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,012 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,012 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,012 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,012 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,012 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,012 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,028 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,028 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,028 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,028 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,028 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,028 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,028 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,028 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,028 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,043 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,043 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,043 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,043 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,043 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,043 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,043 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,043 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,043 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,043 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,043 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,043 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-11-03 18:17:20,128 [INFO] ApiDbMcu:505 - Load IP Config File for PDM2PCM
+2023-11-03 18:17:20,144 [INFO] ApiDbMcu:505 - Load IP Config File for PDM2PCM
+2023-11-03 18:17:20,479 [INFO] OpenFileManager:327 - Restore cursor
+2023-11-03 18:18:31,790 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 662302712 Bytes (757071872)
+2023-11-03 18:18:33,163 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 683276280 Bytes (757071872)
+2023-11-03 18:18:36,001 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 653503032 Bytes (757071872)
+2023-11-03 18:18:36,982 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: SPI
+2023-11-03 18:18:36,982 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: RCC
+2023-11-03 18:18:36,982 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: USART
+2023-11-03 18:18:36,982 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: NVIC2
+2023-11-03 18:18:36,984 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: GPIO
+2023-11-03 18:18:36,984 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: NVIC1
+2023-11-03 18:18:36,984 [INFO] CodeGenerator:690 - code generatio: config db path: C:\Program Files (x86)\STMicroelectronics\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\
+2023-11-03 18:18:37,669 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\MXTmpFiles\license.tmp_save
+2023-11-03 18:18:38,291 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\MXTmpFiles\license.tmp
+2023-11-03 18:18:38,460 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Src\gpio.c_save
+2023-11-03 18:18:38,745 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Src\gpio.c
+2023-11-03 18:18:38,760 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Inc\gpio.h_save
+2023-11-03 18:18:38,945 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Inc\gpio.h
+2023-11-03 18:18:39,061 [WARN] IPConfigManager:94 - WARNING: Missing Config File for NVIC1 ip!!
+2023-11-03 18:18:39,522 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\MXTmpFiles\cortex.tmp_save
+2023-11-03 18:18:39,716 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\MXTmpFiles\cortex.tmp
+2023-11-03 18:18:39,723 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Src\spi.c_save
+2023-11-03 18:18:39,981 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Src\spi.c
+2023-11-03 18:18:39,983 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Inc\spi.h_save
+2023-11-03 18:18:40,139 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Inc\spi.h
+2023-11-03 18:18:40,155 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Src\usart.c_save
+2023-11-03 18:18:40,340 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Src\usart.c
+2023-11-03 18:18:40,356 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Inc\usart.h_save
+2023-11-03 18:18:40,487 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Inc\usart.h
+2023-11-03 18:18:40,540 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Src\stm32h7xx_it.c_save
+2023-11-03 18:18:40,763 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Src\stm32h7xx_it.c
+2023-11-03 18:18:40,783 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Inc\stm32h7xx_it.h_save
+2023-11-03 18:18:40,888 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Inc\stm32h7xx_it.h
+2023-11-03 18:18:41,072 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Src\stm32h7xx_hal_msp.c_save
+2023-11-03 18:18:41,257 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Src\stm32h7xx_hal_msp.c
+2023-11-03 18:18:41,257 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\MXTmpFiles\system.tmp_save
+2023-11-03 18:18:41,373 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\MXTmpFiles\system.tmp
+2023-11-03 18:18:41,404 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Inc\stm32h7xx_hal_conf.h_save
+2023-11-03 18:18:41,573 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Inc\stm32h7xx_hal_conf.h
+2023-11-03 18:18:41,705 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Inc\main.h_save
+2023-11-03 18:18:41,858 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Inc\main.h
+2023-11-03 18:18:41,874 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Src\main.c_save
+2023-11-03 18:18:42,138 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Src\main.c
+2023-11-03 18:18:42,727 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\MXTmpFiles\license.tmp_save
+2023-11-03 18:18:42,865 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\MXTmpFiles\license.tmp
+2023-11-03 18:18:42,880 [WARN] IPConfigManager:94 - WARNING: Missing Config File for NVIC2 ip!!
+2023-11-03 18:18:42,896 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\MXTmpFiles\cortex.tmp_save
+2023-11-03 18:18:43,027 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\MXTmpFiles\cortex.tmp
+2023-11-03 18:18:43,081 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\Core\Src\stm32h7xx_it.c_save
+2023-11-03 18:18:43,255 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\Core\Src\stm32h7xx_it.c
+2023-11-03 18:18:43,263 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\Core\Inc\stm32h7xx_it.h_save
+2023-11-03 18:18:43,367 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\Core\Inc\stm32h7xx_it.h
+2023-11-03 18:18:43,425 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\Core\Src\stm32h7xx_hal_msp.c_save
+2023-11-03 18:18:43,563 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\Core\Src\stm32h7xx_hal_msp.c
+2023-11-03 18:18:43,578 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\MXTmpFiles\system.tmp_save
+2023-11-03 18:18:43,667 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\MXTmpFiles\system.tmp
+2023-11-03 18:18:43,701 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\Core\Inc\stm32h7xx_hal_conf.h_save
+2023-11-03 18:18:43,901 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\Core\Inc\stm32h7xx_hal_conf.h
+2023-11-03 18:18:44,017 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\Core\Inc\main.h_save
+2023-11-03 18:18:44,164 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\Core\Inc\main.h
+2023-11-03 18:18:44,180 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\Core\Src\main.c_save
+2023-11-03 18:18:44,365 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\Core\Src\main.c
+2023-11-03 18:18:45,880 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 384mS.
+2023-11-03 18:18:45,912 [INFO] ProjectBuilder:4117 - Project Generator version: 3.17.1
+2023-11-03 18:18:46,354 [INFO] ConfigFileManager:1394 - The Die is : DIE450
+2023-11-03 18:18:50,572 [ERROR] root:77 - Fail to create / get project 'H755_SPI_wireless' within workspace 'D:/Universidad/Quinto_Semestre/Embedidos_Avanzados/STM32/embedded_systems_603'
+2023-11-03 18:18:50,572 [INFO] ProjectBuilder:4285 - Time for Generating toolchain IDE Files: 4660mS.
+2023-11-03 18:18:50,572 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2023-11-03 18:18:50,572 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2023-11-03 18:31:42,146 [INFO] Gpio:272 - dependency for GPIO [RCC, SPI1, USART3]
+2023-11-03 18:33:06,847 [INFO] Gpio:272 - dependency for GPIO [RCC, SPI1, USART3]
+2023-11-03 18:33:10,263 [INFO] Gpio:272 - dependency for GPIO [RCC, SPI1, USART3]
+2023-11-03 18:33:46,111 [INFO] Gpio:272 - dependency for GPIO [RCC, SPI1, USART3]
+2023-11-03 18:34:00,176 [INFO] Gpio:272 - dependency for GPIO [RCC, SPI1, USART3]
+2023-11-03 18:34:12,053 [INFO] Gpio:272 - dependency for GPIO [RCC, SPI1, USART3]
+2023-11-03 18:34:15,690 [INFO] Gpio:272 - dependency for GPIO [RCC, SPI1, USART3]
+2023-11-03 18:34:18,666 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 688978544 Bytes (955252736)
+2023-11-03 18:34:21,065 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 385647520 Bytes (955252736)
+2023-11-03 18:34:21,563 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: SPI
+2023-11-03 18:34:21,563 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: RCC
+2023-11-03 18:34:21,563 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: USART
+2023-11-03 18:34:21,563 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: NVIC2
+2023-11-03 18:34:21,563 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: GPIO
+2023-11-03 18:34:21,563 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: NVIC1
+2023-11-03 18:34:21,563 [INFO] CodeGenerator:690 - code generatio: config db path: C:\Program Files (x86)\STMicroelectronics\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\
+2023-11-03 18:34:21,851 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\MXTmpFiles\license.tmp_save
+2023-11-03 18:34:21,989 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\MXTmpFiles\license.tmp
+2023-11-03 18:34:22,068 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Src\gpio.c_save
+2023-11-03 18:34:22,221 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Src\gpio.c
+2023-11-03 18:34:22,237 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Inc\gpio.h_save
+2023-11-03 18:34:22,353 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Inc\gpio.h
+2023-11-03 18:34:22,391 [WARN] IPConfigManager:94 - WARNING: Missing Config File for NVIC1 ip!!
+2023-11-03 18:34:22,575 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\MXTmpFiles\cortex.tmp_save
+2023-11-03 18:34:22,723 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\MXTmpFiles\cortex.tmp
+2023-11-03 18:34:22,754 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Src\spi.c_save
+2023-11-03 18:34:22,904 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Src\spi.c
+2023-11-03 18:34:22,920 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Inc\spi.h_save
+2023-11-03 18:34:23,007 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Inc\spi.h
+2023-11-03 18:34:23,038 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Src\usart.c_save
+2023-11-03 18:34:23,192 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Src\usart.c
+2023-11-03 18:34:23,208 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Inc\usart.h_save
+2023-11-03 18:34:23,308 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Inc\usart.h
+2023-11-03 18:34:23,355 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Src\stm32h7xx_it.c_save
+2023-11-03 18:34:23,477 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Src\stm32h7xx_it.c
+2023-11-03 18:34:23,493 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Inc\stm32h7xx_it.h_save
+2023-11-03 18:34:23,656 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Inc\stm32h7xx_it.h
+2023-11-03 18:34:23,825 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Src\stm32h7xx_hal_msp.c_save
+2023-11-03 18:34:23,978 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Src\stm32h7xx_hal_msp.c
+2023-11-03 18:34:23,978 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\MXTmpFiles\system.tmp_save
+2023-11-03 18:34:24,094 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\MXTmpFiles\system.tmp
+2023-11-03 18:34:24,126 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Inc\stm32h7xx_hal_conf.h_save
+2023-11-03 18:34:24,279 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Inc\stm32h7xx_hal_conf.h
+2023-11-03 18:34:24,342 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Inc\main.h_save
+2023-11-03 18:34:24,519 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Inc\main.h
+2023-11-03 18:34:24,534 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Src\main.c_save
+2023-11-03 18:34:24,711 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\Core\Src\main.c
+2023-11-03 18:34:25,246 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\MXTmpFiles\license.tmp_save
+2023-11-03 18:34:25,378 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\MXTmpFiles\license.tmp
+2023-11-03 18:34:25,378 [WARN] IPConfigManager:94 - WARNING: Missing Config File for NVIC2 ip!!
+2023-11-03 18:34:25,394 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\MXTmpFiles\cortex.tmp_save
+2023-11-03 18:34:25,525 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\MXTmpFiles\cortex.tmp
+2023-11-03 18:34:25,547 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\Core\Src\stm32h7xx_it.c_save
+2023-11-03 18:34:25,679 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\Core\Src\stm32h7xx_it.c
+2023-11-03 18:34:25,679 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\Core\Inc\stm32h7xx_it.h_save
+2023-11-03 18:34:25,779 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\Core\Inc\stm32h7xx_it.h
+2023-11-03 18:34:25,810 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\Core\Src\stm32h7xx_hal_msp.c_save
+2023-11-03 18:34:25,944 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\Core\Src\stm32h7xx_hal_msp.c
+2023-11-03 18:34:25,952 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\MXTmpFiles\system.tmp_save
+2023-11-03 18:34:26,045 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\MXTmpFiles\system.tmp
+2023-11-03 18:34:26,070 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\Core\Inc\stm32h7xx_hal_conf.h_save
+2023-11-03 18:34:26,217 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\Core\Inc\stm32h7xx_hal_conf.h
+2023-11-03 18:34:26,271 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\Core\Inc\main.h_save
+2023-11-03 18:34:26,402 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\Core\Inc\main.h
+2023-11-03 18:34:26,434 [INFO] CodeEngine:245 - oldGeneratedFile, D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\Core\Src\main.c_save
+2023-11-03 18:34:26,556 [INFO] CodeEngine:269 - Generated code: D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM4\Core\Src\main.c
+2023-11-03 18:34:27,890 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 316mS.
+2023-11-03 18:34:27,906 [INFO] ProjectBuilder:4117 - Project Generator version: 3.17.1
+2023-11-03 18:34:28,222 [INFO] ConfigFileManager:1394 - The Die is : DIE450
+2023-11-03 18:34:32,364 [ERROR] root:77 - Fail to create / get project 'H755_SPI_wireless' within workspace 'D:/Universidad/Quinto_Semestre/Embedidos_Avanzados/STM32/embedded_systems_603'
+2023-11-03 18:34:32,364 [INFO] ProjectBuilder:4285 - Time for Generating toolchain IDE Files: 4458mS.
+2023-11-03 18:34:32,364 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2023-11-03 18:34:32,364 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.

@@ -1,5 +1,5 @@
 Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.o: \
- C:/Users/david/STM32CubeIDE/workspace_1.10.1/H755_SPI/Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.c \
+ D:/Universidad/Quinto_Semestre/Embedidos_Avanzados/STM32/embedded_systems_603/H755_SPI_wireless/Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.c \
  ../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h \
  ../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h755xx.h \
  ../../Drivers/CMSIS/Include/core_cm7.h \

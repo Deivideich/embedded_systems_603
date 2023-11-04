@@ -24,11 +24,11 @@ References:				This library was written based on the Arduino NRF24 Open-Source l
 #include <stdbool.h>
 #include <string.h>
 //1. Pinout Ports and Pin
-//#define nrf_CSN_PORT		GPIOD
-//#define nrf_CSN_PIN			GPIO_PIN_0
+#define nrf_CSN_PORT		GPIOD
+#define nrf_CSN_PIN			GPIO_PIN_15
 
-//#define nrf_CE_PORT			GPIOD
-//#define nrf_CE_PIN			GPIO_PIN_1
+#define nrf_CE_PORT			GPIOD
+#define nrf_CE_PIN			GPIO_PIN_14
 
 //**** TypeDefs ****//
 //1. Power Amplifier function, NRF24_setPALevel()
@@ -185,4 +185,14 @@ void printConfigReg(void);
 //void nrf24_DebugUART_Init(UART_HandleTypeDef nrf24Uart);
 //5. FIFO Status
 void printFIFOstatus(void);
+
+//********** My Function ************//
+//Collects setup NRF24 functions
+//Group Port, CSN Pin, CE Pin, SPI handle, UART handle, channel, address, speed
+void mySetupNRF24(GPIO_TypeDef *nrf24PORT, uint16_t nrfCSN_Pin, uint16_t nrfCE_Pin,
+		SPI_HandleTypeDef nrfSPI,UART_HandleTypeDef nrf24Uart,
+		uint8_t channel, uint64_t address, rf24_datarate_e speed);
+
+//Read Data
+void myReadData(char* myRxData);
 
