@@ -130,31 +130,37 @@ Error_Handler();
   /* USER CODE BEGIN WHILE */
   uint8_t input[4];
   int inputInt;
-  double pulseWidth = 0.000;
-  double prevPulseWidth = 0.000;
-  double ccr = 0;
-
-  double i = 0.0001;
-
+//  double pulseWidth = 0.000;
+//  double prevPulseWidth = 0.000;
+//  double ccr = 0;
+//
+//  double i = 0.0001;
+//  double i_start = 0.0001;
   printf("Starting...\r\n");
 
 
-  do{
-	  ccr = (pulseWidth * htim2.Init.Period) / 0.02;
-	  htim2.Instance->CCR1 = ccr;
-	  HAL_Delay(100);
+//  do{
+//	  ccr = (pulseWidth * htim2.Init.Period) / 0.02;
+//	  htim2.Instance->CCR1 = ccr;
+//	  HAL_Delay(100);
+//
+//	  printf("(From Start) pulseWidth = %f {CCR=%f}\r\n", pulseWidth,ccr);
+////			  i += 0.000001;
+//
+//	  pulseWidth += i_start;
+//
+//  }while(pulseWidth < 0.002);
+//
+//  pulseWidth = 0.002;
+//  ccr = (pulseWidth * htim2.Init.Period) / 0.02;
+//  printf("CCR: %f\r\n",ccr);
+//  htim2.Instance->CCR1 = ccr;
+  unsigned int minPulseWidth = 500;
+  unsigned int maxPulseWidth = 2400;
+  unsigned int pwmPeriod = 20000;
 
-	  printf("(From Start) pulseWidth = %f {CCR=%f}\r\n", pulseWidth,ccr);
-//			  i += 0.000001;
+  setPwm(htim2, minPulseWidth, maxPulseWidth, 100, 50);
 
-	  pulseWidth += i;
-
-  }while(pulseWidth < 0.002);
-
-  pulseWidth = 0.002;
-  ccr = (pulseWidth * htim2.Init.Period) / 0.02;
-  printf("CCR: %f\r\n",ccr);
-  htim2.Instance->CCR1 = ccr;
 
 
   while (1)

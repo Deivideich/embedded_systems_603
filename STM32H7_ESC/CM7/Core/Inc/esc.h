@@ -8,8 +8,11 @@
 #ifndef INC_ESC_H_
 #define INC_ESC_H_
 
+#define MY_SATURATE(value, max) ( (value) > (max) ? (max) : (value) )
+
 #include "stm32h7xx_hal.h"
 
-void startSetup(TIM_HandleTypeDef *htimN);
+void setPwm(TIM_HandleTypeDef htimN, unsigned int minPulseWidth,
+		unsigned int maxPulseWidth, unsigned int resolution, unsigned int percentage);
 
 #endif /* INC_ESC_H_ */

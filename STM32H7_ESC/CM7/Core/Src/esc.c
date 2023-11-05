@@ -4,27 +4,33 @@
  *  Created on: 3 Nov 2023
  *      Author: demia
  */
+#include <stdlib.h>
 #include "tim.h"
+#include "esc.h"
 
 
-void startSetup(TIM_HandleTypeDef htimN){
-  double pulseWidth = 0.0015;
-  double ccr = 0;
+//@brief
+//@param minPulseWdith, maxPulseWidth and pwmPeriod in micro seconds.
+//@param Resolution and percentage in integer.
+//@Note: The pwm is set in percentage of the resolution assigned. If resolution assigned 100. Then
+//percentage = 1 will create a pulse width of minPulseWidth*e-06 and 100 a pulse width of maxPulseWidth*e-06
+void setPwm(TIM_HandleTypeDef htimN, unsigned int minPulseWidth,
+		unsigned int maxPulseWidth, unsigned int pwmPeriod, unsigned int resolution, unsigned int percentage){
 
-  double i = 0;
+	double pulseWidth;
+	double ccr;
+	double pwmPeriodInMicroSeconds;
 
-  do{
-	  ccr = (pulseWidth * htimN.Init.Period) / 0.02;
-	  htimN.Instance->CCR1 = ccr;
-	  HAL_Delay(100);
+	minPulseWidth = MY_SATURATE(minPulseWidth,pwmPeriod);
+	maxPulseWidth = MY_SATURATE(maxPulseWidth,pwmPeriod);
+	percentage = MY_SATURATE(percentage, resolution);
 
-//	  printf("pulseWidth = %f \r\n", pulseWidth);
-	  i += 0.000001;
+	pulseWidth =  ( ( (maxPulseWidth - minPulseWidth)/resolution ) * percentage ) + minPulseWidth;
 
-	  pulseWidth += i;
+	pulseWidth = pulseWidth/1e6;
+	pwmPeriodInMicroSeconds = pwmPeriod/1e6;
 
-  }while(pulseWidth < 0.002);
+	ccr = (pulseWidth * htimN.Init.Period) / pwmPeriodInMicroSeconds;
+	htimN.Instance->CCR1 = ccr;
 
-  pulseWidth = 0.002;
-  ccr = (pulseWidth * htimN.Init.Period) / 0.02;
 }
