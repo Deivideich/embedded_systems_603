@@ -1,1 +1,2 @@
-../Core/Src/esc.c:13:6:setPwm	24	static
+../Core/Src/esc.c:19:6:setPwm	32	static
+../Core/Src/esc.c:41:6:setPwmS	32	static

@@ -123,115 +123,62 @@ Error_Handler();
   MX_USART3_UART_Init();
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1); //Starting Timer
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  uint8_t input[4];
-  int inputInt;
-//  double pulseWidth = 0.000;
-//  double prevPulseWidth = 0.000;
-//  double ccr = 0;
-//
-//  double i = 0.0001;
-//  double i_start = 0.0001;
-  printf("Starting...\r\n");
 
-
-//  do{
-//	  ccr = (pulseWidth * htim2.Init.Period) / 0.02;
-//	  htim2.Instance->CCR1 = ccr;
-//	  HAL_Delay(100);
-//
-//	  printf("(From Start) pulseWidth = %f {CCR=%f}\r\n", pulseWidth,ccr);
-////			  i += 0.000001;
-//
-//	  pulseWidth += i_start;
-//
-//  }while(pulseWidth < 0.002);
-//
-//  pulseWidth = 0.002;
-//  ccr = (pulseWidth * htim2.Init.Period) / 0.02;
-//  printf("CCR: %f\r\n",ccr);
-//  htim2.Instance->CCR1 = ccr;
-  unsigned int minPulseWidth = 500;
-  unsigned int maxPulseWidth = 2400;
+  int minPulseWidth = 1000; //Variables for PWM
+  int maxPulseWidth = 1500;
   unsigned int pwmPeriod = 20000;
+  int resolution = 100;
 
-  setPwm(htim2, minPulseWidth, maxPulseWidth, 100, 50);
+  struct escValues escValues = {htim2, minPulseWidth, //Struct Containing all
+		  maxPulseWidth, pwmPeriod, resolution};	  //PWM Variables
+
+  printf("Starting Setup...\r\n"); // Setup
+
+  int i = 100;
+  int dt = 1;
+  do{
+//	  setPwm(htim2, minPulseWidth, maxPulseWidth, pwmPeriod, resolution, i);
+	  setPwmS(&escValues);
+	  escValues.percentage=(unsigned int)i;
+	  HAL_Delay(10);
+	  i=i-dt;
+
+  }while(i > 50);
 
 
+  printf("End Setup\r\n");
+
+  uint8_t input[3]; //Variables for Receiving UART
+  int inputInt;
 
   while (1)
   {
-	  while(HAL_UART_Receive(&huart3, input, 4, HAL_MAX_DELAY));
-	  printf("Receive from UART %c%c%c%c \r\n",input[0],input[1],input[2],input[3]);
+
+	  //Receiving from UART
+	  while(HAL_UART_Receive(&huart3, input, 3, HAL_MAX_DELAY));
+	  printf("Receive from UART {%c%c%c} \r\n",input[0],input[1],input[2]);
 
 	  for(int i = 0 ; i < 4 ; i++){
 		  input[i]-='0';
 	  }
 
-	  inputInt = (input[0]*1000 + input[1]*100 + input[2]*10 + input[3]*1);
+	  inputInt = (input[0]*100 + input[1]*10 + input[2]);
 
-	  if(inputInt < 2500 && inputInt > 550){
-		  pulseWidth = (input[0]*1000 + input[1]*100 + input[2]*10 + input[3]*1)/1000000.0;
+	  if(inputInt < 101 && inputInt >= 0){
+		  escValues.percentage = inputInt;
 	  }
-//	  pulseWidth = 0.001;
 
-	  printf("PulseWidth %f\r\n",pulseWidth);
+	  //Setting PWM value
+//	  setPwm(htim2, minPulseWidth, maxPulseWidth, pwmPeriod, resolution, percentage);
+	  setPwmS(&escValues);
 
-	  ccr = (pulseWidth * htim2.Init.Period) / 0.02;
-	  htim2.Instance->CCR1 = ccr;
-	  HAL_Delay(100);
-
-//	  switch (input) {
-//
-//	  case '1':
-//		  printf("Case 1\r\n");
-//		  pulseWidth = 0.00;
-//		  if(pulseWidth < 0.002){
-//		  	  do{
-//		  		  ccr = (pulseWidth * htim2.Init.Period) / 0.02;
-//		  		  htim2.Instance->CCR1 = ccr;
-//		  		  HAL_Delay(100);
-//
-//		  		  printf("(From Start) pulseWidth = %f \r\n", pulseWidth);
-//
-//		  		  pulseWidth += i;
-//
-//		  	  }while(pulseWidth < 0.002);
-//		    }else{
-//		  	  pulseWidth = 0.002;
-//		  	  ccr = (pulseWidth * htim2.Init.Period) / 0.02;
-//		  	  htim2.Instance->CCR1 = ccr;
-//		    }
-//
-//		  break;
-//
-//	  case '2':
-//		  printf("Case 2\r\n");
-//		  pulseWidth = 0.002;
-//		  ccr = (pulseWidth * htim2.Init.Period) / 0.02;
-//		  htim2.Instance->CCR1 = ccr;
-//
-//		  break;
-//
-//	  case '3':
-//		  printf("Case 3\r\n");
-//		  pulseWidth = 0.001;
-//		  ccr = (pulseWidth * htim2.Init.Period) / 0.02;
-//		  htim2.Instance->CCR1 = ccr;
-//
-//		  break;
-//
-//	  default:
-//		  printf("Default\r\n");
-//		  pulseWidth = input;
-//		  ccr = (pulseWidth * htim2.Init.Period) / 0.02;
-//		  htim2.Instance->CCR1 = ccr;
-//
-//	  }
+	  //Printing Values
+	  printf("Percentage{%d} PulseWidth{%.5f}\r\n",escValues.percentage,escValues.pulseWidth);
 
 
     /* USER CODE END WHILE */
