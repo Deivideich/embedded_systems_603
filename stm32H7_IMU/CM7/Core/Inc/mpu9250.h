@@ -185,7 +185,26 @@
 #define AK8963_ADDRESS  0x0C   //  Address of magnetometer
 #endif
 
+struct mpu9250{
+	uint8_t Ascale;
+	uint8_t Gscale;
+
+	float _aRes;
+	float _gRes;
+
+	int16_t rawData[7];
+	float acc[3];
+	float gyro[3];
+};
+
 void initMPU9250(uint8_t Ascale, uint8_t Gscale, uint8_t sampleRate);
 void calibrateMPU9250(float * dest1, float * dest2);
+void readMPU9250Data(int16_t * destination);
+float getAres(struct mpu9250 * mpu9250);
+float getGres(struct mpu9250 * mpu9250);
+void getAccAndGyroData(struct mpu9250 * mpu9250);
+
+
+
 
 #endif /* INC_MPU9250_H_ */

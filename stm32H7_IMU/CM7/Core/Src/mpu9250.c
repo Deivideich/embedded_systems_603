@@ -217,3 +217,83 @@ void calibrateMPU9250(float * dest1, float * dest2)
    dest2[2] = (float)accel_bias[2]/(float)accelsensitivity;
 }
 
+void readMPU9250Data(int16_t * destination)
+{
+  uint8_t rawData[14];  // x/y/z accel register data stored here
+  mpu9250_read_reg(ACCEL_XOUT_H ,rawData, 14);  // Read the 14 raw data registers into data array
+  destination[0] = ((int16_t)rawData[0] << 8) | rawData[1] ;  // Turn the MSB and LSB into a signed 16-bit value
+  destination[1] = ((int16_t)rawData[2] << 8) | rawData[3] ;
+  destination[2] = ((int16_t)rawData[4] << 8) | rawData[5] ;
+  destination[3] = ((int16_t)rawData[6] << 8) | rawData[7] ;
+  destination[4] = ((int16_t)rawData[8] << 8) | rawData[9] ;
+  destination[5] = ((int16_t)rawData[10] << 8) | rawData[11] ;
+  destination[6] = ((int16_t)rawData[12] << 8) | rawData[13] ;
+}
+
+float getGres(struct mpu9250 * mpu9250) {
+  uint8_t Gscale = mpu9250->Gscale;
+  switch (Gscale)
+  {
+  // Possible gyro scales (and their register bit settings) are:
+  // 250 DPS (00), 500 DPS (01), 1000 DPS (10), and 2000 DPS  (11).
+    case GFS_250DPS:
+    		mpu9250->_gRes = 250.0/32768.0;
+          return mpu9250->_gRes;
+          break;
+    case GFS_500DPS:
+    		mpu9250->_gRes = 500.0/32768.0;
+          return mpu9250->_gRes;
+          break;
+    case GFS_1000DPS:
+    		mpu9250->_gRes = 1000.0/32768.0;
+         return mpu9250->_gRes;
+         break;
+    case GFS_2000DPS:
+    		mpu9250->_gRes = 2000.0/32768.0;
+         return mpu9250->_gRes;
+         break;
+  }
+  return 0.0;
+}
+
+float getAres(struct mpu9250 * mpu9250) {
+  uint8_t Ascale = mpu9250->Ascale;
+  switch (Ascale)
+  {
+  // Possible accelerometer scales (and their register bit settings) are:
+  // 2 Gs (00), 4 Gs (01), 8 Gs (10), and 16 Gs  (11).
+        // Here's a bit of an algorith to calculate DPS/(ADC tick) based on that 2-bit value:
+    case AFS_2G:
+		 mpu9250->_aRes = 2.0f/32768.0f;
+         return mpu9250->_aRes;
+         break;
+    case AFS_4G:
+		mpu9250->_aRes = 4.0f/32768.0f;
+         return mpu9250->_aRes;
+         break;
+    case AFS_8G:
+		mpu9250->_aRes = 8.0f/32768.0f;
+         return mpu9250->_aRes;
+         break;
+    case AFS_16G:
+		mpu9250->_aRes = 16.0f/32768.0f;
+         return mpu9250->_aRes;
+         break;
+  }
+  return 0.0;
+}
+
+void getAccAndGyroData(struct mpu9250 * mpu9250){
+	readMPU9250Data(mpu9250->rawData);
+
+	for (int i = 0; i<3; i++){
+		mpu9250->acc[i] = (float)(mpu9250->rawData[i] * getAres(mpu9250));
+	}
+	for (int i = 4; i<7; i++){
+		mpu9250->gyro[i-4] = (float)(mpu9250->rawData[i] * getGres(mpu9250));
+	}
+
+
+}
+
+

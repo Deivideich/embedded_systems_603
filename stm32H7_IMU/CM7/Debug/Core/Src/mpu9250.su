@@ -1,2 +1,6 @@
 ..\Core\Src\mpu9250.c:12:6:initMPU9250	24	static
 ..\Core\Src\mpu9250.c:73:6:calibrateMPU9250	104	static
+..\Core\Src\mpu9250.c:220:6:readMPU9250Data	32	static
+..\Core\Src\mpu9250.c:233:7:getGres	24	static
+..\Core\Src\mpu9250.c:259:7:getAres	24	static
+..\Core\Src\mpu9250.c:286:6:getAccAndGyroData	32	static

@@ -124,32 +124,36 @@ Error_Handler();
   MX_USART2_UART_Init();
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
-  char axisLabel[3] = {'X','Y','Z'};
+  char axisLabel[3] = {'X','Y','Z'}; //Var for printing labels
+  struct mpu9250 mpu={AFS_2G,GFS_250DPS}; //Struct for storing gyro and acc data
 
-  printf("Initiating...\r\n");
+  printf("Initiating...\r\n"); //Initiating MPU9250
   initMPU9250(AFS_2G, GFS_250DPS, M_8Hz);
-  printf("Done Initiating\r\n");
-  float accelBias[3], gyroBias[3];
 
-
+  printf("Calibrating...\r\n");
+  float accelBias[3], gyroBias[3]; //Calibrating and Printing Biases MPU9250
   calibrateMPU9250(gyroBias, accelBias);
-  printf("AccBias ");
+  printf("AccBias {");
   for(int i=0; i<3; i++){
 	  printf(" %c %.3f ",axisLabel[i],gyroBias[i]);
   }
-  printf(" GyroBias");
+  printf("} GyroBias{");
   for(int i=0; i<3; i++){
   	  printf(" %c %.3f ",axisLabel[i],accelBias[i]);
     }
-  printf("\r\n");
+  printf("}\r\n");
 
-  int16_t accel_data[3];
-  float accel_measure[3];
-  float a_conv = 2.0 / 32768;
-
-
-  uint8_t imu_data[14];
+// @note: Variables for testing
+//  without header files
+//  int16_t accel_data[3]; //Accel Var
+//  float accel_measure[3];
+//  float a_conv = 2.0 / 32768;
+//  int16_t gyro_data[3]; //Gyro Var
+//  float gyro_measure[3];
+//  float g_conv = 250.0 / 32768;
+//  uint8_t imu_data[14]; //Raw Data
 //  mpu9250_write_reg(28, 0x00); //Config Accel
+//  mpu9250_write_reg(27, 0x00); //Config Gyro
 
   /* USER CODE END 2 */
 
@@ -162,20 +166,47 @@ Error_Handler();
 
     /* USER CODE BEGIN 3 */
 
-	  mpu9250_read_reg(59, imu_data, sizeof(imu_data)); //Reading register
-	  accel_data[0] = ((int16_t)imu_data[0]<<8) | imu_data[1];
-	  accel_data[1] = ((int16_t)imu_data[2]<<8) | imu_data[3];
-	  accel_data[2] = ((int16_t)imu_data[4]<<8) | imu_data[5];
-
-	  for(int i = 0; i<3;i++){ //Joining high and low byte
-		  accel_measure[i] = (float)(accel_data[i]*a_conv);
-	  }
-
+	  getAccAndGyroData(&mpu); //Printing with func from header file
 	  printf("Acc: ");
+	  for(int i=0;i<3;i++){
+		  printf("{%c %05.3f}",axisLabel[i],mpu.acc[i]);
+	  }
+	  printf(" Gyro: ");
 	  for(int i = 0; i<3;i++){
-		  printf("{%c: %.3f} ",axisLabel[i],accel_measure[i]);
+		  printf("{%c: %05.1f} ",axisLabel[i],mpu.gyro[i]);
 	  }
 	  printf("\r\n");
+
+//	  @note: Code for testing without header files
+//	  mpu9250_read_reg(59, imu_data, sizeof(imu_data)); //Reading register Acc registers
+//	  accel_data[0] = ((int16_t)imu_data[0]<<8) | imu_data[1];
+//	  accel_data[1] = ((int16_t)imu_data[2]<<8) | imu_data[3];
+//	  accel_data[2] = ((int16_t)imu_data[4]<<8) | imu_data[5];
+//
+//	  for(int i = 0; i<3;i++){ //Joining high and low byte
+//		  accel_measure[i] = (float)(accel_data[i]*a_conv);
+//	  }
+//
+//	  printf("Acc: ");
+//	  for(int i = 0; i<3;i++){
+//		  printf("{%c: %.3f} ",axisLabel[i],accel_measure[i]);
+//	  }
+//	  printf("\r\n");
+
+//	  mpu9250_read_reg(67, imu_data, sizeof(imu_data)); //Reading register Acc registers
+//	  gyro_data[0] = ((int16_t)imu_data[0]<<8) | imu_data[1];
+//	  gyro_data[1] = ((int16_t)imu_data[2]<<8) | imu_data[3];
+//	  gyro_data[2] = ((int16_t)imu_data[4]<<8) | imu_data[5];
+//
+//	  for(int i = 0; i<3;i++){ //Joining high and low byte
+//		  gyro_measure[i] = (float)(gyro_data[i]*g_conv);
+//	  }
+//
+//	  printf("Gyro: ");
+//	  for(int i = 0; i<3;i++){
+//		  printf("{%c: %.1f} ",axisLabel[i],gyro_measure[i]);
+//	  }
+//	  printf("\r\n");
 	  HAL_Delay(100);
 
   }
