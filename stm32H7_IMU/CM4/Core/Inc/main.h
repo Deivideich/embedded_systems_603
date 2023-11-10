@@ -63,8 +63,6 @@ void Error_Handler(void);
 #define STLINK_TX_GPIO_Port GPIOD
 #define LD2_Pin GPIO_PIN_1
 #define LD2_GPIO_Port GPIOE
-void   MX_GPIO_Init(void);
-void   MX_USART3_UART_Init(void);
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

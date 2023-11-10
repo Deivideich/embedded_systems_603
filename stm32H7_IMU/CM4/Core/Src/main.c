@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -43,8 +44,6 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-
-UART_HandleTypeDef huart3;
 
 /* USER CODE BEGIN PV */
 
@@ -99,6 +98,7 @@ int main(void)
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
+  MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -112,78 +112,6 @@ int main(void)
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
-}
-
-/**
-  * @brief USART3 Initialization Function
-  * @param None
-  * @retval None
-  */
-void MX_USART3_UART_Init(void)
-{
-
-  /* USER CODE BEGIN USART3_Init 0 */
-
-  /* USER CODE END USART3_Init 0 */
-
-  /* USER CODE BEGIN USART3_Init 1 */
-
-  /* USER CODE END USART3_Init 1 */
-  huart3.Instance = USART3;
-  huart3.Init.BaudRate = 9600;
-  huart3.Init.WordLength = UART_WORDLENGTH_8B;
-  huart3.Init.StopBits = UART_STOPBITS_1;
-  huart3.Init.Parity = UART_PARITY_NONE;
-  huart3.Init.Mode = UART_MODE_TX_RX;
-  huart3.Init.HwFlowCtl = UART_HWCONTROL_NONE;
-  huart3.Init.OverSampling = UART_OVERSAMPLING_16;
-  huart3.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
-  huart3.Init.ClockPrescaler = UART_PRESCALER_DIV1;
-  huart3.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
-  if (HAL_UART_Init(&huart3) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  if (HAL_UARTEx_SetTxFifoThreshold(&huart3, UART_TXFIFO_THRESHOLD_1_8) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  if (HAL_UARTEx_SetRxFifoThreshold(&huart3, UART_RXFIFO_THRESHOLD_1_8) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  if (HAL_UARTEx_DisableFifoMode(&huart3) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN USART3_Init 2 */
-
-  /* USER CODE END USART3_Init 2 */
-
-}
-
-/**
-  * @brief GPIO Initialization Function
-  * @param None
-  * @retval None
-  */
-void MX_GPIO_Init(void)
-{
-  GPIO_InitTypeDef GPIO_InitStruct = {0};
-
-  /* GPIO Ports Clock Enable */
-  __HAL_RCC_GPIOE_CLK_ENABLE();
-
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
-
-  /*Configure GPIO pin : LD2_Pin */
-  GPIO_InitStruct.Pin = LD2_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(LD2_GPIO_Port, &GPIO_InitStruct);
-
 }
 
 /* USER CODE BEGIN 4 */
