@@ -125,12 +125,12 @@ Error_Handler();
   MX_GPIO_Init();
   MX_SPI1_Init();
   MX_USART3_UART_Init();
+  MX_SPI2_Init();
   /* USER CODE BEGIN 2 */
 
   mySetupNRF24(nrf_CSN_PORT, nrf_CSN_PIN, nrf_CE_PIN,
-		  hspi1,huart3,60, RxpipeAddrs, 1);
-
-  /* USER CODE END 2 */
+		  hspi2,huart3,60, RxpipeAddrs, 1);
+  uint8_t a = 0xFF;
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
@@ -142,6 +142,7 @@ Error_Handler();
 	  myReadData(myRxData);
 	  HAL_UART_Transmit(&huart3, (uint8_t *)myRxData, sizeof(myRxData), 10);
 	  HAL_Delay(250);
+
 
   }
   /* USER CODE END 3 */
