@@ -122,63 +122,89 @@ Error_Handler();
   MX_GPIO_Init();
   MX_USART3_UART_Init();
   MX_TIM2_Init();
+  MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1); //Starting Timer
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1); //Starting Timer 2
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1); //Staring Timer 3
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-  int minPulseWidth = 1000; //Variables for PWM
-  int maxPulseWidth = 1500;
+  //@notes: Variables for Pulse Width Modulatio for ESC (motor) and servo.
+  //Esc variables are set for backwards motion (depending on polarity).
+  int minPulseWidthESC = 1000; //Range for variables for PWM (ESC - backwards)
+  int maxPulseWidthESC = 1500;
+  int minPulseWidthServo = 1000; //Range for right and left Servo
+  int maxPulseWidthServo = 2000;
   unsigned int pwmPeriod = 20000;
   int resolution = 100;
 
-  struct escValues escValues = {htim2, minPulseWidth, //Struct Containing all
-		  maxPulseWidth, pwmPeriod, resolution};	  //PWM Variables
 
+
+  struct escValues escValues = {htim2, minPulseWidthESC, //Struct Containing all
+		  maxPulseWidthESC, pwmPeriod, resolution};	  		//PWM Variables for ESC
+
+  struct escValues servoValues = {htim3, minPulseWidthServo, //Struct Containing all
+		  maxPulseWidthServo, pwmPeriod, resolution};	  	 //PWM Variables for Servo
+
+  //@notes: ESC needs to start gradually
+  //after starting gradually, it will respond to pwm. If given a pwm
+  //without this setup, it doesn't respond.
   printf("Starting Setup...\r\n"); // Setup
-
   int i = 100;
   int dt = 1;
   do{
-//	  setPwm(htim2, minPulseWidth, maxPulseWidth, pwmPeriod, resolution, i);
+	  //setPwm(htim2, minPulseWidth, maxPulseWidth, pwmPeriod, resolution, i);
 	  setPwmS(&escValues);
 	  escValues.percentage=(unsigned int)i;
 	  HAL_Delay(10);
 	  i=i-dt;
 
   }while(i > 50);
-
-
   printf("End Setup\r\n");
 
-  uint8_t input[3]; //Variables for Receiving UART
-  int inputInt;
+  uint8_t inputESC[3], inputServo[3]; //Variables for Receiving UART
+  int inputIntESC, inputIntServo;
 
   while (1)
   {
 
-	  //Receiving from UART
-	  while(HAL_UART_Receive(&huart3, input, 3, HAL_MAX_DELAY));
-	  printf("Receive from UART {%c%c%c} \r\n",input[0],input[1],input[2]);
+	  //@note: Test for checking motor with ESC. Receiving from UART
+	  //values from 000 to 100. Change minPulseWidth, maxPulseWidth
+	  //pwmPeriod, resoution and escValues.percentage accordingly to
+	  //your needs.
+	  printf("PWM: ");
+	  while(HAL_UART_Receive(&huart3, inputESC, 3, HAL_MAX_DELAY)); //Receiving from UART ESC
+	  printf("Received PWM: {%c%c%c} \r\n",inputESC[0],inputESC[1],inputESC[2]);
+	  printf("\nServo: ");
+	  while(HAL_UART_Receive(&huart3, inputServo, 3, HAL_MAX_DELAY)); //Receiving from UART Servo
+	  printf("Received PWM: {%c%c%c} \r\n",inputServo[0],inputServo[1],inputServo[2]);
 
-	  for(int i = 0 ; i < 4 ; i++){
-		  input[i]-='0';
+	  for(int i = 0 ; i < 4 ; i++){//Deleting 0 to convert from ASCII to DEC
+		  inputESC[i]-='0';
+		  inputServo[i]-='0';
 	  }
 
-	  inputInt = (input[0]*100 + input[1]*10 + input[2]);
+	  inputIntESC = (inputESC[0]*100 + inputESC[1]*10 + inputESC[2]);//Converting to INT ESC
+	  inputIntServo = (inputServo[0]*100 + inputServo[1]*10 + inputServo[2]);//Converting to INT Servo
 
-	  if(inputInt < 101 && inputInt >= 0){
-		  escValues.percentage = inputInt;
+	  if(inputIntESC < 101 && inputIntESC >= 0){//Limiting input ESC
+		  escValues.percentage = inputIntESC;
+	  }
+	  if(inputIntServo < 101 && inputIntServo >= 0){//Limiting input Servo
+		  servoValues.percentage = inputIntServo;
 	  }
 
 	  //Setting PWM value
-//	  setPwm(htim2, minPulseWidth, maxPulseWidth, pwmPeriod, resolution, percentage);
+	  //setPwm(htim2, minPulseWidth, maxPulseWidth, pwmPeriod, resolution, percentage);
 	  setPwmS(&escValues);
+	  //HAL_Delay(100);
+	  setPwmS(&servoValues);
 
-	  //Printing Values
-	  printf("Percentage{%d} PulseWidth{%.5f}\r\n",escValues.percentage,escValues.pulseWidth);
+	  //@note: Printing percentage, pulse width, set min and set max
+	  printf("ESC   - P: %3d PW: %.5f (min: %.5f max: %.5f)\r\n",escValues.percentage,escValues.pulseWidth,escValues.minPulseWidth/1e6,escValues.maxPulseWidth/1e6);
+	  printf("Servo - P: %3d PW: %.5f (min: %.5f max: %.5f)\r\n",servoValues.percentage,servoValues.pulseWidth,servoValues.minPulseWidth/1e6,servoValues.maxPulseWidth/1e6);
 
 
     /* USER CODE END WHILE */
