@@ -63,15 +63,7 @@ static void MX_SPI1_Init(void);
 /* USER CODE BEGIN PFP */
 void mpu9250_read_reg(uint8_t reg, uint8_t *data, uint8_t len);
 void mpu9250_write_reg(uint8_t reg, uint8_t data);
-void calibrate_mag();
-void init_mag();
-bool read_mag(int16_t*);
 
-float mag_bias[3] = {0., 0., 0.};  // mag calibration value in MAG_OUTPUT_BITS: 16BITS
-float mag_scale[3] = {1., 1., 1.};
-float mag_bias_factory[3] = {0.0, 0.0, 0.0};
-float magnetic_declination = -7.51;  // Japan, 24th June
-float mag_resolution = 10. * 4912. / 32760.0;   // scale resolutions per LSB for the sensors
 
 /* USER CODE END PFP */
 
@@ -144,14 +136,13 @@ Error_Handler();
   int16_t gyro_x, gyro_y, gyro_z;
   //int16_t mag_x, mag_y, mag_z;
   uint8_t imu_data[14];
-  int16_t mag_count[3] = {0, 0, 0};  // Stores the 16-bit signed magnetometer sensor output
   mpu9250_write_reg(27, 0x00);
   HAL_Delay(100);
   mpu9250_write_reg(28, 0x08);
   HAL_Delay(100);
-  float a_conv = 4.0 / 32768;
+  float a_conv = 2.0 / 32768;
   float g_conv = 250.0 / 32768.0;
-  float a_x, a_y, a_z, g_x, g_y, g_z, m_x, m_y, m_z;
+  float a_x, a_y, a_z, g_x, g_y, g_z;
   /* USER CODE END 2 */
 
 
@@ -159,7 +150,6 @@ Error_Handler();
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   printf("Starting !\r\n");
-  calibrate_mag();
   while (1)
   {
 	  HAL_Delay(5);
@@ -168,38 +158,21 @@ Error_Handler();
 	  acc_y = ((int16_t)imu_data[2]<<8) + imu_data[3];
 	  acc_z = ((int16_t)imu_data[4]<<8) + imu_data[5];
 
-	  mpu9250_read_reg(67, imu_data, sizeof(imu_data));
-	  gyro_x = ((int16_t)imu_data[0]<<8) + imu_data[1];
-	  gyro_y = ((int16_t)imu_data[2]<<8) + imu_data[3];
-	  gyro_z = ((int16_t)imu_data[4]<<8) + imu_data[5];
-
-	  if(read_mag(mag_count)){
-		  m_x=(float)(mag_count[0]*mag_resolution*mag_bias_factory[0]-mag_bias[0])*mag_scale[0];  // get actual magnetometer value, this depends on scale being set
-		  m_y=(float)(mag_count[1]*mag_resolution*mag_bias_factory[1]-mag_bias[1])*mag_scale[1];
-		  m_z=(float)(mag_count[2]*mag_resolution*mag_bias_factory[2]-mag_bias[2])*mag_scale[2];
-	  } else {
-		  printf("huh\r\n");
-	  }
-
-	  a_x = (float)(acc_x *  a_conv - 1);
-	  a_y = (float)(acc_y *  a_conv + 0.27);
-	  a_z = (float)(acc_z *  a_conv);
-	  g_x = (float)(gyro_x *  g_conv);
-	  g_y = (float)(gyro_y *  g_conv);
-	  g_z = (float)(gyro_z *  g_conv);
-
 //	  mpu9250_read_reg(67, imu_data, sizeof(imu_data));
-//	  mag_x = ((int16_t)imu_data[0]<<8) + imu_data[1];
-//	  mag_y = ((int16_t)imu_data[2]<<8) + imu_data[3];
-//	  mag_z = ((int16_t)imu_data[4]<<8) + imu_data[5];
-//	  m_x = (float)(mag_x *  m_conv);
-//	  m_y = (float)(mag_y *  m_conv);
-//	  m_z = (float)(mag_z *  m_conv);
+//	  gyro_x = ((int16_t)imu_data[0]<<8) + imu_data[1];
+//	  gyro_y = ((int16_t)imu_data[2]<<8) + imu_data[3];
+//	  gyro_z = ((int16_t)imu_data[4]<<8) + imu_data[5];
 
-//  m[0] = (float)(mag_count[0] * mag_resolution * mag_bias_factory[0] - mag_bias[0] * bias_to_current_bits) * mag_scale[0];  // get actual magnetometer value, this depends on scale being set
+
+	  a_x = (float)(acc_x *  a_conv) * 9.81;
+	  a_y = (float)(acc_y *  a_conv) * 9.81;
+	  a_z = (float)(acc_z *  a_conv) * 9.81;
+//	  g_x = (float)(gyro_x *  g_conv);
+//	  g_y = (float)(gyro_y *  g_conv);
+//	  g_z = (float)(gyro_z *  g_conv);
 
 //	  printf("Acc{x: %.3f, y: %.3f, z:%.3f}, Gyro{x: %.3f, y: %.3f, z:%.3f}\r\n",a_x, a_y, a_z,g_x, g_y, g_z);
-	  printf("Mag{x: %.3f, y: %.3f, z:%.3f}\r\n",m_x, m_y, m_z);
+	  printf("Acc{x: %.3f, y: %.3f, z:%.3f}\r\n",a_x, a_y, a_z);
 
     /* USER CODE END WHILE */
 
@@ -423,95 +396,6 @@ void mpu9250_read_reg(uint8_t reg, uint8_t *data, uint8_t len)
 	HAL_GPIO_WritePin(SPI_CS_GPIO_Port, SPI_CS_Pin, GPIO_PIN_SET);
 }
 
-bool read_mag(int16_t* destination) {
-	const uint8_t st1;
-	mpu9250_read_reg(0x02, st1, sizeof(st1));
-	if (st1 & 0x01) {                                                    // wait for magnetometer data ready bit to be set
-		uint8_t raw_data[7];
-		// x/y/z gyro register data, ST2 register stored here, must read ST2 at end of data acquisition
-		mpu9250_read_reg(0x03, &raw_data[0], 7);
-		if ((st1 & 0x02) != 0){                                      // check if data is not skipped
-			return false;                                            // this should be after data reading to clear DRDY register
-		} else {
-			printf("!st1.2\r\n");
-		}
-		uint16_t c = raw_data[6];                                         // End data read by reading ST2 register
-		if (!(c & 0x08)) {                                               // Check if magnetic sensor overflow set, if not then report data
-			destination[0] = ((int16_t)raw_data[1] << 8) | raw_data[0];  // Turn the MSB and LSB into a signed 16-bit value
-			destination[1] = ((int16_t)raw_data[3] << 8) | raw_data[2];  // Data stored as little Endian
-			destination[2] = ((int16_t)raw_data[5] << 8) | raw_data[4];
-			return true;
-		} else {
-			printf("!c\r\n");
-		}
-	} else {
-		printf("!st1.1\r\n");
-	}
-	return false;
-}
-
-void init_mag(){
-	uint8_t raw_data[3];                            // x/y/z gyro calibration data stored here
-	mpu9250_write_reg(11, 0x00);
-	HAL_Delay(10);
-	mpu9250_write_reg(11, 0x0F);
-	HAL_Delay(10);
-	mpu9250_read_reg(16, raw_data[0], sizeof(raw_data));
-	mag_bias_factory[0] = (float)(raw_data[0] - 128) / 256. + 1.;
-	mag_bias_factory[1] = (float)(raw_data[1] - 128) / 256. + 1.;
-	mag_bias_factory[2] = (float)(raw_data[2] - 128) / 256. + 1.;
-	mpu9250_write_reg(11, 0x00);
-	HAL_Delay(10);
-	mpu9250_write_reg(11,(uint8_t)0x06);
-	HAL_Delay(10);
-}
-
-void calibrate_mag() {
-    printf("Magnetometer calibration started...\r\n\n");
-    init_mag();
-    HAL_Delay(4000);
-	// shoot for ~fifteen seconds of mag data
-	uint16_t sample_count = 0;
-	sample_count = 1500;    // at 100 Hz ODR, new mag data is available every 10 ms
-	int32_t bias[3] = {0, 0, 0}, scale[3] = {0, 0, 0};
-	int16_t mag_max[3] = {-32767, -32767, -32767};
-	int16_t mag_min[3] = {32767, 32767, 32767};
-	int16_t mag_temp[3] = {0, 0, 0};
-	for (uint16_t ii = 0; ii < sample_count; ii++) {
-		read_mag(mag_temp);  // Read the mag data
-		for (int jj = 0; jj < 3; jj++) {
-			if (mag_temp[jj] > mag_max[jj]) mag_max[jj] = mag_temp[jj];
-			if (mag_temp[jj] < mag_min[jj]) mag_min[jj] = mag_temp[jj];
-		}
-		HAL_Delay(12);   // at 100 Hz ODR, new mag data is available every 10 ms
-	}
-
-	// Get hard iron correction
-	bias[0] = (mag_max[0] + mag_min[0]) / 2;  // get average x mag bias in counts
-	bias[1] = (mag_max[1] + mag_min[1]) / 2;  // get average y mag bias in counts
-	bias[2] = (mag_max[2] + mag_min[2]) / 2;  // get average z mag bias in counts
-
-	float bias_resolution = 10. * 4912. / 32760.0;
-	mag_bias[0] = (float)bias[0] * bias_resolution * mag_bias_factory[0];  // save mag biases in G for main program
-	mag_bias[1] = (float)bias[1] * bias_resolution * mag_bias_factory[1];
-	mag_bias[2] = (float)bias[2] * bias_resolution * mag_bias_factory[2];
-
-	// Get soft iron correction estimate
-	//*** multiplication by mag_bias_factory added in accordance with the following comment
-	//*** https://github.com/kriswiner/MPU9250/issues/456#issue-836657973
-	scale[0] = (float)(mag_max[0] - mag_min[0]) * mag_bias_factory[0] / 2;  // get average x axis max chord length in counts
-	scale[1] = (float)(mag_max[1] - mag_min[1]) * mag_bias_factory[1] / 2;  // get average y axis max chord length in counts
-	scale[2] = (float)(mag_max[2] - mag_min[2]) * mag_bias_factory[2] / 2;  // get average z axis max chord length in counts
-
-	float avg_rad = scale[0] + scale[1] + scale[2];
-	avg_rad /= 3.0;
-
-	mag_scale[0] = avg_rad / ((float)scale[0]);
-	mag_scale[1] = avg_rad / ((float)scale[1]);
-	mag_scale[2] = avg_rad / ((float)scale[2]);
-    init_mag();
-    printf("Magnetometer calibrated!\r\n");
-}
 /* USER CODE END 4 */
 
 /**

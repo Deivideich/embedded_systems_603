@@ -1,0 +1,2 @@
+2023-11-06 11:38:55,048 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,450x190,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-11-06 11:40:57,664 [INFO] Gpio:273 - dependency for GPIO [RCC, TIM2, TIM3, USART3]

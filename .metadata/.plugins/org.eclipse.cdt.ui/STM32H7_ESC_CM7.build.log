@@ -1,0 +1,30 @@
+16:25:14 **** Incremental Build of configuration Debug for project STM32H7_ESC_CM7 ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:155:9: warning: unused variable 'endPWM' [-Wunused-variable]
+  155 |   float endPWM = 1900 / 1e6;
+      |         ^~~~~~
+../Core/Src/main.c:136:10: warning: unused variable 'prevPulseWidth' [-Wunused-variable]
+  136 |   double prevPulseWidth = 0.000;
+      |          ^~~~~~~~~~~~~~
+../Core/Src/main.c:134:7: warning: unused variable 'inputInt' [-Wunused-variable]
+  134 |   int inputInt;
+      |       ^~~~~~~~
+../Core/Src/main.c:133:11: warning: unused variable 'input' [-Wunused-variable]
+  133 |   uint8_t input[4];
+      |           ^~~~~
+arm-none-eabi-gcc -o "STM32H7_ESC_CM7.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\STM32H7_ESC\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32H7_ESC_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32H7_ESC_CM7.elf
+ 
+arm-none-eabi-size   STM32H7_ESC_CM7.elf 
+arm-none-eabi-objdump -h -S  STM32H7_ESC_CM7.elf  > "STM32H7_ESC_CM7.list"
+   text	   data	    bss	    dec	    hex	filename
+  37232	    480	   2200	  39912	   9be8	STM32H7_ESC_CM7.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32H7_ESC_CM7.list
+ 
+
+16:25:15 Build Finished. 0 errors, 4 warnings. (took 852ms)
+

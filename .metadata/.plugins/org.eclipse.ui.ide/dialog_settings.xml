@@ -9,6 +9,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32_h7_DMA_i2sFullDuplex\stm32_h7_DMA_i2sFullDuplex"/>
+			<item value="C:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32_h7_DMA_i2sFullDuplex"/>
 			<item value="C:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32_h7_canbase"/>
 			<item value="C:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32_I2C"/>
 			<item value="C:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32h7"/>

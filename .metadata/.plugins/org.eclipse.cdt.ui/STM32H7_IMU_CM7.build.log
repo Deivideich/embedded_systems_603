@@ -1,71 +1,10 @@
-23:43:52 **** Incremental Build of configuration Debug for project STM32H7_IMU_CM7 ****
+11:42:48 **** Build of configuration Debug for project STM32H7_IMU_CM7 ****
 make -j20 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:154:34: warning: variable 'g_z' set but not used [-Wunused-but-set-variable]
-  154 |   float a_x, a_y, a_z, g_x, g_y, g_z, m_x, m_y, m_z;
-      |                                  ^~~
-../Core/Src/main.c:154:29: warning: variable 'g_y' set but not used [-Wunused-but-set-variable]
-  154 |   float a_x, a_y, a_z, g_x, g_y, g_z, m_x, m_y, m_z;
-      |                             ^~~
-../Core/Src/main.c:154:24: warning: variable 'g_x' set but not used [-Wunused-but-set-variable]
-  154 |   float a_x, a_y, a_z, g_x, g_y, g_z, m_x, m_y, m_z;
-      |                        ^~~
-../Core/Src/main.c:154:19: warning: variable 'a_z' set but not used [-Wunused-but-set-variable]
-  154 |   float a_x, a_y, a_z, g_x, g_y, g_z, m_x, m_y, m_z;
-      |                   ^~~
-../Core/Src/main.c:154:14: warning: variable 'a_y' set but not used [-Wunused-but-set-variable]
-  154 |   float a_x, a_y, a_z, g_x, g_y, g_z, m_x, m_y, m_z;
-      |              ^~~
-../Core/Src/main.c:154:9: warning: variable 'a_x' set but not used [-Wunused-but-set-variable]
-  154 |   float a_x, a_y, a_z, g_x, g_y, g_z, m_x, m_y, m_z;
-      |         ^~~
-../Core/Src/main.c: In function 'read_mag':
-../Core/Src/main.c:428:25: warning: passing argument 2 of 'mpu9250_read_reg' makes pointer from integer without a cast [-Wint-conversion]
-  428 |  mpu9250_read_reg(0x02, st1, sizeof(st1));
-      |                         ^~~
-      |                         |
-      |                         uint8_t {aka const unsigned char}
-../Core/Src/main.c:417:45: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t' {aka 'const unsigned char'}
-  417 | void mpu9250_read_reg(uint8_t reg, uint8_t *data, uint8_t len)
-      |                                    ~~~~~~~~~^~~~
-../Core/Src/main.c: In function 'init_mag':
-../Core/Src/main.c:459:31: warning: passing argument 2 of 'mpu9250_read_reg' makes pointer from integer without a cast [-Wint-conversion]
-  459 |  mpu9250_read_reg(16, raw_data[0], sizeof(raw_data));
-      |                       ~~~~~~~~^~~
-      |                               |
-      |                               uint8_t {aka unsigned char}
-../Core/Src/main.c:417:45: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t' {aka 'unsigned char'}
-  417 | void mpu9250_read_reg(uint8_t reg, uint8_t *data, uint8_t len)
-      |                                    ~~~~~~~~~^~~~
-../Core/Src/main.c: In function 'read_mag':
-../Core/Src/main.c:428:2: warning: 'st1' is used uninitialized in this function [-Wuninitialized]
-  428 |  mpu9250_read_reg(0x02, st1, sizeof(st1));
-      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../Core/Src/main.c: In function 'init_mag':
-../Core/Src/main.c:459:31: warning: 'raw_data[0]' is used uninitialized in this function [-Wuninitialized]
-  459 |  mpu9250_read_reg(16, raw_data[0], sizeof(raw_data));
-      |                       ~~~~~~~~^~~
-../Core/Src/main.c:460:40: warning: 'raw_data[0]' is used uninitialized in this function [-Wuninitialized]
-  460 |  mag_bias_factory[0] = (float)(raw_data[0] - 128) / 256. + 1.;
-      |                                ~~~~~~~~^~~
-../Core/Src/main.c:461:40: warning: 'raw_data[1]' is used uninitialized in this function [-Wuninitialized]
-  461 |  mag_bias_factory[1] = (float)(raw_data[1] - 128) / 256. + 1.;
-      |                                ~~~~~~~~^~~
-../Core/Src/main.c:462:40: warning: 'raw_data[2]' is used uninitialized in this function [-Wuninitialized]
-  462 |  mag_bias_factory[2] = (float)(raw_data[2] - 128) / 256. + 1.;
-      |                                ~~~~~~~~^~~
-arm-none-eabi-gcc -o "STM32H7_IMU_CM7.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\STM32H7_IMU\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32H7_IMU_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: STM32H7_IMU_CM7.elf
- 
 arm-none-eabi-size   STM32H7_IMU_CM7.elf 
-arm-none-eabi-objdump -h -S  STM32H7_IMU_CM7.elf  > "STM32H7_IMU_CM7.list"
    text	   data	    bss	    dec	    hex	filename
-  38472	    504	   1896	  40872	   9fa8	STM32H7_IMU_CM7.elf
+  36400	    480	   2184	  39064	   9898	STM32H7_IMU_CM7.elf
 Finished building: default.size.stdout
  
-Finished building: STM32H7_IMU_CM7.list
- 
 
-23:43:53 Build Finished. 0 errors, 13 warnings. (took 737ms)
+11:42:48 Build Finished. 0 errors, 0 warnings. (took 766ms)
 

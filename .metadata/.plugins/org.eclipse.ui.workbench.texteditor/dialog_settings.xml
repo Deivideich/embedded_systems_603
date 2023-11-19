@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="HAL_MAX"/>
+		<item key="selection" value="USER CODE END 0"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="delayed_right"/>
+			<item value="user code end 0"/>
+			<item value="processData"/>
+			<item value="delay_line_left"/>
+			<item value="MAX_DELAY"/>
+			<item value="process"/>
+			<item value="while (1)"/>
+			<item value="while(1)"/>
+			<item value="mag"/>
 			<item value="HAL_MAX"/>
 			<item value="xStreamBuffer"/>
 			<item value="xStreamBuff"/>
 			<item value="xStreamBuf"/>
 			<item value="xStreamBuffer,"/>
 			<item value="mutex"/>
-			<item value="0000008"/>
-			<item value="htim"/>
-			<item value="xStreamBufferSend("/>
-			<item value="xStreamBufferSend"/>
-			<item value="user code begin"/>
-			<item value="stack"/>
-			<item value="printf"/>
-			<item value="usart3"/>
-			<item value="uart"/>
 		</list>
 		<list key="replacehistory">
 			<item value="HAL_Delay"/>
