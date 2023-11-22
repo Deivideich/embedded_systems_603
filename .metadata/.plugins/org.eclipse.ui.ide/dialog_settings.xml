@@ -7,6 +7,8 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU"/>
+			<item value="C:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\STM32H7_IMU"/>
 			<item value="D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
@@ -19,6 +21,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\STM32H7_IMU"/>
+			<item value="C:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32_JohnDeere"/>
 			<item value="D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603"/>
 			<item value="D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\stm32H7_IMU"/>
 		</list>

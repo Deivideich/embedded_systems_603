@@ -1,58 +1,710 @@
-18:55:28 **** Incremental Build of configuration Debug for project H755_SPI_CM7 ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "H755_SPI_CM7.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="H755_SPI_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: H755_SPI_CM7.elf
- 
-arm-none-eabi-size   H755_SPI_CM7.elf 
-arm-none-eabi-objdump -h -S  H755_SPI_CM7.elf  > "H755_SPI_CM7.list"
+15:58:48 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\mpu9250.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\mpu9250.o 
+arm-none-eabi-gcc ..\Core\Src\main.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\main.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 2
+15:59:02 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
    text	   data	    bss	    dec	    hex	filename
-  32580	    132	   2224	  34936	   8878	H755_SPI_CM7.elf
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
 Finished building: default.size.stdout
  
-Finished building: H755_SPI_CM7.list
- 
-18:55:47 **** Incremental Build of configuration Debug for project H755_SPI_CM7 ****
-make -j12 all 
-arm-none-eabi-size   H755_SPI_CM7.elf 
+15:59:02 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+Info: Parallel threads used: 0
+16:01:58 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
    text	   data	    bss	    dec	    hex	filename
-  32580	    132	   2224	  34936	   8878	H755_SPI_CM7.elf
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
 Finished building: default.size.stdout
  
-18:55:48 **** Incremental Build of configuration Debug for project H755_SPI_CM7 ****
-make -j12 all 
-arm-none-eabi-size   H755_SPI_CM7.elf 
+16:01:59 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+Info: Parallel threads used: 0
+16:03:04 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
    text	   data	    bss	    dec	    hex	filename
-  32580	    132	   2224	  34936	   8878	H755_SPI_CM7.elf
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
 Finished building: default.size.stdout
  
-18:58:41 **** Incremental Build of configuration Debug for project H755_SPI_CM7 ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/MY_NRF24.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/MY_NRF24.d" -MT"Core/Src/MY_NRF24.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MY_NRF24.o"
-arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/myprintf.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/myprintf.d" -MT"Core/Src/myprintf.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/myprintf.o"
-arm-none-eabi-gcc "../Core/Src/spi.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/spi.d" -MT"Core/Src/spi.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/spi.o"
-arm-none-eabi-gcc "../Core/Src/stm32h7xx_hal_msp.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_hal_msp.d" -MT"Core/Src/stm32h7xx_hal_msp.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_hal_msp.o"
-arm-none-eabi-gcc "../Core/Src/stm32h7xx_it.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_it.d" -MT"Core/Src/stm32h7xx_it.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_it.o"
-arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
-arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
-arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usart.o"
-arm-none-eabi-gcc -o "H755_SPI_CM7.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\Universidad\Quinto_Semestre\Embedidos_Avanzados\STM32\embedded_systems_603\H755_SPI_wireless\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="H755_SPI_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: H755_SPI_CM7.elf
- 
-arm-none-eabi-size   H755_SPI_CM7.elf 
-arm-none-eabi-objdump -h -S  H755_SPI_CM7.elf  > "H755_SPI_CM7.list"
+16:03:04 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\main.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\main.o 
+arm-none-eabi-gcc ..\Core\Src\mpu9250.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\mpu9250.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 2
+16:03:57 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
    text	   data	    bss	    dec	    hex	filename
-  43204	    496	   2224	  45924	   b364	H755_SPI_CM7.elf
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
 Finished building: default.size.stdout
  
-Finished building: H755_SPI_CM7.list
- 
-18:58:45 **** Incremental Build of configuration Debug for project H755_SPI_CM7 ****
-make -j12 all 
-arm-none-eabi-size   H755_SPI_CM7.elf 
+16:03:57 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+Info: Parallel threads used: 0
+18:52:28 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
    text	   data	    bss	    dec	    hex	filename
-  43204	    496	   2224	  45924	   b364	H755_SPI_CM7.elf
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
 Finished building: default.size.stdout
  
+18:52:28 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\mpu9250.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\mpu9250.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+21:00:41 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+21:00:41 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\main.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\main.o 
+arm-none-eabi-gcc ..\Core\Src\mpu9250.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\mpu9250.o 
+..\Core\Src\mpu9250.c: In function 'updateData':
+..\Core\Src\mpu9250.c:307:25: error: 'gyro' undeclared (first use in this function)
+  307 |   mpu9250->lastAngVel = gyro[2];
+      |                         ^~~~
+..\Core\Src\mpu9250.c:307:25: note: each undeclared identifier is reported only once for each function it appears in
+Info: Parallel threads used: 2
+21:01:14 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+21:01:15 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\main.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\main.o 
+arm-none-eabi-gcc ..\Core\Src\mpu9250.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\mpu9250.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 2
+21:02:38 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+21:02:39 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\main.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\main.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+21:05:23 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+21:05:23 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\main.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\main.o 
+arm-none-eabi-gcc ..\Core\Src\mpu9250.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\mpu9250.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 2
+21:06:55 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+21:06:55 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\main.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\main.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+21:10:48 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+21:10:49 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\main.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\main.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+21:17:14 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+21:17:14 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\mpu9250.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\mpu9250.o 
+arm-none-eabi-gcc ..\Core\Src\main.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\main.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 2
+21:19:26 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+21:19:26 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\main.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\main.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+21:20:39 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+21:20:39 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\main.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\main.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+21:23:18 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+21:23:18 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\mpu9250.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\mpu9250.o 
+..\Core\Src\mpu9250.c: In function 'updateData':
+..\Core\Src\mpu9250.c:322:39: error: invalid operands to binary % (have 'float' and 'int')
+  322 |   mpu9250->psi = (mpu9250->psi + 180) % 360 - 180;
+      |                  ~~~~~~~~~~~~~~~~~~~~ ^
+      |                                |
+      |                                float
+Info: Parallel threads used: 1
+21:24:47 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+21:24:47 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\mpu9250.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\mpu9250.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+21:25:52 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+21:25:52 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\mpu9250.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\mpu9250.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+21:28:44 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+21:28:44 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\mpu9250.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\mpu9250.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+21:33:15 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+21:33:15 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\mpu9250.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\mpu9250.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+21:35:04 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+21:35:04 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\mpu9250.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\mpu9250.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+22:15:08 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+22:15:08 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\mpu9250.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\mpu9250.o 
+..\Core\Src\mpu9250.c: In function 'updateData':
+..\Core\Src\mpu9250.c:339:28: error: 'std' undeclared (first use in this function)
+  339 |   mpu9250->pose[0] += dt * std::cos((mpu9250->lastVel + mpu9250->currentVel) / 2);
+      |                            ^~~
+..\Core\Src\mpu9250.c:339:28: note: each undeclared identifier is reported only once for each function it appears in
+..\Core\Src\mpu9250.c:339:31: error: expected ';' before '::' token
+  339 |   mpu9250->pose[0] += dt * std::cos((mpu9250->lastVel + mpu9250->currentVel) / 2);
+      |                               ^~
+      |                               ;
+..\Core\Src\mpu9250.c:340:31: error: expected ';' before '::' token
+  340 |   mpu9250->pose[1] += dt * std::sin((mpu9250->lastVel + mpu9250->currentVel) / 2);
+      |                               ^~
+      |                               ;
+Info: Parallel threads used: 1
+22:15:24 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+22:15:24 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\mpu9250.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\mpu9250.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+22:16:50 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+22:16:50 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\main.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\main.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+22:24:32 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+22:24:33 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\main.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\main.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+22:26:05 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+22:26:05 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+Info: Parallel threads used: 0
+22:30:26 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+22:30:26 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\mpu9250.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\mpu9250.o 
+arm-none-eabi-gcc ..\Core\Src\main.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\main.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 2
+22:33:34 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+22:33:34 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+Info: Parallel threads used: 0
+22:34:20 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+22:34:20 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+Info: Parallel threads used: 0
+22:34:52 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+22:34:52 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+Info: Parallel threads used: 0
+22:35:23 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+22:35:23 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+Info: Parallel threads used: 0
+22:36:00 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+22:36:01 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\main.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\main.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+22:37:50 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+22:37:50 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\main.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\main.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+22:45:38 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+22:45:39 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\mpu9250.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\mpu9250.o 
+arm-none-eabi-gcc ..\Core\Src\main.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\main.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 2
+22:47:22 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+22:47:22 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\mpu9250.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\mpu9250.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+22:47:43 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+22:47:43 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\mpu9250.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\mpu9250.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+22:48:10 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+22:48:11 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\mpu9250.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\mpu9250.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+22:51:13 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+22:51:13 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\main.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\main.o 
+arm-none-eabi-gcc ..\Core\Src\mpu9250.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\mpu9250.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 2
+22:53:57 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+22:53:58 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\mpu9250.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\mpu9250.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+22:56:05 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+22:56:05 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\main.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\main.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+22:57:58 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+22:57:58 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\main.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\main.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+23:05:30 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+23:05:30 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\mpu9250.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\mpu9250.o 
+..\Core\Src\mpu9250.c: In function 'updateData':
+..\Core\Src\mpu9250.c:328:26: error: 'struct mpu9250' has no member named 'gryo'; did you mean 'gyro'?
+  328 |                 mpu9250->gryo[i]= ((int8_t)(mpu9250->gryo[i]*100)) / 100.0;
+      |                          ^~~~
+      |                          gyro
+..\Core\Src\mpu9250.c:328:54: error: 'struct mpu9250' has no member named 'gryo'; did you mean 'gyro'?
+  328 |                 mpu9250->gryo[i]= ((int8_t)(mpu9250->gryo[i]*100)) / 100.0;
+      |                                                      ^~~~
+      |                                                      gyro
+Info: Parallel threads used: 1
+23:05:39 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+23:05:40 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\mpu9250.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\mpu9250.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+23:10:39 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+23:10:39 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\mpu9250.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\mpu9250.o 
+..\Core\Src\mpu9250.c: In function 'initMPU9250':
+..\Core\Src\mpu9250.c:24:10: error: 'struct mpu9250' has no member named 'lastAcc'
+   24 |   mpu9250->lastAcc[0] = 0;
+      |          ^~
+..\Core\Src\mpu9250.c:25:10: error: 'struct mpu9250' has no member named 'lastAcc'
+   25 |   mpu9250->lastAcc[1] = 0;
+      |          ^~
+Info: Parallel threads used: 1
+23:11:10 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+23:11:11 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\mpu9250.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\mpu9250.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+23:13:42 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+23:13:42 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+Info: Parallel threads used: 0
+23:14:02 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+23:14:02 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+Info: Parallel threads used: 0
+23:14:22 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+23:14:22 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\main.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\main.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+23:15:21 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+23:15:21 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\mpu9250.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\mpu9250.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+23:15:33 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+23:15:33 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\mpu9250.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\mpu9250.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+23:17:09 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+23:17:09 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\mpu9250.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\mpu9250.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+23:18:32 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+23:18:32 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\main.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\main.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+23:20:05 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+23:20:05 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\main.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\main.o 
+..\Core\Src\main.c: In function 'main':
+..\Core\Src\main.c:180:34: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat=]
+  180 |                    printf("{%05.1f}",axisLabel[i],mpu.pose[i]);
+      |                             ~~~~~^   ~~~~~~~~~~~~
+      |                                  |            |
+      |                                  double       int
+      |                             %05.1d
+..\Core\Src\main.c:180:27: warning: too many arguments for format [-Wformat-extra-args]
+  180 |                    printf("{%05.1f}",axisLabel[i],mpu.pose[i]);
+      |                           ^~~~~~~~~~
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+23:20:14 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+23:20:14 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\main.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\main.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1
+23:20:25 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+23:20:25 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+Info: Parallel threads used: 0
+23:25:54 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+23:25:54 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\mpu9250.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\mpu9250.o 
+arm-none-eabi-gcc ..\Core\Src\main.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\main.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 2
+23:26:20 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM4 ****
+make -j20 all 
+arm-none-eabi-size   stm32H7_IMU_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4152	     24	   1568	   5744	   1670	stm32H7_IMU_CM4.elf
+Finished building: default.size.stdout
+ 
+23:26:20 **** Incremental Build of configuration Debug for project stm32H7_IMU_CM7 ****
+Info: Internal Builder is used for build
+arm-none-eabi-gcc ..\Core\Src\main.c -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H745xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o Core\Src\main.o 
+arm-none-eabi-gcc -o stm32H7_IMU_CM7.elf Common\Src\system_stm32h7xx_dualcore_boot_cm4_cm7.o Core\Src\gpio.o Core\Src\main.o Core\Src\mpu9250.o Core\Src\myprintf.o Core\Src\spi.o Core\Src\stm32h7xx_hal_msp.o Core\Src\stm32h7xx_it.o Core\Src\syscalls.o Core\Src\sysmem.o Core\Src\usart.o Core\Startup\startup_stm32h745zitx.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_cortex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_dma_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_exti.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_flash_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_gpio.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_hsem.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_i2c_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_mdma.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_pwr_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_rcc_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_spi_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_tim_ex.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart.o Drivers\STM32H7xx_HAL_Driver\stm32h7xx_hal_uart_ex.o -mcpu=cortex-m7 -TC:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\embedded_systems_603\stm32H7_IMU\CM7\STM32H745ZITX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm32H7_IMU_CM7.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group 
+Info: Parallel threads used: 1

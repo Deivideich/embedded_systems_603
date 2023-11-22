@@ -128,7 +128,7 @@ Error_Handler();
   struct mpu9250 mpu={AFS_2G,GFS_250DPS}; //Struct for storing gyro and acc data
 
   printf("Initiating...\r\n"); //Initiating MPU9250
-  initMPU9250(AFS_2G, GFS_250DPS, M_8Hz);
+  initMPU9250(&mpu, AFS_2G, GFS_250DPS, M_8Hz);
 
   printf("Calibrating...\r\n");
   float accelBias[3], gyroBias[3]; //Calibrating and Printing Biases MPU9250
@@ -160,20 +160,26 @@ Error_Handler();
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   printf("Starting...\r\n");
+  float initPose[] = {100,100,90};
+  setPose(&mpu, initPose);
   while (1)
   {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
 
-	  getAccAndGyroData(&mpu); //Printing with func from header file
-	  printf("Acc: ");
+	  updateData(&mpu, 0.1, 1); //Printing with func from header file
+	  printf("Acc XYZ:");
 	  for(int i=0;i<3;i++){
-		  printf("{%c %05.3f}",axisLabel[i],mpu.acc[i]);
+		  printf("{%05.3f}",mpu.acc[i]);
 	  }
-	  printf(" Gyro: ");
-	  for(int i = 0; i<3;i++){
-		  printf("{%c: %05.1f} ",axisLabel[i],mpu.gyro[i]);
+	  printf(" Gyro XYZ:");
+	   for(int i = 0; i<3;i++){
+		   printf("{%05.1f}",mpu.gyro[i]);
+	  }
+	  printf(" Pose XYZ:");
+	   for(int i = 0; i<3;i++){
+		   printf("{%05.1f}",mpu.pose[i]);
 	  }
 	  printf("\r\n");
 
