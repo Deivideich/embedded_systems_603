@@ -8,6 +8,8 @@
 #ifndef INC_MPU9250_H_
 #define INC_MPU9250_H_
 #include "stdint.h"
+#include "math.h"
+
 // See also MPU-9250 Register Map and Descriptions, Revision 4.0, RM-MPU-9250A-00, Rev. 1.4, 9/9/2013 for registers not listed in
 // above document; the MPU9250 and MPU9150 are virtually identical but the latter has a different register map
 //
@@ -185,6 +187,8 @@
 #define AK8963_ADDRESS  0x0C   //  Address of magnetometer
 #endif
 
+#define filt_size 0x05
+
 struct mpu9250{
 	uint8_t Ascale;
 	uint8_t Gscale;
@@ -195,16 +199,21 @@ struct mpu9250{
 	int16_t rawData[7];
 	float acc[3];
 	float gyro[3];
+
+	uint8_t buffPointer;
+	float accBuff[3][filt_size];
+	float gyroBuff[3][filt_size];
+
+	float lastAngVel;
+	float pose[3]; // x, y, psi
 };
 
-void initMPU9250(uint8_t Ascale, uint8_t Gscale, uint8_t sampleRate);
+void initMPU9250(struct mpu9250 * mpu9250, uint8_t Ascale, uint8_t Gscale, uint8_t sampleRate);
 void calibrateMPU9250(float * dest1, float * dest2);
 void readMPU9250Data(int16_t * destination);
 float getAres(struct mpu9250 * mpu9250);
 float getGres(struct mpu9250 * mpu9250);
-void getAccAndGyroData(struct mpu9250 * mpu9250);
-
-
-
+void updateData(struct mpu9250 * mpu9250, float dt, float vel);
+void setPose(struct mpu9250 * mpu9250, float *pose);
 
 #endif /* INC_MPU9250_H_ */

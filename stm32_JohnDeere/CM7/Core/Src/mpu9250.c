@@ -9,8 +9,20 @@
 #include "stm32h7xx_hal.h"
 #include "myprintf.h"
 
-void initMPU9250(uint8_t Ascale, uint8_t Gscale, uint8_t sampleRate)
+void initMPU9250(struct mpu9250 * mpu9250, uint8_t Ascale, uint8_t Gscale, uint8_t sampleRate)
 {
+  for (int i = 0 ; i < 3 ; i++){
+    for(int j = 0 ; j < filt_size ; j++){
+      mpu9250->accBuff[i][j] = 0;
+      mpu9250->gyroBuff[i][j] = 0;
+    }
+    mpu9250->acc[i] = 0;
+    mpu9250->gyro[i] = 0;
+    mpu9250->pose[i] = 0;
+  }
+
+  mpu9250->buffPointer = 0;
+
 	uint8_t c;
  // wake up device
   mpu9250_write_reg(PWR_MGMT_1, 0x00); // Clear sleep mode bit (6), enable all sensors
@@ -283,17 +295,48 @@ float getAres(struct mpu9250 * mpu9250) {
   return 0.0;
 }
 
-void getAccAndGyroData(struct mpu9250 * mpu9250){
+void updateData(struct mpu9250 * mpu9250, float dt, float vel){
 	readMPU9250Data(mpu9250->rawData);
 
+  // Update buffers' values
 	for (int i = 0; i<3; i++){
-		mpu9250->acc[i] = (float)(mpu9250->rawData[i] * getAres(mpu9250));
+		mpu9250->accBuff[i][mpu9250->buffPointer] = (float)(mpu9250->rawData[i] * getAres(mpu9250));
 	}
 	for (int i = 4; i<7; i++){
-		mpu9250->gyro[i-4] = (float)(mpu9250->rawData[i] * getGres(mpu9250));
+		mpu9250->gyroBuff[i-4][mpu9250->buffPointer] = (float)(mpu9250->rawData[i] * getGres(mpu9250));
 	}
 
+	mpu9250->buffPointer = (mpu9250->buffPointer+1) % filt_size;
+	mpu9250->lastAngVel = mpu9250->gyro[2];
 
+  // Calculate moving average's new iteration
+	for(int i = 0 ; i < 3 ; i++){
+		mpu9250->acc[i] = 0;
+		mpu9250->gyro[i] = 0;
+		for(int j = 0 ; j < filt_size ; j++){
+			mpu9250->acc[i]+= mpu9250->accBuff[i][j];
+			mpu9250->gyro[i]+= mpu9250->gyroBuff[i][j];
+		}
+		mpu9250->acc[i]/= filt_size;
+		mpu9250->gyro[i]/= filt_size;
+	}
+
+  // Update orientation
+	// 1.1 = gyroscope's error
+	mpu9250->pose[2] += 1.1* dt * (mpu9250->gyro[2] + mpu9250->lastAngVel) / 2;
+	if(mpu9250->pose[2] < -180)
+		mpu9250->pose[2] += 360;
+	else if(mpu9250->pose[2] > 180)
+		mpu9250->pose[2] -= 360;
+
+  //Update position
+  mpu9250->pose[0] += cos(M_PI/180 * mpu9250->pose[2]) * dt * vel;
+  mpu9250->pose[1] += sin(M_PI/180 * mpu9250->pose[2]) * dt * vel;
 }
 
+void setPose(struct mpu9250 * mpu9250, float *pos){
+	for(int i = 0 ; i < 3 ; i++){
+		mpu9250->pose[i] = pos[i];
+	}
+}
 
