@@ -61,8 +61,8 @@ all: main-build
 main-build: stm32h7_CM4.elf secondary-outputs
 
 # Tool invocations
-stm32h7_CM4.elf stm32h7_CM4.map: $(OBJS) $(USER_OBJS) C:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\stm32h7\CM4\STM32H755ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "stm32h7_CM4.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\maxpr\STM32CubeIDE\workspace_1.10.1\stm32h7\CM4\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32h7_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+stm32h7_CM4.elf stm32h7_CM4.map: $(OBJS) $(USER_OBJS) C:\Users\david\OneDrive\Escritorio\embedded_systems_603\stm32h7\CM4\STM32H755ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "stm32h7_CM4.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\david\OneDrive\Escritorio\embedded_systems_603\stm32h7\CM4\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32h7_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
