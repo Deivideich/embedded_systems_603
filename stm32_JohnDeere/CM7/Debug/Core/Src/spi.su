@@ -1,0 +1,6 @@
+../Core/Src/spi.c:31:6:MX_SPI1_Init	8	static
+../Core/Src/spi.c:73:6:MX_SPI2_Init	8	static
+../Core/Src/spi.c:115:6:HAL_SPI_MspInit	240	static
+../Core/Src/spi.c:192:6:HAL_SPI_MspDeInit	16	static
+../Core/Src/spi.c:236:6:mpu9250_write_reg	16	static
+../Core/Src/spi.c:244:6:mpu9250_read_reg	24	static
