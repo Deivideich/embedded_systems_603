@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;H755_SPI_wireless/H755_SPI.ioc&apos; to &apos;H755_SPI_wireless.ioc&apos;" description="Rename resource &apos;H755_SPI.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="H755_SPI.ioc" name="H755_SPI_wireless.ioc" stamp="1699057004986" updateReferences="true"/>
-</session>
