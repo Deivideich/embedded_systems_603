@@ -1,7 +1,0 @@
-..\Core\Src\mpu9250.c:12:6:initMPU9250	32	static
-..\Core\Src\mpu9250.c:85:6:calibrateMPU9250	104	static
-..\Core\Src\mpu9250.c:232:6:readMPU9250Data	32	static
-..\Core\Src\mpu9250.c:245:7:getGres	24	static
-..\Core\Src\mpu9250.c:271:7:getAres	24	static
-..\Core\Src\mpu9250.c:298:6:updateData	48	static
-..\Core\Src\mpu9250.c:337:6:setPose	24	static

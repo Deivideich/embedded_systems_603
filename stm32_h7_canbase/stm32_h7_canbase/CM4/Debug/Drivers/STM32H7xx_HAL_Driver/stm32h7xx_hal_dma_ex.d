@@ -1,5 +1,5 @@
 Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_dma_ex.o: \
- D:/Universidad/Quinto_Semestre/Embedidos_Avanzados/STM32/embedded_systems_603/stm32_h7_canbase/stm32_h7_canbase/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c \
+ C:/Users/maxpr/STM32CubeIDE/workspace_1.10.1/embedded_systems_603/stm32_h7_canbase/stm32_h7_canbase/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../Core/Inc/stm32h7xx_hal_conf.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h \
