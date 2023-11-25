@@ -1,7 +1,7 @@
 ../Core/Src/freertos.c:122:6:MX_FREERTOS_Init	8	static
 ../Core/Src/freertos.c:170:6:StartDefaultTask	16	static
 ../Core/Src/freertos.c:183:6:blinkGreenTask	16	static
-../Core/Src/freertos.c:193:6:imuTask	64	static
-../Core/Src/freertos.c:238:6:escTask	16	static
-../Core/Src/freertos.c:245:6:servoTask	136	static
-../Core/Src/freertos.c:277:6:stanleyTask	72	static
+../Core/Src/freertos.c:193:6:imuTask	72	static
+../Core/Src/freertos.c:239:6:escTask	144	static
+../Core/Src/freertos.c:273:6:servoTask	160	static
+../Core/Src/freertos.c:305:6:stanleyTask	72	static

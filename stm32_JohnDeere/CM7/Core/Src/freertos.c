@@ -62,28 +62,28 @@ const osThreadAttr_t blinkGreenTask_attributes = {
 osThreadId_t imuTaskHandle;
 const osThreadAttr_t imuTaskHandle_attributes = {
 		.name = "imuTask",
-		.stack_size = 128 * 6,
+		.stack_size = 128 * 8,
 		.priority = (osPriority_t) osPriorityHigh,
 };
 
 osThreadId_t escTaskHandle;
 const osThreadAttr_t escTaskHandle_attributes = {
 		.name = "escTask",
-		.stack_size = 128 * 4,
+		.stack_size = 128 * 8,
 		.priority = (osPriority_t) osPriorityNormal,
 };
 
 osThreadId_t servoTaskHandle;
 const osThreadAttr_t servoTaskHandle_attributes = {
 		.name = "servoTask",
-		.stack_size = 128 * 6,
+		.stack_size = 128 * 8,
 		.priority = (osPriority_t) osPriorityAboveNormal,
 };
 
 osThreadId_t stanleyTaskHandle;
 const osThreadAttr_t stanleyTaskHandle_attributes = {
 		.name = "stanleyTask",
-		.stack_size = 128 * 6,
+		.stack_size = 128 * 8,
 		.priority = (osPriority_t) osPriorityAboveNormal,
 };
 
@@ -149,8 +149,8 @@ void MX_FREERTOS_Init(void) {
 
   /* USER CODE BEGIN RTOS_THREADS */
   // blinkGreenTaskHandle = osThreadNew(blinkGreenTask, NULL, &blinkGreenTask_attributes);
-  // imuTaskHandle = osThreadNew(imuTask, NULL, &imuTaskHandle_attributes);
-   servoTaskHandle = osThreadNew(servoTask, NULL, &servoTaskHandle_attributes);
+  escTaskHandle = osThreadNew(escTask, NULL, &escTaskHandle_attributes);
+//   servoTaskHandle = osThreadNew(servoTask, NULL, &servoTaskHandle_attributes);
   // escTaskHandle = osThreadNew(escTask, NULL, &escTaskHandle_attributes);
   /* USER CODE END RTOS_THREADS */
 
@@ -213,9 +213,10 @@ void imuTask(void *argument)
 	  float initPose[] = {0,0,0};
 	  setPose(&mpu, initPose);
     stanleyTaskHandle = osThreadNew(stanleyTask, NULL, &stanleyTaskHandle_attributes);
+    float dt = 0.05;
 	for(;;)
 	{
-		updateData(&mpu, 0.1, 1); //Printing with func from header file
+		updateData(&mpu, 0.1, dt); //Printing with func from header file
 		// printf("Acc XYZ:");
 		// for(int i=0;i<3;i++){
 		//   printf("{%05.3f}",mpu.acc[i]);
@@ -231,19 +232,46 @@ void imuTask(void *argument)
 		// }
 		// printf("\r\n");
     // osMutexRelease(myMutex01Handle);
-		osDelay(100);
+		osDelay(dt*1000);
 	}
 }
 
 void escTask(void *argument){
+	HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1); //Staring Timer 3
+	int minPulseWidthEsc = 1000; //Range for right and left Esc
+	int maxPulseWidthEsc = 1500;
+	unsigned int pwmPeriod = 20000;
+	int resolution = 100;
+	struct escValues escValues = {htim2, minPulseWidthEsc, //Struct Containing all
+	maxPulseWidthEsc, pwmPeriod, resolution};	  	 //PWM Variables for Esc
 
+  // Calibration
+  int i = 100;
+  int dt = 1;
+  do{
+	  setPwmS(&escValues);
+	  escValues.percentage=(unsigned int)i;
+	  HAL_Delay(10);
+	  i=i-dt;
+
+  }while(i > 50);
+
+  minPulseWidthEsc = 1500;
+  maxPulseWidthEsc = 2000;
+  escValues.maxPulseWidth = maxPulseWidthEsc;
+  escValues.minPulseWidth = minPulseWidthEsc;
+
+  imuTaskHandle = osThreadNew(imuTask, NULL, &imuTaskHandle_attributes);
+
+	escValues.percentage = 30;
+	setPwmS(&escValues);
 	for(;;){
     osDelay(100);
 	}
 }
 
 void servoTask(void *argument){
-   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1); //Staring Timer 3
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1); //Staring Timer 3
   int minPulseWidthServo = 1000; //Range for right and left Servo
   int maxPulseWidthServo = 2000;
   unsigned int pwmPeriod = 20000;
@@ -251,33 +279,33 @@ void servoTask(void *argument){
   struct escValues servoValues = {htim3, minPulseWidthServo, //Struct Containing all
   maxPulseWidthServo, pwmPeriod, resolution};	  	 //PWM Variables for Servo
 
-//  float in[2] = {stanley.sat[1], stanley.sat[0]}; // min, max delta values
-//  float out[2] = {15, 90}; // min, max percentage values
-//  float slope = (float)(out[1] - out[0]) / (in[1] - in[0]);
-//
-//  uint8_t last_steer = 0;
+  float in[2] = {stanley.sat[1], stanley.sat[0]}; // min, max delta values
+  float out[2] = {90, 0}; // min, max percentage values
+  float slope = (float)(out[1] - out[0]) / (in[1] - in[0]);
+
+  uint8_t last_steer = 0;
 
   servoValues.percentage = 50;
   setPwmS(&servoValues);
 
 	for(;;){
-    // servoValues.percentage = (int) ( (out[0] + (slope * (stanley.delta - in[0]))));
-    // osMutexWait(myMutex01Handle, osWaitForever);
-		// printf("Y {%u}",servoValues.percentage);
-    // osMutexRelease(myMutex01Handle);
-    // if(servoValues.percentage != last_steer){
-    //   setPwmS(&servoValues);
-		//   printf("servo {%u},last {%u}",servoValues.percentage, last_steer);
-    // }
-    // last_steer = servoValues.percentage;
-    osDelay(10000);
+     servoValues.percentage = (int) ( (out[0] + (slope * (stanley.delta - in[0]))));
+//     osMutexWait(myMutex01Handle, osWaitForever);
+	 printf("Y {%u}",servoValues.percentage);
+     if(servoValues.percentage != last_steer){
+       setPwmS(&servoValues);
+	   printf("servo {%u},last {%u}",servoValues.percentage, last_steer);
+     }
+//     osMutexRelease(myMutex01Handle);
+     last_steer = servoValues.percentage;
+    osDelay(100);
 	}
 }
 
 void stanleyTask(void *argument){
   float st_saturation_limits[] = {21.4 * M_PI / 180, -21.4 * M_PI / 180}; // Saturation array
-  float st_k = 1; // Gains
-  float st_k_soft = 2; // Gains
+  float st_k = 5; // Gain
+  float st_k_soft = 0.01; // Soft gain
   uint8_t precision = 10; // Result's float resolution
 
   // Control signals
@@ -303,19 +331,19 @@ void stanleyTask(void *argument){
     vehicle_pos.x = mpu.pose[0];
     vehicle_pos.y = mpu.pose[1];
     psi = mpu.pose[2] * M_PI / 180;
-    vel = 1;
+    vel = 0.5;
     calculateCrosstrackError(&stanley, &vehicle_pos, &p1, &p2);
     setYawAngle(&stanley, psi);
     calculateSteering(&stanley, vel, precision);
     osMutexWait(myMutex01Handle, osWaitForever);
     printf(" Pose XYZ:");
-		for(int i = 0; i<3;i++){
-		   printf("{%05.1f}",mpu.pose[i]);
-		}
-		printf(" Delta: {%05.1f}",stanley.delta * 180 / M_PI);
-		printf("\r\n");
+	for(int i = 0; i<3;i++){
+	   printf("{%05.1f}",mpu.pose[i]);
+	}
+	printf(" Delta: {%05.1f}",stanley.delta * 180 / M_PI);
+	printf("\r\n");
     osMutexRelease(myMutex01Handle);
-    osDelay(100);
+    osDelay(50);
 	}
 }
 /* USER CODE END Application */
