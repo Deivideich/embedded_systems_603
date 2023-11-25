@@ -27,6 +27,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "myprintf.h"
+#include "stanley_controller.h"
 #include "mpu9250.h"
 #include "esc.h"
 /* USER CODE END Includes */
@@ -130,6 +131,22 @@ Error_Handler();
   MX_TIM2_Init();
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1); //Staring Timer 3
+
+//  int minPulseWidthESC = 1000; //Range for variables for PWM (ESC - backwards)
+//  int maxPulseWidthESC = 1500;
+//  int minPulseWidthServo = 1000; //Range for right and left Servo
+//  int maxPulseWidthServo = 2000;
+//  unsigned int pwmPeriod = 20000;
+//  int resolution = 100;
+//
+//  struct escValues servoValues = {htim4, minPulseWidthServo, //Struct Containing all
+//		  maxPulseWidthServo, pwmPeriod, resolution};	  	 //PWM Variables for Servo
+//
+//  servoValues.percentage = 50;
+//
+//  //HAL_Delay(100);
+//  setPwmS(&servoValues);
 
   /* USER CODE END 2 */
 

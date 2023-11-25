@@ -1,0 +1,2 @@
+../Core/Src/esc.c:19:6:setPwm	1
+../Core/Src/esc.c:41:6:setPwmS	1
