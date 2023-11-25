@@ -1,0 +1,4 @@
+../Core/Src/stanley_controller.c:14:6:initStanley	24	static
+../Core/Src/stanley_controller.c:23:6:calculateCrosstrackError	72	static
+../Core/Src/stanley_controller.c:66:6:setYawAngle	16	static
+../Core/Src/stanley_controller.c:70:6:calculateSteering	48	static
