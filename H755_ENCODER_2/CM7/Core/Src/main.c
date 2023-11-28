@@ -65,9 +65,10 @@ static void MX_TIM4_Init(void);
 /* USER CODE BEGIN 0 */
 
 uint32_t timer_counter = 0;
-
+int16_t counter = 0;
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim){
-	timer_counter = __HAL_TIM_GET_COUNTER(htim);
+	timer_counter = __HAL_TIM_GET_COUNTER(&htim4);
+	counter = (int16_t)timer_counter;
 }
 /* USER CODE END 0 */
 
@@ -140,7 +141,11 @@ Error_Handler();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  printf("%ld \r\n", timer_counter);
+	  //1100 ticks per turn approximately
+	  //Diameter 62mm
+	  //Circumference 195mm
+	  printf("%f %d \r\n", ((float)timer_counter/1100)*19.5, counter);
+
   }
   /* USER CODE END 3 */
 }

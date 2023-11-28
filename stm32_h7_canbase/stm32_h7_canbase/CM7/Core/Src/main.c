@@ -1,9 +1,9 @@
 /* USER CODE BEGIN Header */
 /**
-  ******************************************************************************
+  **********
   * @file           : main.c
   * @brief          : Main program body
-  ******************************************************************************
+  **********
   * @attention
   *
   * Copyright (c) 2022 STMicroelectronics.
@@ -13,7 +13,7 @@
   * in the root directory of this software component.
   * If no LICENSE file comes with this software, it is provided AS-IS.
   *
-  ******************************************************************************
+  **********
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
@@ -52,8 +52,6 @@ UART_HandleTypeDef huart3;
 FDCAN_FilterTypeDef sFilterConfig;
 FDCAN_TxHeaderTypeDef TxHeader;
 FDCAN_RxHeaderTypeDef RxHeader;
-uint8_t TxData[8] = {0x10, 0x34, 0x54, 0x76, 0x98, 0x00, 0x11, 0x22};
-uint8_t RxData[8];
 
 /* USER CODE END PV */
 
@@ -107,11 +105,11 @@ int main(void)
 /* USER CODE BEGIN Boot_Mode_Sequence_2 */
 /* When system initialization is finished, Cortex-M7 will release Cortex-M4 by means of
 HSEM notification */
-/*HW semaphore Clock enable*/
+
 __HAL_RCC_HSEM_CLK_ENABLE();
 /*Take HSEM */
 HAL_HSEM_FastTake(HSEM_ID_0);
-/*Release HSEM in order to notify the CPU2(CM4)*/
+
 HAL_HSEM_Release(HSEM_ID_0,0);
 /* wait until CPU2 wakes up from stop mode */
 timeout = 0xFFFF;
@@ -131,7 +129,10 @@ Error_Handler();
   MX_USART3_UART_Init();
   MX_FDCAN1_Init();
   /* USER CODE BEGIN 2 */
-
+  uint8_t TxData[] = {0x01,0x00,0xFF,0xFF,0xFF,0x00,0xFF,0xFF};
+  uint8_t TxData2[] = {0x00,0x01,0xFF,0xFF,0xFF,0x01,0xFF,0xFF};
+  uint8_t TxData3[] = {0xFF,0xFF,0xFF,0x00,0x22,0xFF,0xFF,0xFF};
+  uint8_t TxData4[] = {0xFF,0xFF,0xFF,0x00,0x00,0xFF,0xFF,0xFF};
 
   /* USER CODE END 2 */
 
@@ -139,15 +140,28 @@ Error_Handler();
   /* USER CODE BEGIN WHILE */
      printf("Hello World\r\n");
      while (1){
-     	while (HAL_FDCAN_GetRxMessage(&hfdcan1, FDCAN_RX_FIFO0, &RxHeader, RxData) != HAL_OK);
+//     	while (HAL_FDCAN_GetRxMessage(&hfdcan1, FDCAN_RX_FIFO0, &RxHeader, RxData) != HAL_OK);
+//
+//     	HAL_Delay(10);
+//     	printf("\n\rCAN ID: %lx", RxHeader.Identifier);
+//
+//     	printf(" [%X] ", ((unsigned int)RxHeader.DataLength & 0x000F0000) >> 16 );
+//     	printf(" %02X %02X %02X %02X %02X %02X %02X %02X",RxData[0], RxData[1], RxData[2], RxData[3], RxData[4], RxData[5], RxData[6], RxData[7]);
+//     	HAL_GPIO_TogglePin(LD1_GPIO_Port,LD1_Pin);
+//     	HAL_Delay(100); /AAO-/
 
-     	HAL_Delay(10);
-     	printf("\n\rCAN ID: %lx", RxHeader.Identifier);
-
-     	printf(" [%X] ", ((unsigned int)RxHeader.DataLength & 0x000F0000) >> 16 );
-     	printf(" %02X %02X %02X %02X %02X %02X %02X %02X",RxData[0], RxData[1], RxData[2], RxData[3], RxData[4], RxData[5], RxData[6], RxData[7]);
-     	HAL_GPIO_TogglePin(LD1_GPIO_Port,LD1_Pin);
-     	HAL_Delay(100); /*AAO-*/
+      	TxHeader.Identifier = 0x00FF14A3;
+      	HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &TxHeader, TxData);
+      	HAL_Delay(100);
+      	TxHeader.Identifier = 0x00F004A3;
+      	HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &TxHeader, TxData3);
+      	HAL_Delay(400);
+     	TxHeader.Identifier = 0x00FF14A3;
+     	HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &TxHeader, TxData2);
+     	HAL_Delay(100);
+     	TxHeader.Identifier = 0x00F004A3;
+     	HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &TxHeader, TxData4);
+     	HAL_Delay(400);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -237,8 +251,8 @@ static void MX_FDCAN1_Init(void)
   hfdcan1.Init.ProtocolException = ENABLE;
   hfdcan1.Init.NominalPrescaler = 2;
   hfdcan1.Init.NominalSyncJumpWidth = 8;
-  hfdcan1.Init.NominalTimeSeg1 = 0x1F;
-  hfdcan1.Init.NominalTimeSeg2 = 8;
+  hfdcan1.Init.NominalTimeSeg1 = 0x3F;
+  hfdcan1.Init.NominalTimeSeg2 = 16;
   hfdcan1.Init.DataPrescaler = 1;
   hfdcan1.Init.DataSyncJumpWidth = 1;
   hfdcan1.Init.DataTimeSeg1 = 1;
@@ -262,7 +276,7 @@ static void MX_FDCAN1_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN FDCAN1_Init 2 */
-  /*AAO+*/
+
    /* Configure Rx filter */
     sFilterConfig.IdType = FDCAN_STANDARD_ID;
     sFilterConfig.FilterIndex = 0;
@@ -290,16 +304,18 @@ static void MX_FDCAN1_Init(void)
          /* Notification Error */
 
      /* Configure Tx buffer message */
-    TxHeader.Identifier = 0x111;
-    TxHeader.IdType = FDCAN_STANDARD_ID;
+    TxHeader.Identifier = 0x00FF14A3;
+//    TxHeader.IdType = FDCAN_STANDARD_ID;
+    TxHeader.IdType = FDCAN_EXTENDED_ID;
     TxHeader.TxFrameType = FDCAN_DATA_FRAME;
-    TxHeader.DataLength = FDCAN_DLC_BYTES_12;
+//    TxHeader.DataLength = FDCAN_DLC_BYTES_12;
+    TxHeader.DataLength = FDCAN_DLC_BYTES_8;
     TxHeader.ErrorStateIndicator = FDCAN_ESI_ACTIVE;
     TxHeader.BitRateSwitch = FDCAN_BRS_ON;
     TxHeader.FDFormat = FDCAN_FD_CAN;
     TxHeader.TxEventFifoControl = FDCAN_NO_TX_EVENTS;
     TxHeader.MessageMarker = 0x00;
-   /*AAO-*/
+
   /* USER CODE END FDCAN1_Init 2 */
 
 }

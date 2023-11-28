@@ -1,5 +1,5 @@
 Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.o: \
- C:/Users/david/STM32CubeIDE/workspace_1.10.1/H755_ENCODER_2/Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.c \
+ C:/Users/david/OneDrive/Escritorio/embedded_systems_603/H755_ENCODER_2/Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.c \
  ../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h \
  ../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h755xx.h \
  ../../Drivers/CMSIS/Include/core_cm7.h \

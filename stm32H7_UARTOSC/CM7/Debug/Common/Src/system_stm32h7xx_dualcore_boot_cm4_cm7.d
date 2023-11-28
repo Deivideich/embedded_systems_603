@@ -1,5 +1,5 @@
 Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.o: \
- C:/Users/DAVID/STM32CubeIDE/workspace_1.10.1/stm32H7_UARTOSC/Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.c \
+ C:/Users/david/OneDrive/Escritorio/embedded_systems_603/stm32H7_UARTOSC/Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.c \
  ../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h \
  ../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h745xx.h \
  ../../Drivers/CMSIS/Include/core_cm7.h \
