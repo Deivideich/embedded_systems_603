@@ -64,15 +64,15 @@ const osThreadAttr_t blinkGreenTask_attributes = {
 osThreadId_t imuTaskHandle;
 const osThreadAttr_t imuTaskHandle_attributes = {
 		.name = "imuTask",
-		.stack_size = 128 * 8,
-		.priority = (osPriority_t) osPriorityHigh,
+		.stack_size = 128 * 10,
+		.priority = (osPriority_t) osPriorityAboveNormal,
 };
 
 osThreadId_t escTaskHandle;
 const osThreadAttr_t escTaskHandle_attributes = {
 		.name = "escTask",
 		.stack_size = 128 * 8,
-		.priority = (osPriority_t) osPriorityNormal,
+		.priority = (osPriority_t) osPriorityAboveNormal,
 };
 
 osThreadId_t servoTaskHandle;
@@ -85,14 +85,14 @@ const osThreadAttr_t servoTaskHandle_attributes = {
 osThreadId_t stanleyTaskHandle;
 const osThreadAttr_t stanleyTaskHandle_attributes = {
 		.name = "stanleyTask",
-		.stack_size = 128 * 8,
+		.stack_size = 128 * 10,
 		.priority = (osPriority_t) osPriorityAboveNormal,
 };
 
 osThreadId_t radioTaskHandle;
 const osThreadAttr_t radioTaskHandle_attributes = {
 		.name = "radioTask",
-		.stack_size = 128 * 8,
+		.stack_size = 128 * 10,
 		.priority = (osPriority_t) osPriorityAboveNormal,
 };
 
@@ -155,13 +155,13 @@ void MX_FREERTOS_Init(void) {
 
   /* Create the thread(s) */
   /* creation of defaultTask */
-  defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
+  // defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   blinkGreenTaskHandle = osThreadNew(blinkGreenTask, NULL, &blinkGreenTask_attributes);
   servoTaskHandle = osThreadNew(servoTask, NULL, &servoTaskHandle_attributes);
   escTaskHandle = osThreadNew(escTask, NULL, &escTaskHandle_attributes);
-  // radioTaskHandle = osThreadNew(radioTask, NULL, &radioTaskHandle_attributes);
+  radioTaskHandle = osThreadNew(radioTask, NULL, &radioTaskHandle_attributes);
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_EVENTS */
@@ -180,11 +180,6 @@ void MX_FREERTOS_Init(void) {
 void StartDefaultTask(void *argument)
 {
   /* USER CODE BEGIN StartDefaultTask */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(10000);
-  }
   /* USER CODE END StartDefaultTask */
 }
 
@@ -202,7 +197,7 @@ void blinkGreenTask(void *argument)
 
 void radioTask(void *argument)
 {
-  float dt = 100;
+  float dt = 0.1;
   float real_x = 0.0;
   float real_y = 0.0;
   float init_x = real_x;
@@ -214,54 +209,59 @@ void radioTask(void *argument)
   float accel_var_y = 0.1;
   initKalman(&kf, init_x, init_y, vx, vy, accel_var_x, accel_var_y);
   int counter = 0;
-
 	for(;;)
 	{
     // Modificar tras lectura de radio real!
     vx = 1 * cos(M_PI / 180 * mpu.pose[2]);
     vy = 1 * sin(M_PI / 180 * mpu.pose[2]);
     real_x += dt * vx;
-    real_y += dt * vy;
+    real_y +=  dt * vy;
     
+    osMutexWait(myMutex01Handle, osWaitForever);
     predict(&kf, dt);
 
     // Reemplazar por if(wifi_received)
-    if(counter % 20 == 0){
+    if(counter % 20 == 0)
       update(&kf, real_x, real_y, meas_variance);
-    }
+
     counter++;
-    printf("Real: %3.3f, %3.3f || Estimated: %3.3f, %3.3f \r\n",real_x, real_y, kf.x, kf.y);
-		osDelay(100);
+
+    osMutexRelease(myMutex01Handle);
+    printf("Real: %3.3f, %3.3f || Estimated: %3.3f, %3.3f \r\n",real_x, real_y, kf.x[0], kf.y[0]);
+		osDelay(dt * 1000);
 	}
 }
 
 void imuTask(void *argument)
 {
-	  char axisLabel[3] = {'X','Y','Z'}; //Var for printing labels
-	  printf("Initiating IMU...\r\n"); //Initiating MPU9250
-	  initMPU9250(&mpu, AFS_2G, GFS_250DPS, M_8Hz);
+  char axisLabel[3] = {'X','Y','Z'}; //Var for printing labels
+  printf("Initiating IMU...\r\n"); //Initiating MPU9250
+  initMPU9250(&mpu, AFS_2G, GFS_250DPS, M_8Hz);
 
-	  printf("Calibrating IMU...\r\n");
-	  float accelBias[3], gyroBias[3]; //Calibrating and Printing Biases MPU9250
-	  calibrateMPU9250(gyroBias, accelBias);
-	  printf("AccBias {");
-	  for(int i=0; i<3; i++){
-		  printf(" %c %.3f ",axisLabel[i],gyroBias[i]);
-	  }
-	  printf("} GyroBias{");
-	  for(int i=0; i<3; i++){
-		  printf(" %c %.3f ",axisLabel[i],accelBias[i]);
-	  }
-	  printf("}\r\n");
+  printf("Calibrating IMU...\r\n");
+  float accelBias[3], gyroBias[3]; //Calibrating and Printing Biases MPU9250
+  calibrateMPU9250(gyroBias, accelBias);
+  printf("AccBias {");
+  for(int i=0; i<3; i++){
+    printf(" %c %.3f ",axisLabel[i],gyroBias[i]);
+  }
+  printf("} GyroBias{");
+  for(int i=0; i<3; i++){
+    printf(" %c %.3f ",axisLabel[i],accelBias[i]);
+  }
+  printf("}\r\n");
 
-	  printf("Starting IMU...\r\n");
-	  float initPose[] = {0,0,0};
-	  setPose(&mpu, initPose);
-    stanleyTaskHandle = osThreadNew(stanleyTask, NULL, &stanleyTaskHandle_attributes);
-    float dt = 0.05;
+  printf("Starting IMU...\r\n");
+  float initPose[] = {0,0,0};
+  setPose(&mpu, initPose);
+  stanleyTaskHandle = osThreadNew(stanleyTask, NULL, &stanleyTaskHandle_attributes);
+  float dt = 0.05;
 	for(;;)
 	{
+    osMutexWait(myMutex01Handle, osWaitForever);
 		updateData(&mpu, dt, 1); //Printing with func from header file
+    osMutexRelease(myMutex01Handle);
+
 		// printf("Acc XYZ:");
 		// for(int i=0;i<3;i++){
 		//   printf("{%05.3f}",mpu.acc[i]);
@@ -294,7 +294,7 @@ void escTask(void *argument){
   int i = 100;
   int dt = 1;
   do{
-	  setPwmS(&escValues);
+	  // setPwmS(&escValues);
 	  escValues.percentage=(unsigned int)i;
 	  HAL_Delay(10);
 	  i=i-dt;
@@ -309,9 +309,10 @@ void escTask(void *argument){
   imuTaskHandle = osThreadNew(imuTask, NULL, &imuTaskHandle_attributes);
 
 	escValues.percentage = 30;
-	setPwmS(&escValues);
+	// setPwmS(&escValues);
 	for(;;){
-    osDelay(100);
+    // printf("ESC Debug \r\n");
+    osDelay(1000);
 	}
 }
 
@@ -335,12 +336,15 @@ void servoTask(void *argument){
 
 	for(;;){
      servoValues.percentage = (int) ( (out[0] + (slope * (stanley.delta - in[0]))));
-//     osMutexWait(myMutex01Handle, osWaitForever);
 	//  printf("Y {%u}",servoValues.percentage);
      if(servoValues.percentage != last_steer){
-       setPwmS(&servoValues);
+    osMutexWait(myMutex01Handle, osWaitForever);
+    // setPwmS(&servoValues);
+    osMutexRelease(myMutex01Handle);
+
 	  //  printf("servo {%u},last {%u}",servoValues.percentage, last_steer);
      }
+//     osMutexWait(myMutex01Handle, osWaitForever);
 //     osMutexRelease(myMutex01Handle);
      last_steer = servoValues.percentage;
     osDelay(100);
@@ -372,22 +376,22 @@ void stanleyTask(void *argument){
   initStanley(&stanley,st_saturation_limits, st_k, st_k_soft);
   
 	for(;;){
-    vehicle_pos.x = mpu.pose[0];
-    vehicle_pos.y = mpu.pose[1];
-    psi = mpu.pose[2] * M_PI / 180;
-    vel = 0.5;
-    calculateCrosstrackError(&stanley, &vehicle_pos, &p1, &p2);
-    setYawAngle(&stanley, psi);
-    calculateSteering(&stanley, vel, precision);
-    osMutexWait(myMutex01Handle, osWaitForever);
-    printf(" Pose XYZ:");
+  vehicle_pos.x = mpu.pose[0];
+  vehicle_pos.y = mpu.pose[1];
+  psi = mpu.pose[2] * M_PI / 180;
+  vel = 0.5;
+  osMutexWait(myMutex01Handle, osWaitForever);
+  calculateCrosstrackError(&stanley, &vehicle_pos, &p1, &p2);
+  setYawAngle(&stanley, psi);
+  calculateSteering(&stanley, vel, precision);
+  osMutexRelease(myMutex01Handle);
+  // printf(" Pose XYZ:");
 	for(int i = 0; i<3;i++){
-	   printf("{%05.1f}",mpu.pose[i]);
+	  //  printf("{%05.1f}",mpu.pose[i]);
 	}
-	printf(" Delta: {%05.1f}",stanley.delta * 180 / M_PI);
-	printf("\r\n");
-    osMutexRelease(myMutex01Handle);
-    osDelay(50);
+	// printf(" Delta: {%05.1f}",stanley.delta * 180 / M_PI);
+	// printf("\r\n");
+  osDelay(100);
 	}
 }
 /* USER CODE END Application */

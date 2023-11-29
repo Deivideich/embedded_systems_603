@@ -25,7 +25,7 @@ void initKalman(struct KF * kf,
     kf->accel_variance_y = accel_var_y;
 
     for(int i = 0 ; i < 2 ; i++){
-        for(int j = 0 ; i < 2 ; j++){
+        for(int j = 0 ; j < 2 ; j++){
             kf->Px[i][j] = I[i][j];
             kf->Py[i][j] = I[i][j];
         }
