@@ -27,6 +27,7 @@
 /* USER CODE BEGIN Includes */
 #include "mpu9250.h"
 #include "stanley_controller.h"
+#include "kalman_filter.h"
 #include "myprintf.h"
 #include "esc.h"
 #include "tim.h"
@@ -49,8 +50,9 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
-struct mpu9250 mpu={AFS_2G,GFS_250DPS}; //Struct for storing gyro and acc data
+struct mpu9250 mpu; //Struct for storing gyro and acc data
 struct Stanley stanley; //Struct for Stanley controller
+struct KF kf;
 
 osThreadId_t blinkGreenTaskHandle;
 const osThreadAttr_t blinkGreenTask_attributes = {
@@ -87,6 +89,13 @@ const osThreadAttr_t stanleyTaskHandle_attributes = {
 		.priority = (osPriority_t) osPriorityAboveNormal,
 };
 
+osThreadId_t radioTaskHandle;
+const osThreadAttr_t radioTaskHandle_attributes = {
+		.name = "radioTask",
+		.stack_size = 128 * 8,
+		.priority = (osPriority_t) osPriorityAboveNormal,
+};
+
 /* USER CODE END Variables */
 /* Definitions for defaultTask */
 osThreadId_t defaultTaskHandle;
@@ -108,6 +117,7 @@ void imuTask(void *argument);
 void escTask(void *argument);
 void servoTask(void *argument);
 void stanleyTask(void *argument);
+void radioTask(void *argument);
 /* USER CODE END FunctionPrototypes */
 
 void StartDefaultTask(void *argument);
@@ -148,10 +158,10 @@ void MX_FREERTOS_Init(void) {
   defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
-  // blinkGreenTaskHandle = osThreadNew(blinkGreenTask, NULL, &blinkGreenTask_attributes);
+  blinkGreenTaskHandle = osThreadNew(blinkGreenTask, NULL, &blinkGreenTask_attributes);
+  servoTaskHandle = osThreadNew(servoTask, NULL, &servoTaskHandle_attributes);
   escTaskHandle = osThreadNew(escTask, NULL, &escTaskHandle_attributes);
-//   servoTaskHandle = osThreadNew(servoTask, NULL, &servoTaskHandle_attributes);
-  // escTaskHandle = osThreadNew(escTask, NULL, &escTaskHandle_attributes);
+  // radioTaskHandle = osThreadNew(radioTask, NULL, &radioTaskHandle_attributes);
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_EVENTS */
@@ -190,6 +200,41 @@ void blinkGreenTask(void *argument)
 	}
 }
 
+void radioTask(void *argument)
+{
+  float dt = 100;
+  float real_x = 0.0;
+  float real_y = 0.0;
+  float init_x = real_x;
+  float init_y = real_y;
+  float vx = 1.0;
+  float vy = 0.0;
+  float meas_variance = 0.1 * 0.1;
+  float accel_var_x = 0.1;
+  float accel_var_y = 0.1;
+  initKalman(&kf, init_x, init_y, vx, vy, accel_var_x, accel_var_y);
+  int counter = 0;
+
+	for(;;)
+	{
+    // Modificar tras lectura de radio real!
+    vx = 1 * cos(M_PI / 180 * mpu.pose[2]);
+    vy = 1 * sin(M_PI / 180 * mpu.pose[2]);
+    real_x += dt * vx;
+    real_y += dt * vy;
+    
+    predict(&kf, dt);
+
+    // Reemplazar por if(wifi_received)
+    if(counter % 20 == 0){
+      update(&kf, real_x, real_y, meas_variance);
+    }
+    counter++;
+    printf("Real: %3.3f, %3.3f || Estimated: %3.3f, %3.3f \r\n",real_x, real_y, kf.x, kf.y);
+		osDelay(100);
+	}
+}
+
 void imuTask(void *argument)
 {
 	  char axisLabel[3] = {'X','Y','Z'}; //Var for printing labels
@@ -216,7 +261,7 @@ void imuTask(void *argument)
     float dt = 0.05;
 	for(;;)
 	{
-		updateData(&mpu, 0.1, dt); //Printing with func from header file
+		updateData(&mpu, dt, 1); //Printing with func from header file
 		// printf("Acc XYZ:");
 		// for(int i=0;i<3;i++){
 		//   printf("{%05.3f}",mpu.acc[i]);
@@ -291,10 +336,10 @@ void servoTask(void *argument){
 	for(;;){
      servoValues.percentage = (int) ( (out[0] + (slope * (stanley.delta - in[0]))));
 //     osMutexWait(myMutex01Handle, osWaitForever);
-	 printf("Y {%u}",servoValues.percentage);
+	//  printf("Y {%u}",servoValues.percentage);
      if(servoValues.percentage != last_steer){
        setPwmS(&servoValues);
-	   printf("servo {%u},last {%u}",servoValues.percentage, last_steer);
+	  //  printf("servo {%u},last {%u}",servoValues.percentage, last_steer);
      }
 //     osMutexRelease(myMutex01Handle);
      last_steer = servoValues.percentage;
@@ -325,7 +370,6 @@ void stanleyTask(void *argument){
   p2.y = 0;
 
   initStanley(&stanley,st_saturation_limits, st_k, st_k_soft);
-  servoTaskHandle = osThreadNew(servoTask, NULL, &servoTaskHandle_attributes);
   
 	for(;;){
     vehicle_pos.x = mpu.pose[0];
