@@ -83,7 +83,7 @@ static void MX_TIM4_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-int16_t speed = 0;
+int32_t speed = 0;
 uint32_t timer_counter = 0;
 int16_t counter = 0;
 int16_t position = 0;
@@ -164,52 +164,33 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-	//printf("Hello World\r\n");
+	printf("Staring...\r\n");
 	union FloatBytes fb;
 //	union BytesFloat bf;
+	uint8_t m = 0x00;
 
 	while (1) {
 
+		//Calculating speed
 		//1100 ticks per turn approximately
-				//Diameter 62mm
-				//Circumference 195mm
-
-//		printf("%f %d %f \r\n", ((float)timer_counter/1100)*19.5, counter, (float)speed*(19.5/1100));
+		//Diameter 62mm
+		//Circumference 195mm
+		//printf("%f %d %f \r\n", ((float)timer_counter/1100)*19.5, counter, (float)speed*(19.5/1100));
 		fb.floatValue = (float)speed*(19.5/1100);
-//     	while (HAL_FDCAN_GetRxMessage(&hfdcan1, FDCAN_RX_FIFO0, &RxHeader, RxData) != HAL_OK);
-//
-//     	HAL_Delay(10);
-//     	printf("\n\rCAN ID: %lx", RxHeader.Identifier);
-//
-//     	printf(" [%X] ", ((unsigned int)RxHeader.DataLength & 0x000F0000) >> 16 );
-//     	printf(" %02X %02X %02X %02X %02X %02X %02X %02X",RxData[0], RxData[1], RxData[2], RxData[3], RxData[4], RxData[5], RxData[6], RxData[7]);
-//     	HAL_GPIO_TogglePin(LD1_GPIO_Port,LD1_Pin);
-//     	HAL_Delay(100); /AAO-/
-
-		// Access the individual bytes
-//		printf("Sent float value: %f\r\n", fb.floatValue);
-//		printf("Byte values: \r\n");
-		uint8_t TxData[8] = {};
-//		uint8_t RxData[8] = {};
-
+		printf("%f ", fb.floatValue);
 
 		// Print each byte
+		uint8_t TxData[8] = {};
+		printf("Data: {");
 		for (size_t i = 0; i < sizeof(float); i++) {
 			printf("%02X ", fb.byteValue[i]);
 			TxData[i]=fb.byteValue[i];
 		}
+		printf("\r\n");
 
+		m = HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &TxHeader, TxData);
+		printf("Status: %d ",m);
 
-		TxHeader.Identifier = 0x00FF14A3;
-		HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &TxHeader, TxData);
-
-//		for (size_t i = 0; i < sizeof(float); i++) {
-//			uint8_t receivedByte = TxData[i];
-//			bf.byteValue[i] = receivedByte;
-//		}
-
-//		printf("\r\nReceived float: %f \r\n", bf.floatValue);
-//		HAL_Delay(50);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -325,21 +306,20 @@ static void MX_FDCAN1_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN FDCAN1_Init 2 */
-
+	/*AAO+*/
 	/* Configure Rx filter */
-	sFilterConfig.IdType = FDCAN_STANDARD_ID;
+	sFilterConfig.IdType = FDCAN_EXTENDED_ID;
 	sFilterConfig.FilterIndex = 0;
 	sFilterConfig.FilterType = FDCAN_FILTER_MASK;
 	sFilterConfig.FilterConfig = FDCAN_FILTER_TO_RXFIFO0;
-//    sFilterConfig.FilterID1 = 0x321;
-//    sFilterConfig.FilterID2 = 0x7FF;
-	sFilterConfig.FilterID1 = 0x610; //Testing
-	sFilterConfig.FilterID2 = 0xFFF;
-
+	sFilterConfig.FilterID1 = 0x00;
+	sFilterConfig.FilterID2 = 0x00;
+	/*Filtrar especificamente 3F8
+	 sFilterConfig.FilterID1 = 0x611;
+	 sFilterConfig.FilterID2 = 0xFFF;
+	 */
 	/* Configure global filter to reject all non-matching frames */
-	HAL_FDCAN_ConfigGlobalFilter(&hfdcan1, FDCAN_REJECT, FDCAN_REJECT,
-			FDCAN_REJECT_REMOTE, FDCAN_REJECT_REMOTE);
-
+	//HAL_FDCAN_ConfigGlobalFilter(&hfdcan1, FDCAN_REJECT, FDCAN_REJECT, FDCAN_REJECT_REMOTE, FDCAN_REJECT_REMOTE);
 	if (HAL_FDCAN_ConfigFilter(&hfdcan1, &sFilterConfig) != HAL_OK) {
 		/* Filter configuration Error */
 		Error_Handler();
@@ -354,18 +334,18 @@ static void MX_FDCAN1_Init(void)
 	/* Notification Error */
 
 	/* Configure Tx buffer message */
-	TxHeader.Identifier = 0x00FF14A3;
-//    TxHeader.IdType = FDCAN_STANDARD_ID;
+
+	TxHeader.Identifier = 0x0CFF14A3; // Turn Right Indicator
+	// TxHeader.Identifier = 0x0CFEFCA3; // Fuel Level
 	TxHeader.IdType = FDCAN_EXTENDED_ID;
 	TxHeader.TxFrameType = FDCAN_DATA_FRAME;
-//    TxHeader.DataLength = FDCAN_DLC_BYTES_12;
 	TxHeader.DataLength = FDCAN_DLC_BYTES_8;
 	TxHeader.ErrorStateIndicator = FDCAN_ESI_ACTIVE;
 	TxHeader.BitRateSwitch = FDCAN_BRS_ON;
 	TxHeader.FDFormat = FDCAN_FD_CAN;
 	TxHeader.TxEventFifoControl = FDCAN_NO_TX_EVENTS;
 	TxHeader.MessageMarker = 0x00;
-
+	/*AAO-*/
   /* USER CODE END FDCAN1_Init 2 */
 
 }
