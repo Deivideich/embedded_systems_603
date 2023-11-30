@@ -16,7 +16,7 @@ union BytesFloat {
 	uint8_t byteValue[sizeof(float)];
 };
 
-uint8_t readSpeed(FDCAN_HandleTypeDef *hfdcan, FDCAN_RxHeaderTypeDef *pRxHeader,
-		union BytesFloat bf, uint8_t *pRxData, float *speed);
+void readSpeed(FDCAN_HandleTypeDef *hfdcan, FDCAN_RxHeaderTypeDef *pRxHeader,
+		union BytesFloat bf, uint8_t *pRxData, uint8_t *m, float *sp);
 
 #endif /* INC_MYCAN_H_ */

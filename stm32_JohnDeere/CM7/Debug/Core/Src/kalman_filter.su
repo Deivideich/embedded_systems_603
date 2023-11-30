@@ -1,0 +1,10 @@
+../Core/Src/kalman_filter.c:16:6:initKalman	64	static
+../Core/Src/kalman_filter.c:36:6:predict	176	static
+../Core/Src/kalman_filter.c:76:6:update	192	static
+../Core/Src/kalman_filter.c:129:6:dot	40	static
+../Core/Src/kalman_filter.c:140:6:dotV	32	static
+../Core/Src/kalman_filter.c:149:6:dotS	32	static
+../Core/Src/kalman_filter.c:155:6:copy	24	static
+../Core/Src/kalman_filter.c:163:6:sumS	32	static
+../Core/Src/kalman_filter.c:171:6:trans	24	static
+../Core/Src/kalman_filter.c:179:6:sat	32	static

@@ -1,1 +1,1 @@
-../Core/Src/myCAN.c:10:9:readSpeed	32	static
+../Core/Src/myCAN.c:10:6:readSpeed	32	static

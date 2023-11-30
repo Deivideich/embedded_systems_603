@@ -1,0 +1,11 @@
+../Core/Src/freertos.c:168:6:MX_FREERTOS_Init	1
+../Core/Src/freertos.c:222:6:StartDefaultTask	1
+../Core/Src/freertos.c:235:6:blinkGreenTask	1
+../Core/Src/freertos.c:245:6:radioTask	2
+../Core/Src/freertos.c:287:6:wpTask	3
+../Core/Src/freertos.c:305:6:imuTask	3
+../Core/Src/freertos.c:357:6:escTask	5
+../Core/Src/freertos.c:395:6:servoTask	2
+../Core/Src/freertos.c:431:6:stanleyTask	2
+../Core/Src/freertos.c:490:6:wirelessTask	1
+../Core/Src/freertos.c:530:6:canTask	1

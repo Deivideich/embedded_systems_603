@@ -7,16 +7,17 @@
 
 #include "myCAN.h"
 
-uint8_t readSpeed(FDCAN_HandleTypeDef *hfdcan, FDCAN_RxHeaderTypeDef *pRxHeader,
-		union BytesFloat bf, uint8_t *pRxData, float *speed){
-	uint8_t m;
-	m = HAL_FDCAN_GetRxMessage(&hfdcan1, FDCAN_RX_FIFO0, pRxHeader, pRxData);
+void readSpeed(FDCAN_HandleTypeDef *hfdcan, FDCAN_RxHeaderTypeDef *pRxHeader,
+		union BytesFloat bf, uint8_t *pRxData, uint8_t *m, float *sp){
+	uint8_t m2;
+	m2 = HAL_FDCAN_GetRxMessage(&hfdcan1, FDCAN_RX_FIFO0, pRxHeader, pRxData);
+	*m = m2;
 	for (size_t i = 0; i < sizeof(float); i++) {
 		uint8_t receivedByte = pRxData[i];
 		bf.byteValue[i] = receivedByte;
 	}
 
-	*speed = bf.floatValue;
+	*sp = bf.floatValue;
 
-	return m;
+	// return m;
 }
