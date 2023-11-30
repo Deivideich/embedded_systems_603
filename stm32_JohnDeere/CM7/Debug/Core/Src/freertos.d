@@ -30,6 +30,7 @@ Core/Src/freertos.o: ../Core/Src/freertos.c \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mdma.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_exti.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cortex.h \
+ ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_fdcan.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash_ex.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h \
@@ -48,7 +49,9 @@ Core/Src/freertos.o: ../Core/Src/freertos.c \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
  ../Core/Inc/mpu9250.h ../Core/Inc/stanley_controller.h \
  ../Core/Inc/myprintf.h ../Core/Inc/esc.h ../Core/Inc/tim.h \
- ../Core/Inc/main.h
+ ../Core/Inc/main.h ../Core/Inc/MY_NRF24.h ../Core/Inc/nRF24L01.h \
+ ../Core/Inc/spi.h ../Core/Inc/usart.h ../Core/Inc/fdcan.h \
+ ../Core/Inc/myCAN.h ../Core/Inc/fdcan.h
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../Core/Inc/FreeRTOSConfig.h:
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
@@ -80,6 +83,7 @@ Core/Src/freertos.o: ../Core/Src/freertos.c \
 ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mdma.h:
 ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_exti.h:
 ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cortex.h:
+../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_fdcan.h:
 ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h:
 ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash_ex.h:
 ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h:
@@ -102,3 +106,10 @@ Core/Src/freertos.o: ../Core/Src/freertos.c \
 ../Core/Inc/esc.h:
 ../Core/Inc/tim.h:
 ../Core/Inc/main.h:
+../Core/Inc/MY_NRF24.h:
+../Core/Inc/nRF24L01.h:
+../Core/Inc/spi.h:
+../Core/Inc/usart.h:
+../Core/Inc/fdcan.h:
+../Core/Inc/myCAN.h:
+../Core/Inc/fdcan.h:

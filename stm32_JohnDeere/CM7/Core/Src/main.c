@@ -19,6 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "cmsis_os.h"
+#include "fdcan.h"
 #include "spi.h"
 #include "tim.h"
 #include "usart.h"
@@ -130,23 +131,9 @@ Error_Handler();
   MX_SPI2_Init();
   MX_TIM2_Init();
   MX_TIM3_Init();
+  MX_SPI3_Init();
+  MX_FDCAN1_Init();
   /* USER CODE BEGIN 2 */
-//  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1); //Staring Timer 3
-//
-//  int minPulseWidthESC = 1000; //Range for variables for PWM (ESC - backwards)
-//  int maxPulseWidthESC = 1500;
-//  int minPulseWidthServo = 1000; //Range for right and left Servo
-//  int maxPulseWidthServo = 2000;
-//  unsigned int pwmPeriod = 20000;
-//  int resolution = 100;
-//
-//  struct escValues servoValues = {htim3, minPulseWidthServo, //Struct Containing all
-//		  maxPulseWidthServo, pwmPeriod, resolution};	  	 //PWM Variables for Servo
-//
-//  servoValues.percentage = 50;
-//
-//  //HAL_Delay(100);
-//  setPwmS(&servoValues);
 
   /* USER CODE END 2 */
 
@@ -160,6 +147,7 @@ Error_Handler();
   /* We should never get here as control is now taken by the scheduler */
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
   while (1)
   {
     /* USER CODE END WHILE */
@@ -191,14 +179,15 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
-  RCC_OscInitStruct.HSEState = RCC_HSE_BYPASS;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+  RCC_OscInitStruct.HSIState = RCC_HSI_DIV1;
+  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
-  RCC_OscInitStruct.PLL.PLLM = 1;
-  RCC_OscInitStruct.PLL.PLLN = 120;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+  RCC_OscInitStruct.PLL.PLLM = 4;
+  RCC_OscInitStruct.PLL.PLLN = 60;
   RCC_OscInitStruct.PLL.PLLP = 2;
-  RCC_OscInitStruct.PLL.PLLQ = 5;
+  RCC_OscInitStruct.PLL.PLLQ = 24;
   RCC_OscInitStruct.PLL.PLLR = 2;
   RCC_OscInitStruct.PLL.PLLRGE = RCC_PLL1VCIRANGE_3;
   RCC_OscInitStruct.PLL.PLLVCOSEL = RCC_PLL1VCOWIDE;

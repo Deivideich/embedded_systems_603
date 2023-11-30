@@ -36,7 +36,7 @@ extern "C" {
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
-extern struct escValues escValues;
+//extern struct escValues escValues;
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/
@@ -61,10 +61,10 @@ void Error_Handler(void);
 #define SPI_CS_GPIO_Port GPIOA
 #define LD1_Green_Pin GPIO_PIN_0
 #define LD1_Green_GPIO_Port GPIOB
-#define CE_Pin_Pin GPIO_PIN_14
-#define CE_Pin_GPIO_Port GPIOD
-#define CSN_Pin_Pin GPIO_PIN_15
-#define CSN_Pin_GPIO_Port GPIOD
+#define CE_Pin_Pin GPIO_PIN_9
+#define CE_Pin_GPIO_Port GPIOC
+#define CSN_Pin_Pin GPIO_PIN_8
+#define CSN_Pin_GPIO_Port GPIOC
 #define LD2_yellow_Pin GPIO_PIN_1
 #define LD2_yellow_GPIO_Port GPIOE
 /* USER CODE BEGIN Private defines */

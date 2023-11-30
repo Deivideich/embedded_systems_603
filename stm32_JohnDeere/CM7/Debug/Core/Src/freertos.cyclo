@@ -1,7 +1,0 @@
-../Core/Src/freertos.c:122:6:MX_FREERTOS_Init	1
-../Core/Src/freertos.c:170:6:StartDefaultTask	1
-../Core/Src/freertos.c:183:6:blinkGreenTask	1
-../Core/Src/freertos.c:193:6:imuTask	3
-../Core/Src/freertos.c:239:6:escTask	2
-../Core/Src/freertos.c:273:6:servoTask	2
-../Core/Src/freertos.c:305:6:stanleyTask	2

@@ -917,17 +917,20 @@ void mySetupNRF24(GPIO_TypeDef *nrf24PORT, uint16_t nrfCSN_Pin, uint16_t nrfCE_P
 		uint8_t channel, uint64_t address, rf24_datarate_e speed){
 	NRF24_begin(nrf24PORT,nrfCSN_Pin,nrfCE_Pin,nrfSPI);
 	nrf24_DebugUART_Init(nrf24Uart);
-	NRF24_setAutoAck(true);
+	//NRF24_setAutoAck(true);
+	NRF24_setAutoAck(false);
 	NRF24_setChannel(channel);
 	NRF24_setPayloadSize(32);
 	NRF24_openReadingPipe(0, address);
+	NRF24_enableDynamicPayloads();
+	//NRF24_enableAckPayload();
 	NRF24_setDataRate(speed);
 	printRadioSettings();
 	NRF24_startListening();
 }
 
 //Read Data
-void myReadData(char* myRxData){
+void myReadData(uint8_t* myRxData){
   if(NRF24_available()){
 			NRF24_read(myRxData, 32);
 //			NRF24_writeAckPayload(1, myAckPayload, 32); //Sends acknowledgement to receiver

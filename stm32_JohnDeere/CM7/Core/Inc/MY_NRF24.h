@@ -23,12 +23,25 @@ References:				This library was written based on the Arduino NRF24 Open-Source l
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
+
+struct dataCam{
+	uint16_t x,y,theta;
+};
+
 //1. Pinout Ports and Pin
+//SPI2
 #define nrf_CSN_PORT		GPIOD
 #define nrf_CSN_PIN			GPIO_PIN_15
 
 #define nrf_CE_PORT			GPIOD
 #define nrf_CE_PIN			GPIO_PIN_14
+
+//SPI3
+#define nrf_CSN_PORT3		GPIOC
+#define nrf_CSN_PIN3		GPIO_PIN_8
+
+#define nrf_CE_PORT3		GPIOC
+#define nrf_CE_PIN3			GPIO_PIN_9
 
 //**** TypeDefs ****//
 //1. Power Amplifier function, NRF24_setPALevel()
@@ -194,5 +207,4 @@ void mySetupNRF24(GPIO_TypeDef *nrf24PORT, uint16_t nrfCSN_Pin, uint16_t nrfCE_P
 		uint8_t channel, uint64_t address, rf24_datarate_e speed);
 
 //Read Data
-void myReadData(char* myRxData);
-
+void myReadData(uint8_t* myRxData);
