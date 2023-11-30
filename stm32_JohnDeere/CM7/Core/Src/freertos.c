@@ -37,6 +37,7 @@
 #include "myCAN.h"
 #include "waypoints.h"
 #include "kalman_filter.h"
+#include "pi.h"
 //#include
 /* USER CODE END Includes */
 
@@ -63,6 +64,7 @@ uint8_t myRxData[32]; //Var for storing data from radio(camera)
 struct dataCam dataCam = {0,0,0};
 float speed = 0; //Var for speed(CAN)
 struct KF kf;
+struct PI pi;
 struct waypoint_buffer wp_buf;
 float st_saturation_limits[] = {21.4 * M_PI / 180, -21.4 * M_PI / 180}; // Saturation array
 
@@ -257,27 +259,18 @@ void radioTask(void *argument) {
   int counter = 0;
 	for(;;)
 	{
-		// osMutexWait(myMutex01Handle, osWaitForever); //Setting up Radio
 		vx = speed * cos(M_PI / 180 * mpu.pose[2]);
 		vy = speed * sin(M_PI / 180 * mpu.pose[2]);
-		// osMutexRelease(myMutex01Handle);
-
 	    real_x += dt * vx;
 	    real_y +=  dt * vy;
 
-		// osMutexWait(myMutex01Handle, osWaitForever);
 		predict(&kf, dt);
 
-//		if(real_x != dataCam.x || real_y != dataCam.y){
-//			real_x = dataCam.x;
-//			real_y = dataCam.y;
-//			update(&kf, real_x, real_y, meas_variance);
-//		}
-		if(counter % 10 == 0)
-		      update(&kf, real_x, real_y, meas_variance);
+		if(counter % 20 == 0)
+//		  update(&kf, real_x, real_y, meas_variance);
+	      update(&kf, dataCam.px, dataCam.py, meas_variance);
 		counter++;
 
-		// osMutexRelease(myMutex01Handle);
 		// printf("Real: %3.3f, %3.3f || Estimated: %3.3f, %3.3f || V: %3.3f, %3.3f || Psi: %3.3f \r\n",
 		// real_x, real_y, kf.x[0], kf.y[0], vx, vy, mpu.pose[2]);
 		osDelay(dt * 1000);
@@ -286,19 +279,19 @@ void radioTask(void *argument) {
 
 void wpTask(void *argument) {
   init_waypoint_buffer(&wp_buf);
-  add_wp(&wp_buf, 0, 0);
-  add_wp(&wp_buf, 4, 0);
-  add_wp(&wp_buf, 1, 2);
-  add_wp(&wp_buf, 0, 0);
+//  add_wp(&wp_buf, 0, 0);
+//  add_wp(&wp_buf, 1, 0);
+//  add_wp(&wp_buf, 1, 1);
+//  add_wp(&wp_buf, 0, 1);
+//  add_wp(&wp_buf, 0, 0);
+  add_wp(&wp_buf, 0.0, 0.5);
+  add_wp(&wp_buf, 0.9, 0.5);
   float dt = 0.1;
 	for(;;)
 	{
     if(stanley.e_a < 0.2 && stanley.e_a > 0.0)
       to_next(&wp_buf);
-    // osMutexWait(myMutex01Handle, osWaitForever);
-    
-    // osMutexRelease(myMutex01Handle);
-		osDelay(dt * 1000);
+	osDelay(dt * 1000);
 	}
 }
 
@@ -323,17 +316,22 @@ void imuTask(void *argument)
 
 	  printf("Starting IMU...\r\n");
 	  float initPose[] = {0,0,0};
+	  float pose[] = {0,0,0};
 	  setPose(&mpu, initPose);
+	  int counter = 1;
 
-    stanleyTaskHandle = osThreadNew(stanleyTask, NULL, &stanleyTaskHandle_attributes);
+    //stanleyTaskHandle = osThreadNew(stanleyTask, NULL, &stanleyTaskHandle_attributes);
 	wirelessTaskHandle = osThreadNew(wirelessTask, NULL, &wirelessTaskHandle_attributes);
 
     float dt = 0.1;
 	for(;;)
 	{
-		// osMutexWait(myMutex01Handle, osWaitForever); //Setting up Radio
 		updateData(&mpu, dt, speed); //Printing with func from header file
-		// osMutexRelease(myMutex01Handle);
+		if(counter % 20 == 0){
+			pose[2] = dataCam.psi * M_PI / 180;
+			setPose(&mpu, pose);
+		}
+		counter++;
 
 		// printf("Acc XYZ:");
 		// for(int i=0;i<3;i++){
@@ -367,12 +365,16 @@ void escTask(void *argument){
   int i = 100;
   int dt = 1;
   do{
-	  setPwmS(&escValues);
+//	  setPwmS(&escValues);
 	  escValues.percentage=(unsigned int)i;
 	  HAL_Delay(10);
 	  i=i-dt;
 
   }while(i > 50);
+
+  float dtTask = 0.1;
+
+  initPI(&pi, dtTask, 190.0, 80.0, 10.0, 100, 10);
 
   minPulseWidthEsc = 1500;
   maxPulseWidthEsc = 2000;
@@ -381,14 +383,29 @@ void escTask(void *argument){
 
   imuTaskHandle = osThreadNew(imuTask, NULL, &imuTaskHandle_attributes);
 
-	escValues.percentage = 50;
-	setPwmS(&escValues);
+//  escValues.percentage = 0;
+//  setPwmS(&escValues);
+
+  updateReferences(&pi, 0.5);
+  saturateManipulation(&pi, speed);
+//  escValues.percentage = (unsigned int)pi.u;
+  escValues.percentage = 30;
+//  setPwmS(&escValues);
+  HAL_Delay(10);
+
 	for(;;){
+
     if(wp_buf.to == wp_buf.size - 1 && (stanley.e_a < 0.1 || stanley.e_a > -0.1)){
       escValues.percentage = 0;
-      setPwmS(&escValues);
+//      setPwmS(&escValues);
+    } else {
+      saturateManipulation(&pi, speed);
+      escValues.percentage = (unsigned int)pi.u;
+//      escValues.percentage = 80;
+//      setPwmS(&escValues)
+      ;
     }
-    osDelay(100);
+    osDelay(1000 * dtTask);
 	}
 }
 
@@ -414,15 +431,10 @@ void servoTask(void *argument){
 
 	for(;;){
      servoValues.percentage = (int) ( (out[0] + (slope * (stanley.delta - in[0]))));
-//    osMutexWait(myMutex01Handle, osWaitForever);
-//	 printf("Y {%u}",servoValues.percentage);
      if(servoValues.percentage != last_steer){
-    	 setPwmS(&servoValues);
-//    	 printf("servo{%u},last{%u},est:%3.3f",servoValues.percentage, last_steer,
-//    			 (out[0] + (slope * (stanley.delta - in[0])))
-//				 );
+//    	 setPwmS(&servoValues);
+
      }
-//    osMutexRelease(myMutex01Handle);
      last_steer = servoValues.percentage;
     osDelay(100);
 	}
@@ -450,8 +462,6 @@ void stanleyTask(void *argument){
   p2.y = 0;
 
   initStanley(&stanley,st_saturation_limits, st_k, st_k_soft);
-
-  // servoTaskHandle = osThreadNew(servoTask, NULL, &servoTaskHandle_attributes);
   
 	for(;;){
     vehicle_pos.x = kf.x[0];
@@ -464,25 +474,17 @@ void stanleyTask(void *argument){
       p2.y = wp_buf.wp_buf[wp_buf.to].y;
     }
     psi = mpu.pose[2] * M_PI / 180;
-	// osMutexWait(myMutex01Handle, osWaitForever); //Setting up Radio
     vel = speed;
-	// osMutexRelease(myMutex01Handle);
     calculateCrosstrackError(&stanley, &vehicle_pos, &p1, &p2);
     setYawAngle(&stanley, psi);
     calculateSteering(&stanley, vel, precision);
-    // osMutexWait(myMutex01Handle, osWaitForever);
-//    printf(" Pose XYZ:");
-//	for(int i = 0; i<3;i++){
-//	   printf("{%05.1f}",mpu.pose[i]);
-//	}
-//	printf(" Delta: {%05.1f}",stanley.delta * 180 / M_PI);
-//	printf("\r\n");
-    printf("Pose{x: %3.1f, y: %3.1f, psi: %3.1f}, WP{x: %5.1f, y: %5.1f}, Delta{%3.1f},"
-    		"E{%3.1f}, S{%3.3f}\r\n",
-      kf.x[0], kf.y[0], mpu.pose[2], 
-      wp_buf.wp_buf[wp_buf.to].x, wp_buf.wp_buf[wp_buf.to].y, 
-      (stanley.delta * 180 / M_PI), stanley.e_a, speed);
-    // osMutexRelease(myMutex01Handle);
+
+    printf("Pose{%3.1f,%3.1f,%3.1f}, WP{%3.1f,%3.1f}, Delta{%3.1f},"
+    		"E{%3.1f}, S{%1.2f}, PI{sp:%3.3f,u:%3.3f} Cam{%3.3f,%3.3f,%3.3f\r\n",
+      kf.x[0], kf.y[0], mpu.pose[2],
+      wp_buf.wp_buf[wp_buf.to].x, wp_buf.wp_buf[wp_buf.to].y,
+      (stanley.delta * 180 / M_PI), stanley.e_a, speed, pi.chi1_d, pi.u,
+	  dataCam.px,dataCam.py,dataCam.psi);
     osDelay(100);
 	}
 }
@@ -490,10 +492,10 @@ void stanleyTask(void *argument){
 void wirelessTask(void *argument){
 	uint64_t RxpipeAddrs = 0x11223344AA; //Address of sender
 
-	// osMutexWait(myMutex01Handle, osWaitForever); //Setting up Radio
+	osMutexWait(myMutex01Handle, osWaitForever); //Setting up Radio
 	mySetupNRF24(nrf_CSN_PORT, nrf_CSN_PIN, nrf_CE_PIN,
 			  hspi2,huart3,52, RxpipeAddrs, 1);
-	// osMutexRelease(myMutex01Handle);
+	osMutexRelease(myMutex01Handle);
 
 	int maxX = 100; //Max and min values
 	int minX = 0;
@@ -509,6 +511,12 @@ void wirelessTask(void *argument){
 		dataCam.x = (uint16_t)myRxData[0] << 8 | myRxData[1];
 		dataCam.y = (uint16_t)myRxData[2] << 8 | myRxData[3];
 		dataCam.theta = (uint16_t)myRxData[4] << 8 | myRxData[5];
+		dataCam.px = dataCam.x / 100.0;
+		dataCam.py = dataCam.y / 100.0;
+		dataCam.psi = dataCam.theta;
+		if(dataCam.psi > 180)
+			dataCam.psi -= 360;
+//		mpu.pose[2] = dataCam.psi * M_PI / 180;
 
 //		dataCam.x = dataCam.x < minX ? minX : dataCam.x;
 //		dataCam.x = dataCam.x > maxX ? maxX : dataCam.x;
@@ -519,10 +527,10 @@ void wirelessTask(void *argument){
 //		for(int i=0;i<6;i++){
 //			printf("%x ",myRxData[i]);
 //		}
-//		printf("%x%x %x%x %x%x",myRxData[0],myRxData[1],myRxData[2],myRxData[3],myRxData[4],myRxData[5]);
-//		printf("\r\n");
-//		printf("X:%d Y:%d Angle:%d\r\n",dataCam.x,dataCam.y,dataCam.theta);
-//		printf("\r\n");
+		printf("%x%x %x%x %x%x",myRxData[0],myRxData[1],myRxData[2],myRxData[3],myRxData[4],myRxData[5]);
+		printf("\r\n");
+		printf("X:%d Y:%d Angle:%d\r\n",dataCam.px,dataCam.py,dataCam.psi);
+		printf("\r\n");
 		osDelay(1000);
 	}
 }
