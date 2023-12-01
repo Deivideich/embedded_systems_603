@@ -206,6 +206,7 @@ struct mpu9250{
 
 	float lastAngVel;
 	float pose[3]; // x, y, psi
+	float psi;
 };
 
 void initMPU9250(struct mpu9250 * mpu9250, uint8_t Ascale, uint8_t Gscale, uint8_t sampleRate);

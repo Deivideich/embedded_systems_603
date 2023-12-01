@@ -10,6 +10,7 @@
  * */
 
 #include "stanley_controller.h"
+#include "myprintf.h"
 
 void initStanley(struct Stanley * stanley, float *delta_sat, float k, float k_soft)
 {
@@ -61,6 +62,7 @@ void calculateCrosstrackError(struct Stanley * stanley, struct Point * vehicle_p
     // Along-track and crosstrack errors in path frame
     stanley->e_a = (p2->x - xp) * cos(stanley->ak) + (p2->y - yp) * sin(stanley->ak); // along-track error
     stanley->e_c = -(vehicle_pos->x - xp) * sin(stanley->ak) + (vehicle_pos->y - yp) * cos(stanley->ak); // crosstrack error
+    // printf("p1: %3.3f,%3.3f, p2: %3.3f,%3.3f. \r\n", p1->x, p1->y, p2->x, p2->y);
 }
 
 void setYawAngle(struct Stanley * stanley, float psi){
@@ -71,10 +73,10 @@ void calculateSteering(struct Stanley * stanley, float vel, uint8_t precision){
     stanley->vel = vel;
 
     // PI error fixed due to rounding in ak_ angle when the path is vertical that makes it greater than M_PI
-    double PI = M_PI + 1e-3;
+    double PI = M_PI - 1e-3;
     if(stanley->ak >= PI/2 && stanley->ak <=  PI && stanley->psi <= -PI/2 && stanley->psi >= - PI){
         stanley->psi = stanley->psi + PI*2;
-    } else if (stanley->ak < -PI/2 && stanley->ak > - PI && stanley->psi > PI/2 && stanley->psi <  PI){
+    } else if (stanley->ak <= -PI/2 && stanley->ak >= - PI && stanley->psi >= PI/2 && stanley->psi <=  PI){
         stanley->psi = stanley->psi - PI*2;
     }
 
@@ -83,7 +85,11 @@ void calculateSteering(struct Stanley * stanley, float vel, uint8_t precision){
 
     // You want to reduce psi by delta so ...
     stanley->delta = -stanley->delta;
+    stanley->delta = -stanley->delta;
 
     stanley->delta = stanley->delta < stanley->sat[1] ? stanley->sat[1] : stanley->delta;
     stanley->delta = stanley->delta > stanley->sat[0] ? stanley->sat[0] : stanley->delta;
+
+    // printf("Phi: %3.3f, ATAN: %3.3f, CE: %3.3f, AE: %3.3f \r\n", phi,
+    // atan2(stanley->k*stanley->e_c,stanley->k_soft + stanley->vel),  stanley->e_c, stanley->e_a);
 }

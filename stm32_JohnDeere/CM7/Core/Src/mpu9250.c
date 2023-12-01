@@ -338,11 +338,15 @@ void updateData(struct mpu9250 * mpu9250, float dt, float vel){
   //Update position
   mpu9250->pose[0] += cos(M_PI/180 * mpu9250->pose[2]) * dt * vel;
   mpu9250->pose[1] += sin(M_PI/180 * mpu9250->pose[2]) * dt * vel;
+
+//  mpu9250->psi = -mpu9250->pose[2];
+  mpu9250->psi = mpu9250->pose[2];
 }
 
 void setPose(struct mpu9250 * mpu9250, float *pos){
 	for(int i = 0 ; i < 3 ; i++){
 		mpu9250->pose[i] = pos[i];
 	}
+//	mpu9250->pose[2] *= -1;
 }
 
