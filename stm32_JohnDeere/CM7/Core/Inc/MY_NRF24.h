@@ -23,6 +23,15 @@ References:				This library was written based on the Arduino NRF24 Open-Source l
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
+<<<<<<< Updated upstream
+=======
+
+struct dataCam{
+	uint16_t x,y,theta;
+	float px, py, psi;
+};
+
+>>>>>>> Stashed changes
 //1. Pinout Ports and Pin
 #define nrf_CSN_PORT		GPIOD
 #define nrf_CSN_PIN			GPIO_PIN_15
@@ -30,6 +39,22 @@ References:				This library was written based on the Arduino NRF24 Open-Source l
 #define nrf_CE_PORT			GPIOD
 #define nrf_CE_PIN			GPIO_PIN_14
 
+<<<<<<< Updated upstream
+=======
+//SPI3
+#define nrf_CSN_PORT3		GPIOC
+#define nrf_CSN_PIN3		GPIO_PIN_8
+
+#define nrf_CE_PORT3		GPIOC
+#define nrf_CE_PIN3			GPIO_PIN_9
+
+#define nrf_CSN_PORT3_2		GPIOD
+#define nrf_CSN_PIN3_2		GPIO_PIN_7
+
+#define nrf_CE_PORT3_2		GPIOD
+#define nrf_CE_PIN3_2		GPIO_PIN_6
+
+>>>>>>> Stashed changes
 //**** TypeDefs ****//
 //1. Power Amplifier function, NRF24_setPALevel()
 typedef enum {
@@ -194,5 +219,9 @@ void mySetupNRF24(GPIO_TypeDef *nrf24PORT, uint16_t nrfCSN_Pin, uint16_t nrfCE_P
 		uint8_t channel, uint64_t address, rf24_datarate_e speed);
 
 //Read Data
+<<<<<<< Updated upstream
 void myReadData(char* myRxData);
 
+=======
+uint8_t myReadData(uint8_t* myRxData);
+>>>>>>> Stashed changes

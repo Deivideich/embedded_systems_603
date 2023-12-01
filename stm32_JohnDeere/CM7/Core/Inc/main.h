@@ -61,10 +61,21 @@ void Error_Handler(void);
 #define SPI_CS_GPIO_Port GPIOA
 #define LD1_Green_Pin GPIO_PIN_0
 #define LD1_Green_GPIO_Port GPIOB
+<<<<<<< Updated upstream
 #define CE_Pin_Pin GPIO_PIN_14
 #define CE_Pin_GPIO_Port GPIOD
 #define CSN_Pin_Pin GPIO_PIN_15
 #define CSN_Pin_GPIO_Port GPIOD
+=======
+#define CE_Pin_Pin GPIO_PIN_9
+#define CE_Pin_GPIO_Port GPIOC
+#define CSN_Pin_Pin GPIO_PIN_8
+#define CSN_Pin_GPIO_Port GPIOC
+#define CE_2__Pin GPIO_PIN_6
+#define CE_2__GPIO_Port GPIOD
+#define CSN3_2__Pin GPIO_PIN_7
+#define CSN3_2__GPIO_Port GPIOD
+>>>>>>> Stashed changes
 #define LD2_yellow_Pin GPIO_PIN_1
 #define LD2_yellow_GPIO_Port GPIOE
 /* USER CODE BEGIN Private defines */

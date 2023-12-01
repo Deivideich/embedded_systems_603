@@ -62,7 +62,8 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 uint64_t RxpipeAddrs = 0x11223344AA;
-char myRxData[50];
+char myRxData[6];
+uint8_t myRxData2[6];
 char myAckPayload[32] = "Ack by STMF7!";
 /* USER CODE END 0 */
 
@@ -126,11 +127,15 @@ Error_Handler();
   MX_SPI1_Init();
   MX_USART3_UART_Init();
   MX_SPI2_Init();
+  MX_SPI3_Init();
   /* USER CODE BEGIN 2 */
-
-  mySetupNRF24(nrf_CSN_PORT, nrf_CSN_PIN, nrf_CE_PIN,
-		  hspi2,huart3,60, RxpipeAddrs, 1);
-  uint8_t a = 0xFF;
+  mySetupNRF24(nrf_CSN_PORT3_2, nrf_CSN_PIN3_2, nrf_CE_PIN3_2,
+		  hspi3,huart3,52, RxpipeAddrs, 1);
+//  mySetupNRF24(nrf_CSN_PORT, nrf_CSN_PIN, nrf_CE_PIN,
+//  		  hspi2,huart3,60, RxpipeAddrs, 1);
+  uint16_t x=0, y=0 ,a=0;
+  uint8_t status;
+  /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
@@ -139,9 +144,15 @@ Error_Handler();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  myReadData(myRxData);
-	  HAL_UART_Transmit(&huart3, (uint8_t *)myRxData, sizeof(myRxData), 10);
-	  HAL_Delay(250);
+	  status = myReadData2(myRxData);
+	  x = (uint16_t)myRxData[0] << 8 | myRxData[1];
+	  y = (uint16_t)myRxData[2] << 8 | myRxData[3];
+	  a = (uint16_t)myRxData[4] << 8 | myRxData[5];
+//	  printf("S: %d \r\n",status);
+//	  printf("U %x %x %x %x %x %x\r\n",myRxData2[0],myRxData2[1],myRxData2[2],myRxData2[3],myRxData2[4],myRxData2[5]);
+	  printf("X:%d Y:%d A:%d\r\n",x,y,a);
+//
+//	  HAL_Delay(500);
 
 
   }

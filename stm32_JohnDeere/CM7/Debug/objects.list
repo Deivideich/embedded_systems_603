@@ -6,6 +6,7 @@
 "./Core/Src/main.o"
 "./Core/Src/mpu9250.o"
 "./Core/Src/myprintf.o"
+"./Core/Src/pi.o"
 "./Core/Src/spi.o"
 "./Core/Src/stanley_controller.o"
 "./Core/Src/stm32h7xx_hal_msp.o"

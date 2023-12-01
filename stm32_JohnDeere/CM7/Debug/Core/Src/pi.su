@@ -1,0 +1,4 @@
+../Core/Src/pi.c:17:6:initPI	40	static
+../Core/Src/pi.c:32:6:updateReferences	16	static
+../Core/Src/pi.c:36:6:calculateManipulation	32	static
+../Core/Src/pi.c:54:6:saturateManipulation	24	static

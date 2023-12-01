@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 ../Core/Src/freertos.c:122:6:MX_FREERTOS_Init	8	static
 ../Core/Src/freertos.c:170:6:StartDefaultTask	16	static
 ../Core/Src/freertos.c:183:6:blinkGreenTask	16	static
@@ -5,3 +6,16 @@
 ../Core/Src/freertos.c:239:6:escTask	144	static
 ../Core/Src/freertos.c:273:6:servoTask	160	static
 ../Core/Src/freertos.c:305:6:stanleyTask	72	static
+=======
+../Core/Src/freertos.c:175:6:MX_FREERTOS_Init	8	static
+../Core/Src/freertos.c:234:6:StartDefaultTask	16	static
+../Core/Src/freertos.c:247:6:blinkGreenTask	16	static
+../Core/Src/freertos.c:257:6:radioTask	72	static
+../Core/Src/freertos.c:292:6:wpTask	24	static
+../Core/Src/freertos.c:310:6:imuTask	88	static
+../Core/Src/freertos.c:367:6:escTask	152	static
+../Core/Src/freertos.c:434:6:servoTask	168	static
+../Core/Src/freertos.c:465:6:stanleyTask	200	static
+../Core/Src/freertos.c:514:6:wirelessTask	360	static
+../Core/Src/freertos.c:565:6:canTask	88	static
+>>>>>>> Stashed changes

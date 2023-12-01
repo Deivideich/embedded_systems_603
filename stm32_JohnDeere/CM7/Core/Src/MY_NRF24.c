@@ -927,12 +927,18 @@ void mySetupNRF24(GPIO_TypeDef *nrf24PORT, uint16_t nrfCSN_Pin, uint16_t nrfCE_P
 }
 
 //Read Data
+<<<<<<< Updated upstream
 void myReadData(char* myRxData){
+=======
+uint8_t myReadData(uint8_t* myRxData){
+	uint8_t m = 0;
+>>>>>>> Stashed changes
   if(NRF24_available()){
-			NRF24_read(myRxData, 32);
+			m = NRF24_read(myRxData, 32);
 //			NRF24_writeAckPayload(1, myAckPayload, 32); //Sends acknowledgement to receiver
 			myRxData[32] = '\r';
 			myRxData[32+1] = '\n';
 //			HAL_UART_Transmit(&huart3, (uint8_t *)myRxData, 32+2, 10); //Problem with printf
 		}
+  return m;
 }

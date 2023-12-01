@@ -54,4 +54,8 @@
 ../Core/Src/MY_NRF24.c:890:6:nrf24_DebugUART_Init	8	static
 ../Core/Src/MY_NRF24.c:895:6:printFIFOstatus	128	static
 ../Core/Src/MY_NRF24.c:915:6:mySetupNRF24	160	static
+<<<<<<< Updated upstream
 ../Core/Src/MY_NRF24.c:930:6:myReadData	16	static
+=======
+../Core/Src/MY_NRF24.c:933:9:myReadData	24	static
+>>>>>>> Stashed changes
