@@ -65,6 +65,10 @@ void Error_Handler(void);
 #define CE_Pin_GPIO_Port GPIOC
 #define CSN_Pin_Pin GPIO_PIN_8
 #define CSN_Pin_GPIO_Port GPIOC
+#define CSN3_2__Pin GPIO_PIN_6
+#define CSN3_2__GPIO_Port GPIOD
+#define CSN3_2_D7_Pin GPIO_PIN_7
+#define CSN3_2_D7_GPIO_Port GPIOD
 #define LD2_yellow_Pin GPIO_PIN_1
 #define LD2_yellow_GPIO_Port GPIOE
 /* USER CODE BEGIN Private defines */

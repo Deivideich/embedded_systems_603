@@ -1,4 +1,0 @@
-../Core/Src/waypoints.c:4:6:init_waypoint_buffer	1
-../Core/Src/waypoints.c:8:6:add_wp	3
-../Core/Src/waypoints.c:20:6:to_next	2
-../Core/Src/waypoints.c:27:6:clean	1

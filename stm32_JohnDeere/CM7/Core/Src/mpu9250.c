@@ -320,10 +320,16 @@ void updateData(struct mpu9250 * mpu9250, float dt, float vel){
 		mpu9250->acc[i]/= filt_size;
 		mpu9250->gyro[i]/= filt_size;
 	}
+	float tolerance = 0.9;
+	for(int i = 0 ; i < 3 ; i++){
+		if(mpu9250->gyro[i] < tolerance && mpu9250->gyro[i] > -tolerance)
+			mpu9250->gyro[i] = 0;
+	}
 
   // Update orientation
 	// 1.1 = gyroscope's error
-	mpu9250->pose[2] += 1.1* dt * (mpu9250->gyro[2] + mpu9250->lastAngVel) / 2;
+
+	mpu9250->pose[2] += .98 * dt * (mpu9250->gyro[2] + mpu9250->lastAngVel) / 2;
 	if(mpu9250->pose[2] < -180)
 		mpu9250->pose[2] += 360;
 	else if(mpu9250->pose[2] > 180)

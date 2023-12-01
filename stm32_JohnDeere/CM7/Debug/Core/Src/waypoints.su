@@ -1,4 +1,4 @@
 ../Core/Src/waypoints.c:4:6:init_waypoint_buffer	16	static
-../Core/Src/waypoints.c:8:6:add_wp	32	static
-../Core/Src/waypoints.c:20:6:to_next	16	static
-../Core/Src/waypoints.c:27:6:clean	16	static
+../Core/Src/waypoints.c:10:6:add_wp	32	static
+../Core/Src/waypoints.c:22:6:to_next	16	static
+../Core/Src/waypoints.c:29:6:clean	16	static

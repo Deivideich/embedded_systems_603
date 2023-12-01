@@ -2,7 +2,9 @@
 #include <stdio.h>
 
 void init_waypoint_buffer(struct waypoint_buffer * wp_buf) {
-    clean(wp_buf);
+    wp_buf->size = 0;
+    wp_buf->from = 0;
+    wp_buf->to = 0;
 }
 
 void add_wp(struct waypoint_buffer * wp_buf, float x, float y) {
@@ -25,7 +27,6 @@ void to_next(struct waypoint_buffer * wp_buf) {
 }
 
 void clean(struct waypoint_buffer * wp_buf){
-    wp_buf->size = 0;
     wp_buf->from = 0;
-    wp_buf->to = 0;
+    wp_buf->to = 1;
 }

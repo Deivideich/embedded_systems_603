@@ -26,6 +26,7 @@ References:				This library was written based on the Arduino NRF24 Open-Source l
 
 struct dataCam{
 	uint16_t x,y,theta;
+	float px, py, psi;
 };
 
 //1. Pinout Ports and Pin
@@ -42,6 +43,12 @@ struct dataCam{
 
 #define nrf_CE_PORT3		GPIOC
 #define nrf_CE_PIN3			GPIO_PIN_9
+
+#define nrf_CSN_PORT3_2		GPIOD
+#define nrf_CSN_PIN3_2		GPIO_PIN_7
+
+#define nrf_CE_PORT3_2		GPIOD
+#define nrf_CE_PIN3_2		GPIO_PIN_6
 
 //**** TypeDefs ****//
 //1. Power Amplifier function, NRF24_setPALevel()
